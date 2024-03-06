@@ -1,0 +1,855 @@
+<app-sidebar
+  [isExpanded]="sidebarExpanded"
+  (toggleSidebar)="sidebarExpanded = !sidebarExpanded"
+></app-sidebar>
+<div class="content" [ngClass]="{ sidebarExpanded: sidebarExpanded }">
+  <div class="content">
+    <div class="sidebar" [ngClass]="{'show': showSidebar}">
+      <div
+      style="
+        background-color: rgba(253, 238, 238, 1);
+        position: relative;
+        padding-bottom: 20px;
+        padding-top: 20px;
+      "
+    >
+      <div></div>
+      <div (click)="toggleSidebar()" style="position: absolute; right: 0px; top: 0px; margin: 20px;cursor: pointer;">
+        <img src="assets/images/close.png" style="height: 30px;" />
+      </div>
+      <div style="position: absolute; left: 0px; top: 0px; margin: 20px">
+        <img
+          src="assets/images/search.png"
+          style="height: 30px; display: block; margin-bottom: 20px"
+        />
+        <img
+          src="assets/images/instagram.png"
+          style="display: block; margin-bottom: 10px"
+        />
+        <img src="assets/images/twitter.png" style="display: block; margin-bottom: 10px"/>
+        <img src="assets/images/linkedin.png" style="display: block; margin-bottom: 10px"/>
+        <img src="assets/images/whatsapp.png" style="display: block; margin-bottom: 10px"/>
+        <img src="assets/images/facebook.png" style="display: block; margin-bottom: 10px"/>
+        <img src="assets/images/logoshade.png" style="width: 90%;
+        display: grid;
+        margin-left: -77px;
+        margin-top: 130px;">
+      </div>
+      <!-- logo -->
+  
+      <div class="logo" style="text-align: center; margin-bottom: 20px">
+        <img src="assets/images/logo.png" />
+      </div>
+      <div class="row"
+        style="
+          text-align: center;
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 25px;color: black;
+        "
+      >
+      <div class="col-lg-8" style="display: grid;
+      justify-content: flex-end;font-size: 17px;">
+        <p style="cursor: pointer;" [routerLink]="['/']">Home</p>
+        <p style="cursor: pointer;" [routerLink]="['/events']">Events</p>
+        <p style="cursor: pointer;" [routerLink]="['/manufacturer']">Manufacturer</p>
+        <p>Products</p>
+        <p style="cursor: pointer;" [routerLink]="['/joblisting']">Jobs</p>
+        <p style="cursor: pointer;" [routerLink]="['/contactus']">Contact Us</p>
+        <p style="font-weight: bold">Manufacturer <span style="cursor: pointer;" [routerLink]="['/login']">LogIn</span>/<span style="cursor: pointer;" [routerLink]="['/signup']">Register</span></p>
+        <p style="font-weight: bold">Brand <span style="cursor: pointer;" [routerLink]="['/login']">LogIn</span>/<span style="cursor: pointer;" [routerLink]="['/signup']">Register</span></p>
+        <p>Terms & Conditions</p>
+        <p>Privacy Policies</p>
+        </div>
+        <div class="col-lg-4">
+          <img src="assets/images/logoshade.png" style="width: 140%;">
+        </div>
+      </div>
+      <div style="text-align: center; margin: 30px">
+        <img src="assets/images/envelop.png" />
+      </div>
+      <div>
+        <p
+          style="
+            text-align: center;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 17px;
+            color: rgba(0, 0, 0, 1);
+            padding-left: 50px;
+            padding-right: 50px;
+          "
+        >
+          We’re building the community of tomorrow, and making it easier for
+          entrepreneurs, indie founders, marketers, and sales professionals to
+          learn and connect with each other.
+        </p>
+      </div>
+    </div>
+      <!-- <button (click)="toggleSidebar()">Toggle Sidebar</button> -->
+  </div>
+    <div class="split">
+      <div class="left" style="padding-left: 10px; margin-top: 5px">
+        <span
+          style="
+            color: rgba(100, 96, 96, 1);
+            font-family: poppins;
+            font-size: 10px;
+            text-align: end;
+            margin-left: 2px;
+          "
+        >
+          <!-- {{ getCurrentDate() }} -->
+          {{ getCurrentDate() }}
+          </span
+        >
+        &nbsp; <img src="assets/images/downarrow.png" style="width: 18px" />
+        <p>
+          <input type="text" class="searchinput" placeholder="Search" />
+        </p>
+      </div>
+      <div class="right">
+        <div class="row">
+          <div class="col">
+        <table cellspacing="10">
+          <tr>
+            <td style="padding-right: 10px">
+              <img style="width: 30px" src="assets/images/noti.png" />
+            </td>
+            <td style="padding-right: 16px">
+              <div style="margin-top: 20px">
+                <h5
+                  style="
+                    color: rgba(102, 49, 48, 1);
+                    font-family: Poppins;
+                    font-size: 14px;
+                    margin-bottom: 0.2rem;
+                  "
+                >
+                  <!-- {{ (username$ | async)?.username || 'Guest' }}  -->
+                  {{ (username$ | async)?.username || 'Guest' }}
+                  
+                </h5>
+                <p
+                  style="
+                    color: rgba(100, 96, 96, 1);
+                    font-family: poppins;
+                    font-size: 8px;
+                    text-align: end;
+                  "
+                >
+                  Manufacturer
+                </p>
+              </div>
+            </td>
+            <td style="padding-right: 16px">
+              <img
+                style="width: 50px; border-radius: 50%; height: 40px"
+                src="assets/images/person.png"
+              />
+            </td>
+            <td style="padding-right: 20px">
+              <img src="assets/images/downarrow.png" style="width: 18px" />
+            </td>
+          </tr>
+        </table>
+        </div>
+        <div class="col">
+          <a class="nav-item nav-link" style="color: black">
+                  <!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
+                  <img (click)="toggleSidebar1()"  style="cursor: pointer;position: absolute;
+                  top: 28px;
+                  left: 5px;" src="assets/images/hamberger.png" />
+                </a>
+  </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <ul
+      ngbNav
+      #nav="ngbNav"
+      class="navbar-toggle nav nav-pills nav-justified pull-left"
+    >
+      <li ngbNavItem="create" *ngIf="!isProfileCreated">
+        <a ngbNavLink>Create Manufacturer Profile</a>
+        <ng-template ngbNavContent>
+          <br />
+          <div class="row" style="display: flex; justify-content: center">
+            <div class="col-lg-8">
+              <div
+                class="card"
+                style="filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161))"
+              >
+                <div class="card-header" style="background: #663130"></div>
+                <div class="card-body" style="padding: 0rem 0rem">
+                  <div
+                    style="
+                      display: grid;
+                      justify-content: center;
+                      border-bottom: 1px solid grey;
+                      padding: 20px 0px 18px 0px;
+                    "
+                  >
+                    <div style="display: flex; justify-content: center">
+                      <h5 style="font-family: Poppins; text-align: center">
+                        Create Profile
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body" style="padding: 1rem 4rem">
+                  <!-- [formGroup]="userForm" -->
+                  <!-- add again if it doesnt work - dummy.html-->
+                  <form
+                    [formGroup]="userForm"
+                    (ngSubmit)="
+                      createManufacturerProfile(
+                        usernameIput.value,
+                        organization_nameInput.value,
+                        designationInput.value,
+                        emailInput.value,
+                        phone_numberInput.value,
+                        street_addressInput.value,
+                        cityInput.value,
+                        postal_codeInput.value,
+                        stateInput.value,
+                        countryInput.value
+                      )
+                    "
+                  >
+                    <label class="labletitle" for="username">Username</label>
+                    <input
+                      type="text"
+                      class="input2"
+                      style="padding: 10px"
+                      placeholder="First"
+                      id="username"
+                      formControlName="username"
+                      #usernameIput
+                      required
+                    />
+
+                    <label class="labletitle" for="organization_name"
+                      >Organization name</label
+                    >
+                    <input
+                      id="organization_name"
+                      style="padding: 10px"
+                      class="input2"
+                      placeholder=""
+                      #organization_nameInput
+                      required
+                    />
+                    <label class="labletitle" for="designation"
+                      >Designation/Title</label
+                    >
+                    <input
+                      id="designation"
+                      style="padding: 10px"
+                      class="input2"
+                      placeholder=""
+                      #designationInput
+                      required
+                    />
+                    <label class="labletitle" for="email">Email</label>
+                    <input
+                      id="email"
+                      class="input2"
+                      style="padding: 10px"
+                      placeholder=""
+                      formControlName="email"
+                      #emailInput
+                      required
+                    />
+                    <!-- new fields -->
+                   
+                       <!-- <form [formGroup]="productForm">
+                        <div>
+                          <label for="category">Product Category:</label>
+                          <select id="category" formControlName="category" (change)="onCategoryChange()">
+                            <option *ngFor="let category of productCategories" [value]="category">{{ category }}</option>
+                          </select>
+                        </div>
+                       
+                         <div class="input-container">
+                          <input
+                            type="text"
+                            placeholder="Select Subcategories"
+                            formControlName="subcategories"
+                            [value]="getSubcategoriesValue()"
+                            (click)="openDropdown()"
+                          />
+                          <span class="icon" (click)="openDropdown()">+</span>
+                          <div class="dropdown" *ngIf="isDropdownOpen">
+                            
+                            <div *ngFor="let subcategory of subcategories" (click)="selectSubcategory(subcategory)">
+                              {{ subcategory }}
+                            </div>
+                          </div>
+                        </div>
+                      </form> -->
+                     
+                    
+                    <!-- new fields -->
+                    <label class="labletitle" for="phone_number"
+                      >Phone Number</label
+                    >
+                    <input
+                      id="phone_number"
+                      #phone_numberInput
+                      class="input2"
+                      style="padding: 10px"
+                      required
+                    />
+                    <!-- <form #f="ngForm" [formGroup]="phoneForm">
+                        <div class="wrapper input2">
+                          <ngx-intl-tel-input
+                            [cssClass]="'custom'"
+                            [preferredCountries]="preferredCountries"
+                            [enableAutoCountrySelect]="true"
+                            [enablePlaceholder]="true"
+                            [searchCountryFlag]="true"
+                            [searchCountryField]="[
+                              SearchCountryField.Iso2,
+                              SearchCountryField.Name
+                            ]"
+                            [selectFirstCountry]="false"
+                            [selectedCountryISO]="CountryISO.India"
+                            [maxLength]="15"
+                            [phoneValidation]="true"
+                            [separateDialCode]="separateDialCode"
+                            name="phone"
+                            formControlName="phone"
+                            id="phone_number" #phone_numberInput required
+                          >
+                          </ngx-intl-tel-input>
+                        </div>
+                      </form> -->
+                    <label class="labletitle" style="margin-top: 15px"
+                      >Address&nbsp;<img
+                        style="width: 15px"
+                        src="assets/images/location.png"
+                    /></label>
+
+                    
+                    <input
+                      id="street_address"
+                      #street_addressInput
+                      class="input2"
+                      style="padding: 10px"
+                      placeholder="Street Address"
+                      required
+                    />
+                   
+                    <div class="row">
+                      <div class="col">
+                        <input
+                          id="city"
+                          class="input2"
+                          style="padding: 10px"
+                          placeholder="City"
+                          #cityInput
+                          required
+                        />
+                      </div>
+                     
+                      <div class="col">
+                        <input
+                          id="postal_code"
+                          #postal_codeInput
+                          class="input2"
+                          style="padding: 10px"
+                          placeholder="Postal Code"
+                          required
+                        />
+                      </div>
+                    </div>
+                   
+                    <div class="row">
+                      <div class="col">
+                        <input
+                          id="state"
+                          class="input2"
+                          style="padding: 10px"
+                          placeholder="State"
+                          #stateInput
+                          required
+                        />
+                      </div>
+                     
+                      <div class="col">
+                        <input
+                          id="country"
+                          class="input2"
+                          style="padding: 10px"
+                          placeholder="Country"
+                          #countryInput
+                          required
+                        />
+                      </div>
+                    </div>
+                    <br />
+                    <br />
+                    <div style="display: flex; justify-content: center">
+                      <!-- [routerLink]="['/manufacturersuccess']"
+                        [queryParams]="{ name: 'create' }" -->
+                      <button
+                        style="
+                          color: white;
+                          width: 40%;
+                          font-size: 15px !important;
+                          background-color: #663130 !important;
+                          padding: 6px;
+                          border-radius: 5px;
+                          border: none;
+                        "
+                        type="submit"
+                      >
+                        Create Profile
+                      </button>
+                    </div>
+                    <br />
+                  </form>
+
+                  <!-- addagain -->
+                </div>
+              </div>
+              <br />
+            </div>
+          </div>
+        </ng-template>
+      </li>
+      <li ngbNavItem="edit" *ngIf="isProfileCreated">
+        <a ngbNavLink>Update Manufacturer Profile</a>
+        <ng-template ngbNavContent>
+          <br />
+          <div class="row" style="display: flex; justify-content: center">
+            <div class="col-lg-8">
+              <div
+                class="card"
+                style="filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161))"
+              >
+                <div class="card-header" style="background: #663130"></div>
+                <div class="card-body" style="padding: 0rem 0rem">
+                  <div
+                    style="
+                      display: grid;
+                      justify-content: center;
+                      border-bottom: 1px solid grey;
+                      padding: 20px 0px 18px 0px;
+                    "
+                  >
+                    <div style="display: flex; justify-content: center">
+                      <h5 style="font-family: Poppins; text-align: center">
+                        Update Profile
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body" style="padding: 1rem 4rem">
+        <!-- <a ngbNavLink>Edit Manufacturer Profile</a>
+        <ng-template ngbNavContent>
+          <br />
+          <div class="row" style="display: flex; justify-content: center">
+            <div class="col-lg-8">
+              <div
+                class="card"
+                style="filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161))"
+              >
+                <div class="card-header" style="background: #663130"></div>
+                <div class="card-body" style="padding: 0rem 0rem">
+                  <div
+                    style="
+                      display: grid;
+                      justify-content: center;
+                      border-bottom: 1px solid grey;
+                      padding: 10px 0px 20px 0px;
+                    "
+                  >
+                    <div style="display: flex; justify-content: center">
+                      <img
+                        style="width: 230px"
+                        src="assets/images/logoblack.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body" style="padding: 1rem 4rem">
+                     new 
+                    <h5 style="font-family: Poppins; text-align: center">
+                        Edit Profile
+                      </h5> -->
+                    <form
+                    [formGroup]="updateProfileForm"
+                    (ngSubmit)="
+                      updateManufacturerProfile(
+                        usernameIput.value,
+                        organization_nameInput.value,
+                        designationInput.value,
+                        emailInput.value,
+                        phone_numberInput.value,
+                        street_addressInput.value,
+                        cityInput.value,
+                        postal_codeInput.value,
+                        stateInput.value,
+                        countryInput.value
+                      )
+                    "
+                  >
+                    <label class="labletitle" for="username">Username</label>
+                    <input
+                      type="text"
+                      class="input2"
+                      style="padding: 10px"
+                      placeholder="First"
+                      id="username"
+                      formControlName="username"
+                      #usernameIput
+                      required
+                    />
+
+                    <label class="labletitle" for="organization_name"
+                      >Organization name</label
+                    >
+                    <input
+                      id="organization_name"
+                      style="padding: 10px"
+                      class="input2"
+                      placeholder=""
+                      formControlName="organization_name"
+                      #organization_nameInput
+                      required
+                    />
+                    <label class="labletitle" for="designation"
+                      >Designation/Title</label
+                    >
+                    <input
+                      id="designation"
+                      style="padding: 10px"
+                      class="input2"
+                      placeholder=""
+                      formControlName="designation"
+                      #designationInput
+                      required
+                    />
+                    <label class="labletitle" for="email">Email</label>
+                    <input
+                      id="email"
+                      class="input2"
+                      style="padding: 10px"
+                      placeholder=""
+                      formControlName="email"
+                      #emailInput
+                      required
+                    />
+                    <label class="labletitle" for="phone_number"
+                      >Phone Number</label
+                    >
+                    <input
+                      id="phone_number"
+                      #phone_numberInput
+                      class="input2"
+                      style="padding: 10px"
+                      formControlName="phone_number"
+                      required
+                    />
+                    <!-- <form #f="ngForm" [formGroup]="phoneForm">
+                        <div class="wrapper input2">
+                          <ngx-intl-tel-input
+                            [cssClass]="'custom'"
+                            [preferredCountries]="preferredCountries"
+                            [enableAutoCountrySelect]="true"
+                            [enablePlaceholder]="true"
+                            [searchCountryFlag]="true"
+                            [searchCountryField]="[
+                              SearchCountryField.Iso2,
+                              SearchCountryField.Name
+                            ]"
+                            [selectFirstCountry]="false"
+                            [selectedCountryISO]="CountryISO.India"
+                            [maxLength]="15"
+                            [phoneValidation]="true"
+                            [separateDialCode]="separateDialCode"
+                            name="phone"
+                            formControlName="phone"
+                            id="phone_number" #phone_numberInput required
+                          >
+                          </ngx-intl-tel-input>
+                        </div>
+                      </form> -->
+                    <label class="labletitle" style="margin-top: 15px"
+                      >Address&nbsp;<img
+                        style="width: 15px"
+                        src="assets/images/location.png"
+                    /></label>
+
+                    
+                    <input
+                      id="street_address"
+                      #street_addressInput
+                      class="input2"
+                      style="padding: 10px"
+                      placeholder="Street Address"
+                      formControlName="street_address"
+                      required
+                    />
+                   
+                    <div class="row">
+                      <div class="col">
+                        <input
+                          id="city"
+                          class="input2"
+                          style="padding: 10px"
+                          placeholder="City"
+                          formControlName="city"
+                          #cityInput
+                          required
+                        />
+                      </div>
+                     
+                      <div class="col">
+                        <input
+                          id="postal_code"
+                          #postal_codeInput
+                          class="input2"
+                          style="padding: 10px"
+                          placeholder="Postal Code"
+                          formControlName="postal_code"
+                          required
+                        />
+                      </div>
+                    </div>
+                   
+                    <div class="row">
+                      <div class="col">
+                        <input
+                          id="state"
+                          class="input2"
+                          style="padding: 10px"
+                          placeholder="State"
+                          #stateInput
+                          formControlName="state"
+                          required
+                        />
+                      </div>
+                     
+                      <div class="col">
+                        <input
+                          id="country"
+                          class="input2"
+                          style="padding: 10px"
+                          placeholder="Country"
+                          #countryInput
+                          formControlName="country"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <br />
+                    <br />
+                    <div style="display: flex; justify-content: center">
+                      <!-- [routerLink]="['/manufacturersuccess']"
+                        [queryParams]="{ name: 'create' }" -->
+                      <button
+                        style="
+                          color: white;
+                          width: 40%;
+                          font-size: 15px !important;
+                          background-color: #663130 !important;
+                          padding: 6px;
+                          border-radius: 5px;
+                          border: none;
+                        "
+                        type="submit"
+                      >
+                        Update Profile
+                      </button>
+                    </div>
+                    <br />
+                  </form>
+                    <!-- new -->
+                 
+                  </div>
+                  <br />
+                </div>
+              </div>
+              <br />
+            </div>
+          <!-- </div> -->
+        </ng-template>
+      </li>
+      <li ngbNavItem="upgrade">
+        <a ngbNavLink>Upgrade Subscription</a>
+        <ng-template ngbNavContent>
+          <br />
+          <div
+            class="row row-cols-1 row-cols-md-1 g-2"
+            style="display: flex; justify-content: center"
+          >
+            <div class="col-lg-4">
+              <div
+                class="card"
+                style="
+                  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+                  border-start-end-radius: 16px;
+                  border-start-start-radius: 16px;
+                  border-end-end-radius: 16px;
+                  border-end-start-radius: 16px;
+                "
+              >
+                <div
+                  class="card-header"
+                  style="
+                    background: rgba(247, 215, 201, 1);
+                    text-align: center;
+                    font-family: Poppins;
+                    border-start-end-radius: 16px;
+                    border-start-start-radius: 16px;
+                    font-size: 13px;
+                  "
+                >
+                  <b>Manufacturer Premium Plan</b>
+                </div>
+                <div class="card-body" style="height: 21vw">
+                  <p
+                    style="
+                      font-size: 8px;
+                      margin-top: 0.5rem;
+                      margin-bottom: 0.3rem;
+                    "
+                  >
+                    Includes All the Features From the Basic Plan
+                  </p>
+                  <p style="font-size: 13px">
+                    <b>$30/Month ($300/Annually)</b>
+                  </p>
+                  <p
+                    style="
+                      font-size: 10px;
+                      font-family: Poppins;
+                      margin-bottom: 0.4rem;
+                    "
+                  >
+                    <img
+                      src="assets/images/checkmark.png"
+                      style="width: 15px"
+                    />&nbsp;&nbsp;&nbsp;<span>Verified Listing</span>
+                  </p>
+                  <p
+                    style="
+                      font-size: 10px;
+                      font-family: Poppins;
+                      margin-bottom: 0.4rem;
+                    "
+                  >
+                    <img
+                      src="assets/images/checkmark.png"
+                      style="width: 15px"
+                    />&nbsp;&nbsp;&nbsp;<span>Chat/Message</span>
+                  </p>
+                  <div
+                    class="row"
+                    style="
+                      font-size: 10px;
+                      font-family: Poppins;
+                      margin-bottom: 0.5rem;
+                      gap: 10px;
+                    "
+                  >
+                    <div class="col-lg-1">
+                      <img
+                        src="assets/images/checkmark.png"
+                        style="width: 15px"
+                      />
+                    </div>
+                    <div style="padding: 0" class="col-lg-10">
+                      <span>Slot Among Premium Manufacturers </span>
+                    </div>
+                  </div>
+                  <p
+                    style="
+                      font-size: 10px;
+                      font-family: Poppins;
+                      margin-bottom: 0.4rem;
+                    "
+                  >
+                    <img
+                      src="assets/images/checkmark.png"
+                      style="width: 15px"
+                    />&nbsp;&nbsp;&nbsp;<span>Featured Slot On Homepage</span>
+                  </p>
+                  <p
+                    style="
+                      font-size: 10px;
+                      font-family: Poppins;
+                      margin-bottom: 0.4rem;
+                    "
+                  >
+                    <img
+                      src="assets/images/checkmark.png"
+                      style="width: 15px"
+                    />&nbsp;&nbsp;&nbsp;<span>Download Bulk Leads</span>
+                  </p>
+                  <p
+                    style="
+                      font-size: 10px;
+                      font-family: Poppins;
+                      margin-bottom: 0.4rem;
+                    "
+                  >
+                    <img
+                      src="assets/images/checkmark.png"
+                      style="width: 15px"
+                    />&nbsp;&nbsp;&nbsp;<span>Customize Form Input Fields</span>
+                  </p>
+                  <p
+                    style="
+                      font-size: 10px;
+                      font-family: Poppins;
+                      margin-bottom: 0.4rem;
+                    "
+                  >
+                    <img
+                      src="assets/images/checkmark.png"
+                      style="width: 15px"
+                    />&nbsp;&nbsp;&nbsp;<span>Four To Five Page Website</span>
+                  </p>
+                  <p
+                    style="
+                      font-size: 10px;
+                      font-family: Poppins;
+                      margin-bottom: 0.4rem;
+                    "
+                  >
+                    <img
+                      src="assets/images/checkmark.png"
+                      style="width: 15px"
+                    />&nbsp;&nbsp;&nbsp;<span>Priority Support</span>
+                  </p>
+                </div>
+                <div
+                  class="card-footer"
+                  style="
+                    background: rgba(247, 215, 201, 1);
+                    text-align: center;
+                    font-family: Poppins;
+                    border-end-end-radius: 16px;
+                    border-end-start-radius: 16px;
+                    font-size: 13px;
+                  "
+                >
+                  <b>Change Plan</b>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br />
+        </ng-template>
+      </li>
+    </ul>
+    <div [ngbNavOutlet]="nav" class="ml-4"></div>
+  </div>
+</div>

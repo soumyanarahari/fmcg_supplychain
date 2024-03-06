@@ -1,0 +1,943 @@
+<app-sidebar [isExpanded]="sidebarExpanded" (toggleSidebar)="sidebarExpanded = !sidebarExpanded"></app-sidebar>
+<div class="content" [ngClass]="{ 'sidebarExpanded': sidebarExpanded }">
+    
+    <div class="content">
+      <div class="sidebar" [ngClass]="{'show': showSidebar}">
+        <div
+        style="
+          background-color: rgba(253, 238, 238, 1);
+          position: relative;
+          padding-bottom: 20px;
+          padding-top: 20px;
+        "
+      >
+        <div></div>
+        <div (click)="toggleSidebar()" style="position: absolute; right: 0px; top: 0px; margin: 20px;cursor: pointer;">
+          <img src="assets/images/close.png" style="height: 30px;" />
+        </div>
+        <div style="position: absolute; left: 0px; top: 0px; margin: 20px">
+          <img
+            src="assets/images/search.png"
+            style="height: 30px; display: block; margin-bottom: 20px"
+          />
+          <img
+            src="assets/images/instagram.png"
+            style="display: block; margin-bottom: 10px"
+          />
+          <img src="assets/images/twitter.png" style="display: block; margin-bottom: 10px"/>
+          <img src="assets/images/linkedin.png" style="display: block; margin-bottom: 10px"/>
+          <img src="assets/images/whatsapp.png" style="display: block; margin-bottom: 10px"/>
+          <img src="assets/images/facebook.png" style="display: block; margin-bottom: 10px"/>
+          <img src="assets/images/logoshade.png" style="width: 90%;
+          display: grid;
+          margin-left: -77px;
+          margin-top: 130px;">
+        </div>
+        <!-- logo -->
+    
+        <div class="logo" style="text-align: center; margin-bottom: 20px">
+          <img src="assets/images/logo.png" />
+        </div>
+        <div class="row"
+          style="
+            text-align: center;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 25px;color: black;
+          "
+        >
+        <div class="col-lg-8" style="display: grid;
+        justify-content: flex-end;font-size: 17px;">
+          <p style="cursor: pointer;" [routerLink]="['/']">Home</p>
+          <p style="cursor: pointer;" [routerLink]="['/events']">Events</p>
+          <p style="cursor: pointer;" [routerLink]="['/manufacturer']">Manufacturer</p>
+          <p>Products</p>
+          <p style="cursor: pointer;" [routerLink]="['/joblisting']">Jobs</p>
+          <p style="cursor: pointer;" [routerLink]="['/contactus']">Contact Us</p>
+          <p style="font-weight: bold">Manufacturer <span style="cursor: pointer;" [routerLink]="['/login']">LogIn</span>/<span style="cursor: pointer;" [routerLink]="['/signup']">Register</span></p>
+          <p style="font-weight: bold">Brand <span style="cursor: pointer;" [routerLink]="['/login']">LogIn</span>/<span style="cursor: pointer;" [routerLink]="['/signup']">Register</span></p>
+          <p>Terms & Conditions</p>
+          <p>Privacy Policies</p>
+          </div>
+          <div class="col-lg-4">
+            <img src="assets/images/logoshade.png" style="width: 140%;">
+          </div>
+        </div>
+        <div style="text-align: center; margin: 30px">
+          <img src="assets/images/envelop.png" />
+        </div>
+        <div>
+          <p
+            style="
+              text-align: center;
+              font-family: Poppins;
+              font-style: normal;
+              font-weight: bold;
+              font-size: 17px;
+              color: rgba(0, 0, 0, 1);
+              padding-left: 50px;
+              padding-right: 50px;
+            "
+          >
+            We’re building the community of tomorrow, and making it easier for
+            entrepreneurs, indie founders, marketers, and sales professionals to
+            learn and connect with each other.
+          </p>
+        </div>
+      </div>
+        <!-- <button (click)="toggleSidebar()">Toggle Sidebar</button> -->
+    </div>
+        <div class="split">
+     <div class="left" style="padding-left: 10px;margin-top: 5px;">
+         <span style="color: rgba(100,96,96,1);font-family: poppins;font-size: 10px;text-align: end;margin-left: 2px;"> {{ getCurrentDate() }}</span> 
+         &nbsp; <img src="assets/images/downarrow.png" style="width: 18px;">
+         <p>
+             <input type="text" class="searchinput" placeholder="Search">
+         </p>
+     </div>
+     <div class="right">
+      <div class="row">
+        <div class="col">
+         <table cellspacing="10"> 
+             <tr> 
+                 <td style="padding-right: 10px;">  
+                     <img style="width: 30px;" src="assets/images/noti.png">
+                     </td>
+               <td style="padding-right: 16px;">  
+                 <div style="margin-top: 20px;">   
+             <h5 style="color: rgba(102,49,48,1);font-family: Poppins;font-size: 14px;margin-bottom: 0.2rem;">{{ (username$ | async)?.username || 'Guest' }} </h5>  
+             <p style="color: rgba(100,96,96,1);font-family: poppins;font-size: 8px;text-align: end;">Administrator</p> 
+             </div>   
+               </td> 
+               <td  style="padding-right: 16px;"> 
+                 <img style="width: 50px;
+                 border-radius: 50%;
+                 height: 40px;" src="assets/images/person.png">
+               </td> 
+               <td style="padding-right: 20px;">
+                 <img src="assets/images/downarrow.png" style="width: 18px;">
+               </td>
+             </tr> 
+           </table> 
+           </div>
+           <div class="col">
+            <a class="nav-item nav-link" style="color: black">
+                    <!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
+                    <img (click)="toggleSidebar1()"  style="cursor: pointer;position: absolute;
+                    top: 28px;
+                    left: 5px;" src="assets/images/hamberger.png" />
+                  </a>
+    </div>
+           </div>
+     </div>
+        </div>
+        <br/>
+         <!-- top bar -->
+ <div class="container-fluid">
+  <div class="row">
+   
+    <!-- Inbox outer container -->
+    <div
+      class="container-fluid"
+      style="
+        border-top: 2px solid rgba(221, 223, 225, 1);
+        color: rgba(106, 112, 126, 1);
+      "
+    >
+      <div class="row">
+        <div
+          class="col-2"
+          style="
+            border-right: 2px solid rgba(221, 223, 225, 1);
+            padding: 0px;
+          "
+        >
+          <ul
+            class="inbox_list"
+            style="
+              list-style: none;
+              margin-top: 20px;
+              color: rgba(106, 112, 126, 1);
+              padding-left: 20px;
+            "
+          >
+            <li>
+              <img src="assets/images/inbox.png" />
+              <p style="color: rgba(102, 49, 48, 1)">Inbox</p>
+              <div
+                style="
+                  background: rgba(102, 49, 48, 1);
+                  border-radius: 3px;
+                  color: white;
+                  text-align: center;
+                  height: 16px;
+                  width: 16px;
+                  padding-right: 1px;
+                  /* padding-bottom: 2px; */
+                  font-size: 12px;
+                  margin-left: auto;
+                  margin-right: 15px;
+                  margin-top: 5px;
+                "
+              >
+                <p>12</p>
+              </div>
+            </li>
+            <li>
+              <img src="assets/images/paperplane.png" />
+              <p>Sent</p>
+            </li>
+            <li>
+              <img src="assets/images/star.png" />
+              <p>Important</p>
+            </li>
+            <li>
+              <img src="assets/images/editpen.png" />
+              <p>Drafts</p>
+            </li>
+            <li>
+              <img src="assets/images/trashcan.png" />
+              <p>Trash</p>
+            </li>
+          </ul>
+          <p
+            style="
+              background: rgba(170, 126, 125, 0.3);
+              margin-right: 0px;
+              padding: 5px 20px;
+              font-weight: bold;
+            "
+          >
+            Categories
+          </p>
+          <ul
+            class="inbox_list"
+            style="
+              list-style: none;
+              margin-top: 20px;
+              color: rgba(106, 112, 126, 1);
+              padding-left: 20px;
+            "
+          >
+            <li>
+              <img src="assets/images/folder4.png" />
+              <p>Work</p>
+            </li>
+            <li>
+              <img src="assets/images/folder3.png" />
+              <p>Private</p>
+            </li>
+            <li>
+              <img src="assets/images/folder2.png" />
+              <p>Support</p>
+            </li>
+            <li>
+              <img src="assets/images/folder1.png" />
+              <p>Social</p>
+            </li>
+          </ul>
+          <div
+            style="
+              background: rgba(170, 126, 125, 0.3);
+              margin-right: 0px;
+              padding: 5px 20px;
+              display: flex;
+            "
+          >
+            <p style="font-weight: bold; margin-bottom: 0px">Chats</p>
+            <p
+              style="
+                margin-left: auto;
+                font-size: small;
+                opacity: 0.7;
+                margin-bottom: 0px;
+              "
+            >
+              Online
+            </p>
+          </div>
+
+          <ul
+            class="chat_list"
+            style="
+              list-style: none;
+              margin-top: 20px;
+              color: rgba(106, 112, 126, 1);
+              padding-left: 20px;
+            "
+          >
+            <li>
+              <img src="assets/images/account.png" />
+              <div>
+                <p
+                  style="
+                    margin-bottom: 0px;
+                    font-family: Poppins;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 12px;
+                  "
+                >
+                  James J. Bourgeois
+                </p>
+                <p
+                  style="
+                    font-family: Poppins;
+                    font-style: normal;
+                    font-weight: lighter;
+                    font-size: 9px;
+                  "
+                >
+                  SEO Expert
+                </p>
+              </div>
+            </li>
+            <li>
+              <img src="assets/images/account.png" />
+              <div>
+                <p
+                  style="
+                    margin-bottom: 0px;
+                    font-family: Poppins;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 12px;
+                  "
+                >
+                  Brad K. Gallant
+                </p>
+                <p
+                  style="
+                    font-family: Poppins;
+                    font-style: normal;
+                    font-weight: lighter;
+                    font-size: 9px;
+                  "
+                >
+                  Business Development
+                </p>
+              </div>
+            </li>
+          </ul>
+          <button
+            style="
+              font-style: normal;
+              font-weight: normal;
+
+              color: rgba(255, 255, 255, 1);
+              letter-spacing: 0.2px;
+              background: rgba(102, 49, 48, 1);
+              border: none;
+              border-radius: 5px;
+              width: 90%;
+              padding: 10px;
+              font-size: 18px;
+              margin:10px;
+              
+            "
+          >
+            Compose
+          </button>
+        </div>
+        <div class="col-10">
+          <div
+            class="row"
+            style="border-bottom: 2px solid rgba(221, 223, 225, 1)"
+          >
+            <div
+              class="col-6"
+              style="
+                border-right: 2px solid rgba(221, 223, 225, 1);
+                padding: 20px 20px;
+              "
+            >
+              <div style="position: relative">
+                <img
+                  src="assets/images/search2.png"
+                  style="
+                    position: absolute;
+                    height: 50%;
+                    top: 25%;
+                    left: 5px;
+                  "
+                />
+                <input
+                  type="text"
+                  placeholder="Search Current Mail"
+                  style="
+                    border: none;
+                    border-bottom: 1px solid gray;
+                    width: 60%;
+                    padding: 7px 30px;
+                  "
+                />
+              </div>
+              <ul
+                style="
+                  display: flex;
+                  list-style: none;
+                  justify-content: space-between;
+                  padding-left: 0px;
+                  margin-top: 40px;
+                  margin-bottom: 0px;
+                "
+              >
+                <li>All</li>
+                <li style="opacity: 0.6">Unread</li>
+                <li style="opacity: 0.6">Marked</li>
+                <li>
+                  By Date<img
+                    src="assets/images/filter.png"
+                    style="margin-left: 10px"
+                  />
+                </li>
+                <li>
+                  Newest<img
+                    src="assets/images/read-message.png"
+                    style="height: 14px; margin-left: 10px"
+                  />
+                </li>
+              </ul>
+            </div>
+            <div class="col-6" style="padding: 0px; margin: 0px">
+              <div style="display: flex; margin: 40px 40px">
+                <img
+                  src="assets/images/person5.png"
+                  style="
+                    border: 3px solid gray;
+                    border-radius: 50%;
+                    margin-right: 20px;
+                  "
+                />
+                <div>
+                  <p
+                    style="
+                      /* margin-bottom: 0px; */
+                      font-family: Poppins;
+                      font-style: normal;
+                      font-weight: normal;
+                      font-size: 16px;
+                      color: rgba(102, 49, 48, 1);
+                    "
+                  >
+                    Soumya Narahari
+                  </p>
+                  <p
+                    style="
+                      margin-bottom: 0px;
+                      font-family: poppins;
+                      font-style: normal;
+                      font-weight: normal;
+                      font-size: 16px;
+                      color: rgba(171, 175, 179, 1);
+                    "
+                  >
+                    2 Oct 2023
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div
+              class="col-6"
+              style="
+                border-right: 2px solid rgba(221, 223, 225, 1);
+                padding: 0px;
+              "
+            >
+              <ul style="list-style: none; padding-left: 0px">
+                <!-- <li>
+                        <div style="display: flex; margin: 40px 40px;">
+                            <img
+                              src="assets/images/person5.png"
+                              style="
+                                border: 3px solid gray;
+                                border-radius: 50%;
+                                margin-right: 20px;
+                              "
+                            />
+                            <div>
+                              <p
+                                style="
+                                  /* margin-bottom: 0px; */
+                                  font-family: Poppins;
+                                  font-style: normal;
+                                  font-weight: normal;
+                                  font-size: 16px;
+                                  color: rgba(102, 49, 48, 1);
+                                "
+                              >
+                                Soumya Narahari
+                              </p>
+                              <p
+                                style="
+                                margin-bottom: 0px;
+                                  font-family: poppins;
+                                  font-style: normal;
+                                  font-weight: normal;
+                                  font-size: 16px;
+                                  color: rgba(171, 175, 179, 1);
+                                  
+                                "
+                              >
+                                2 Oct 2023
+                              </p>
+                            </div>
+                          </div>
+                    </li> -->
+                <li>
+                  <div class="row" style="padding: 20px 15px">
+                    <div class="col-2">
+                      <img
+                        src="assets/images/person1.png"
+                        style="
+                          border: 2px solid brown;
+                          border-radius: 50%;
+                          height: 70px;
+                        "
+                      />
+                    </div>
+                    <div class="col-10">
+                      <div>
+                        <div style="margin-bottom: 0px; display: flex">
+                          <p
+                            style="
+                              font-family: Poppins;
+                              font-style: normal;
+                              font-weight: normal;
+                              font-size: 12px;
+                            "
+                          >
+                            Monish Nair
+                          </p>
+                          <p
+                            style="
+                              margin-left: auto;
+                              font-family: CircularStd-Book;
+                              font-style: normal;
+                              font-weight: normal;
+                              font-size: 14px;
+                              color: rgba(171, 175, 179, 1);
+                            "
+                          >
+                            02 Oct 2023
+                          </p>
+                        </div>
+
+                        <div style="display: flex">
+                          <p
+                            style="
+                              font-family: Poppins;
+                              font-style: normal;
+                              font-weight: normal;
+                              font-size: 16px;
+                            "
+                          >
+                            Introducing our new tool!
+                          </p>
+                          <p
+                            style="
+                              margin-left: auto;
+                              font-family: Poppins-Light;
+                              font-style: normal;
+                              font-weight: normal;
+                              font-size: 10px;
+                              color: rgba(133, 152, 173, 1);
+                            "
+                          >
+                            10:35
+                          </p>
+                        </div>
+                        <p
+                          style="
+                            font-family: Poppins;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 12px;
+                            color: rgba(171, 175, 179, 1);
+                          "
+                        >
+                          A small river named Duden flows by their supplies
+                          necessary regelialia
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    style="border-bottom: 2px solid rgba(221, 223, 225, 1)"
+                  ></div>
+                </li>
+                <!-- second email -->
+                <li>
+                  <div class="row" style="padding: 20px 15px">
+                    <div class="col-2">
+                      <img
+                        src="assets/images/person2.png"
+                        style="
+                          border: 2px solid brown;
+                          border-radius: 50%;
+                          height: 70px;
+                        "
+                      />
+                    </div>
+                    <div class="col-10">
+                      <div>
+                        <div style="margin-bottom: 0px; display: flex">
+                          <p
+                            style="
+                              font-family: Poppins;
+                              font-style: normal;
+                              font-weight: normal;
+                              font-size: 12px;
+                            "
+                          >
+                            Kiran Nalawade
+                          </p>
+                          <p
+                            style="
+                              margin-left: auto;
+                              font-family: CircularStd-Book;
+                              font-style: normal;
+                              font-weight: normal;
+                              font-size: 14px;
+                              color: rgba(171, 175, 179, 1);
+                            "
+                          >
+                            02 Oct 2023
+                          </p>
+                        </div>
+
+                        <div style="display: flex">
+                          <p
+                            style="
+                              font-family: Poppins;
+                              font-style: normal;
+                              font-weight: normal;
+                              font-size: 16px;
+                            "
+                          >
+                            My leads section layout!
+                          </p>
+                          <p
+                            style="
+                              margin-left: auto;
+                              font-family: Poppins-Light;
+                              font-style: normal;
+                              font-weight: normal;
+                              font-size: 10px;
+                              color: rgba(133, 152, 173, 1);
+                            "
+                          >
+                            10:35
+                          </p>
+                        </div>
+                        <p
+                          style="
+                            font-family: Poppins;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 12px;
+                            color: rgba(171, 175, 179, 1);
+                          "
+                        >
+                          A small river named Duden flows by their supplies
+                          necessary regelialia
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    style="border-bottom: 2px solid rgba(221, 223, 225, 1)"
+                  ></div>
+                </li>
+                <!-- third email -->
+                <li>
+                  <div class="row" style="padding: 20px 15px">
+                    <div class="col-2">
+                      <img
+                        src="assets/images/person3.png"
+                        style="
+                          border: 2px solid brown;
+                          border-radius: 50%;
+                          height: 70px;
+                        "
+                      />
+                    </div>
+                    <div class="col-10">
+                      <div>
+                        <div style="margin-bottom: 0px; display: flex">
+                          <p
+                            style="
+                              font-family: Poppins;
+                              font-style: normal;
+                              font-weight: normal;
+                              font-size: 12px;
+                            "
+                          >
+                            Nishanti Samantha
+                          </p>
+                          <p
+                            style="
+                              margin-left: auto;
+                              font-family: CircularStd-Book;
+                              font-style: normal;
+                              font-weight: normal;
+                              font-size: 14px;
+                              color: rgba(171, 175, 179, 1);
+                            "
+                          >
+                            01 Oct 2023
+                          </p>
+                        </div>
+
+                        <div style="display: flex">
+                          <p
+                            style="
+                              font-family: Poppins;
+                              font-style: normal;
+                              font-weight: normal;
+                              font-size: 16px;
+                            "
+                          >
+                            Need new layouts
+                          </p>
+                          <p
+                            style="
+                              margin-left: auto;
+                              font-family: Poppins-Light;
+                              font-style: normal;
+                              font-weight: normal;
+                              font-size: 10px;
+                              color: rgba(133, 152, 173, 1);
+                            "
+                          >
+                            10:35
+                          </p>
+                        </div>
+                        <p
+                          style="
+                            font-family: Poppins;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 12px;
+                            color: rgba(171, 175, 179, 1);
+                          "
+                        >
+                          A small river named Duden flows by their supplies
+                          necessary regelialia
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    style="border-bottom: 2px solid rgba(221, 223, 225, 1)"
+                  ></div>
+                </li>
+                <!-- 4th email -->
+                <li>
+                  <div class="row" style="padding: 20px 15px">
+                    <div class="col-2">
+                      <img
+                        src="assets/images/person4.png"
+                        style="
+                          border: 2px solid brown;
+                          border-radius: 50%;
+                          height: 70px;
+                        "
+                      />
+                    </div>
+                    <div class="col-10">
+                      <div>
+                        <div style="margin-bottom: 0px; display: flex">
+                          <p
+                            style="
+                              font-family: Poppins;
+                              font-style: normal;
+                              font-weight: normal;
+                              font-size: 12px;
+                            "
+                          >
+                            Samir Sharma
+                          </p>
+                          <p
+                            style="
+                              margin-left: auto;
+                              font-family: CircularStd-Book;
+                              font-style: normal;
+                              font-weight: normal;
+                              font-size: 14px;
+                              color: rgba(171, 175, 179, 1);
+                            "
+                          >
+                            02 Oct 2023
+                          </p>
+                        </div>
+
+                        <div style="display: flex">
+                          <p
+                            style="
+                              font-family: Poppins;
+                              font-style: normal;
+                              font-weight: normal;
+                              font-size: 16px;
+                            "
+                          >
+                            Updated invitation!
+                          </p>
+                          <p
+                            style="
+                              margin-left: auto;
+                              font-family: Poppins-Light;
+                              font-style: normal;
+                              font-weight: normal;
+                              font-size: 10px;
+                              color: rgba(133, 152, 173, 1);
+                            "
+                          >
+                            10:35
+                          </p>
+                        </div>
+                        <p
+                          style="
+                            font-family: Poppins;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 12px;
+                            color: rgba(171, 175, 179, 1);
+                          "
+                        >
+                          Updated invitation: Catch up on Website
+                          Development Work @ Mon Sep 4, 2023 10am - 11am
+                          (IST)
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    style="border-bottom: 2px solid rgba(221, 223, 225, 1)"
+                  ></div>
+                </li>
+                <!-- 5th email -->
+              </ul>
+            </div>
+            <div class="col-6" style="padding: 20px 30px">
+              <p
+                style="
+                  font-family: Poppins;
+                  font-style: normal;
+                  font-weight: normal;
+                  font-size: 13px;
+                  color: rgba(122, 69, 13, 1);
+                "
+              >
+                A collection of textile samples lay spread
+              </p>
+              <p
+                style="
+                  font-family: CircularStd-Book;
+                  font-style: normal;
+                  font-weight: normal;
+                  font-size: 10px;
+                  color: rgba(171, 175, 179, 1);
+                "
+              >
+                To: Me,invernessmckenzie@gmail.com
+              </p>
+              <p
+                style="
+                  font-family: Poppins;
+                  font-style: normal;
+                  font-weight: normal;
+                  font-size: 12px;
+                  color: rgba(93, 96, 102, 1);
+                "
+              >
+                Hi Soumya,
+              </p>
+              <p
+                style="
+                  font-family: Poppins;
+                  font-style: normal;
+                  font-weight: lighter;
+                  font-size: 12px;
+                  color: rgba(129, 122, 122, 1);
+                  letter-spacing: 0.2px;
+                "
+              >
+                Holistic Globe Body Mind Spirit Expo Conference is a
+                must-attend event for anyone interested in the latest trends
+                and innovations in the tech industry. This exciting
+                conference brings together leading experts, innovators, and
+                entrepreneurs to share their insights, experiences, and
+                ideas, and to explore the future of technology. At the Xtra
+                Technology Conference, you’ll have the chance to hear from
+                some of the top minds in the tech industry, as they share
+                their knowledge and expertise in a wide range of fields,
+                from artificial intelligence and machine learning to
+                cybersecurity and blockchain technology. You’ll learn about
+                the latest trends and emerging technologies, and discover
+                how they’re transforming industries.
+              </p>
+              <p
+                style="
+                  font-family: Poppins;
+                  font-style: normal;
+                  font-weight: normal;
+                  font-size: 12px;
+                  color: rgba(93, 96, 102, 1);
+                "
+              >
+                Thanks & Regards,
+              </p>
+              <p
+                style="
+                  font-family: Poppins;
+                  font-style: normal;
+                  font-weight: normal;
+                  font-size: 12px;
+                  color: rgba(171, 175, 179, 1);
+                "
+              >
+                NWC Team
+              </p>
+              <textarea
+                class="reply_email"
+                type="text"
+                placeholder="It’s really amazing! I want to know more about it."
+                rows="3"
+                style="
+                  border: 1px solid rgba(221, 223, 225, 1);
+                  width: 100%;
+                  padding: 10px 20px;
+                "
+              ></textarea>
+              <button
+                style="
+                  font-style: normal;
+                  font-weight: normal;
+                  font-size: 10px;
+                  color: rgba(255, 255, 255, 1);
+                  letter-spacing: 0.2px;
+                  background: rgba(102, 49, 48, 1);
+                  border: none;
+                  border-radius: 5px;
+                  padding: 10px 60px;
+                  margin-top: 15px;
+                  float: inline-end;
+                "
+              >
+                Send
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        </div>
+        </div>
+

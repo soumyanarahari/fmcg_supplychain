@@ -1,0 +1,21 @@
+.maincontainer {
+    background-image: url('/assets/images/manuimg.png');
+    padding: 50px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    text-align: center;
+  }
+  .blurredtext{
+    text-align: center;
+    margin: 6rem;
+    height: 20vw;
+    overflow: visible;
+    background-color: rgba(211, 211, 211, 0.09);
+    padding: 60px;
+    backdrop-filter: blur(20px);
+    // border-width: 1.5px;
+    // border-style: solid;
+    border-color: none;
+    color: black;
+  }

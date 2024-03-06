@@ -1,0 +1,852 @@
+<script src="tinymce/tinymce.min.js"></script>
+<app-sidebar [isExpanded]="sidebarExpanded" (toggleSidebar)="sidebarExpanded = !sidebarExpanded"></app-sidebar>
+<div class="content" [ngClass]="{ 'sidebarExpanded': sidebarExpanded }">
+    <!-- <div class="sidebar">
+        <br />
+        <div style="display: grid;justify-content: center;border-bottom: 1px solid grey;">
+            <div style="display: flex;justify-content: center;"><img style="width: 50px;" src="assets/images/bcp.png">
+            </div>
+            <p style="color: white;font-family: playfair display;font-size: 10px;">For The Consumer Goods Industry</p>
+        </div>
+        <a><img src="assets/images/calendar1.png" style="width: 25px;">&nbsp;&nbsp;&nbsp;<span>My Subscriptions</span></a>
+        <a><img src="assets/images/events.png" style="width: 25px;">&nbsp;&nbsp;&nbsp;<span>My Events</span></a>
+        <a class="active"><img src="assets/images/jobs.png" style="width: 25px;">&nbsp;&nbsp;&nbsp;<span>My Jobs</span></a>
+        <a><img src="assets/images/manu.png" style="width: 25px;">&nbsp;&nbsp;&nbsp;<span>My Manufacturer Listing</span></a>
+        <a><img src="assets/images/message.png" style="width: 25px;">&nbsp;&nbsp;&nbsp;<span>My Messages</span></a>
+        <a><img src="assets/images/leads.png" style="width: 25px;">&nbsp;&nbsp;&nbsp;<span>My Leads</span></a>
+        <a><img src="assets/images/advt.png" style="width: 25px;">&nbsp;&nbsp;&nbsp;<span>My Advertising</span></a>
+    </div> -->
+    
+    <div class="content">
+        <div class="sidebar" [ngClass]="{'show': showSidebar}">
+            <div
+            style="
+              background-color: rgba(253, 238, 238, 1);
+              position: relative;
+              padding-bottom: 20px;
+              padding-top: 20px;
+            "
+          >
+            <div></div>
+            <div (click)="toggleSidebar()" style="position: absolute; right: 0px; top: 0px; margin: 20px;cursor: pointer;">
+              <img src="assets/images/close.png" style="height: 30px;" />
+            </div>
+            <div style="position: absolute; left: 0px; top: 0px; margin: 20px">
+              <img
+                src="assets/images/search.png"
+                style="height: 30px; display: block; margin-bottom: 20px"
+              />
+              <img
+                src="assets/images/instagram.png"
+                style="display: block; margin-bottom: 10px"
+              />
+              <img src="assets/images/twitter.png" style="display: block; margin-bottom: 10px"/>
+              <img src="assets/images/linkedin.png" style="display: block; margin-bottom: 10px"/>
+              <img src="assets/images/whatsapp.png" style="display: block; margin-bottom: 10px"/>
+              <img src="assets/images/facebook.png" style="display: block; margin-bottom: 10px"/>
+              <img src="assets/images/logoshade.png" style="width: 90%;
+              display: grid;
+              margin-left: -77px;
+              margin-top: 130px;">
+            </div>
+            <!-- logo -->
+        
+            <div class="logo" style="text-align: center; margin-bottom: 20px">
+              <img src="assets/images/logo.png" />
+            </div>
+            <div class="row"
+              style="
+                text-align: center;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 25px;color: black;
+              "
+            >
+            <div class="col-lg-8" style="display: grid;
+            justify-content: flex-end;font-size: 17px;">
+              <p style="cursor: pointer;" [routerLink]="['/']">Home</p>
+              <p style="cursor: pointer;" [routerLink]="['/events']">Events</p>
+              <p style="cursor: pointer;" [routerLink]="['/manufacturer']">Manufacturer</p>
+              <p>Products</p>
+              <p style="cursor: pointer;" [routerLink]="['/joblisting']">Jobs</p>
+              <p style="cursor: pointer;" [routerLink]="['/contactus']">Contact Us</p>
+              <p style="font-weight: bold">Manufacturer <span style="cursor: pointer;" [routerLink]="['/login']">LogIn</span>/<span style="cursor: pointer;" [routerLink]="['/signup']">Register</span></p>
+              <p style="font-weight: bold">Brand <span style="cursor: pointer;" [routerLink]="['/login']">LogIn</span>/<span style="cursor: pointer;" [routerLink]="['/signup']">Register</span></p>
+              <p>Terms & Conditions</p>
+              <p>Privacy Policies</p>
+              </div>
+              <div class="col-lg-4">
+                <img src="assets/images/logoshade.png" style="width: 140%;">
+              </div>
+            </div>
+            <div style="text-align: center; margin: 30px">
+              <img src="assets/images/envelop.png" />
+            </div>
+            <div>
+              <p
+                style="
+                  text-align: center;
+                  font-family: Poppins;
+                  font-style: normal;
+                  font-weight: bold;
+                  font-size: 17px;
+                  color: rgba(0, 0, 0, 1);
+                  padding-left: 50px;
+                  padding-right: 50px;
+                "
+              >
+                We’re building the community of tomorrow, and making it easier for
+                entrepreneurs, indie founders, marketers, and sales professionals to
+                learn and connect with each other.
+              </p>
+            </div>
+          </div>
+            <!-- <button (click)="toggleSidebar()">Toggle Sidebar</button> -->
+        </div>
+       <div class="split">
+    <div class="left" style="padding-left: 10px;margin-top: 5px;">
+        <span style="color: rgba(100,96,96,1);font-family: poppins;font-size: 10px;text-align: end;margin-left: 2px;"> {{ getCurrentDate() }}</span> 
+        &nbsp; <img src="assets/images/downarrow.png" style="width: 18px;">
+        <p>
+            <input type="text" class="searchinput" placeholder="Search">
+        </p>
+    </div>
+    <div class="right">
+        <div class="row">
+            <div class="col">
+        <table cellspacing="10"> 
+            <tr> 
+                <td style="padding-right: 10px;">  
+                    <img style="width: 30px;" src="assets/images/noti.png">
+                    </td>
+              <td style="padding-right: 16px;">  
+                <div style="margin-top: 20px;">   
+            <h5 style="color: rgba(102,49,48,1);font-family: Poppins;font-size: 14px;margin-bottom: 0.2rem;">{{ (username$ | async)?.username || 'Guest' }} </h5>  
+            <p style="color: rgba(100,96,96,1);font-family: poppins;font-size: 8px;text-align: end;">Administrator</p> 
+            </div>   
+              </td> 
+              <td  style="padding-right: 16px;"> 
+                <img style="width: 50px;
+                border-radius: 50%;
+                height: 40px;" src="assets/images/person.png">
+              </td> 
+              <td style="padding-right: 20px;">
+                <img src="assets/images/downarrow.png" style="width: 18px;">
+              </td>
+            </tr> 
+          </table> 
+          </div>
+          <div class="col">
+            <a class="nav-item nav-link" style="color: black">
+                    <!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
+                    <img (click)="toggleSidebar1()"  style="cursor: pointer;position: absolute;
+                    top: 28px;
+                    left: 5px;" src="assets/images/hamberger.png" />
+                  </a>
+    </div>
+          </div>
+    </div>
+       </div>
+       <br/>
+        <ul ngbNav #nav="ngbNav" class="navbar-toggle nav nav-pills nav-justified pull-left">
+            <li ngbNavItem="create">
+                <a ngbNavLink>Create a Job</a>
+                <ng-template ngbNavContent>
+                    <br />
+                    <div class="row" style="display: flex;justify-content: center;">
+                        <div class="col-lg-8" id="id1">
+                            <div class="card" style="filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));">
+                                <div class="card-header" style="background:#663130"></div>
+                                <div class="card-body" style="padding: 0rem 0rem;">
+                                    <div
+                                        style="display: grid;justify-content: center;border-bottom: 1px solid grey;padding: 20px 0px 18px 0px">
+                                        <div style="display: flex;justify-content: center;">
+                                            <h5 style="font-family: Poppins;text-align: center;">Post A Job</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body" style="padding: 1rem 4rem;">
+                                   
+                                    <label class="labletitle">Job Title</label>
+                                    <input type="text" class="input2" style="padding: 10px;" placeholder="Add the title you are hiring for">
+                                    <label class="labletitle">Company</label>
+                                    <input type="text" style="padding: 10px;" class="input2" placeholder="">
+                                    <label class="labletitle">Workplace Type</label>
+                                    <select
+                                        style="padding:0px 0px 0px 10px;font-size:14px;cursor:pointer;width: 100%;height: 40px;font-family: Poppins;">
+                                        <option value="">Select</option>
+                                        <option value="">On-Site</option>
+                                        <option value="">Hybrid</option>
+                                    </select>
+                                    <label class="labletitle">Job Location</label>
+                                    <input type="text" class="input2" style="padding: 10px;" placeholder="Pune, Maharashtra, India">
+                                    <label class="labletitle">Job Type</label>
+                                    <select
+                                        style="padding:0px 0px 0px 10px;font-style:Poppins;cursor:pointer;width: 100%;height: 40px;">
+                                        <option value="">Select</option>
+                                        <option value="">Full-Time</option>
+                                        <option value="">Part-Time</option>
+                                        <option value="">Remote</option>
+                                    </select>
+                                    <br /> <br />
+                                    <div style="display: flex;justify-content: center;">
+                                        <button style="color:white;width: 40%;
+                            font-size: 15px !important;background-color:#663130 !important;padding: 6px;border-radius: 5px;border: none;" type="button" 
+                                            (click)="myfunction()">Next</button>
+                                    </div>
+                                    <br />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="display: flex;justify-content: center;">
+                        <div class="col-lg-8" style="display: none;" id="id2">
+                            <div class="card" style="filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));">
+                                <div class="card-header" style="background:#663130"></div>
+                                <div class="card-body" style="padding: 0rem 0rem;">
+                                    <!-- <div
+                                        style="display: grid;justify-content: center;border-bottom: 1px solid grey;padding: 10px 0px 20px 0px">
+                                        <div style="display: flex;justify-content: center;"><img style="width: 230px;"
+                                                src="assets/images/logoblack.png">
+                                        </div>
+                                    </div> -->
+                                </div>
+                                <div class="card-body" style="padding: 1rem 1rem;">
+                                    <label class="labletitle">Job Description</label>
+                                    <form method="post">
+                                        <textarea id="message" name="message" rows="15" cols="100"
+                                            class="tinymce"></textarea><br />
+                                    </form>
+                                    <br />
+                                    <div style="display: flex;justify-content: center;gap: 60px;">
+                                        <button style="color:white;width: 40%;
+            font-size: 15px !important;background-color:#663130 !important;padding: 6px;border-radius: 5px;border: none;" type="button" 
+                                            (click)="backfunction()">Back</button>
+                                        <button style="color:white;width: 40%;
+            font-size: 15px !important;background-color:#663130 !important;padding: 6px;border-radius: 5px;border: none;" type="button" 
+                                            (click)="nextfunction()">Next</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="display: flex;justify-content: center;">
+                        <div class="col-lg-8" style="display: none;" id="id3">
+                            <div class="card" style="filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));">
+                                <div class="card-header" style="background:#663130"></div>
+                                <div class="card-body" style="padding: 0rem 0rem;">
+                                    <!-- <div
+                                        style="display: grid;justify-content: center;border-bottom: 1px solid grey;padding: 10px 0px 20px 0px">
+                                        <div style="display: flex;justify-content: center;"><img style="width: 230px;"
+                                                src="assets/images/logoblack.png">
+                                        </div>
+                                    </div> -->
+                                </div>
+                                <div class="card-body" style="padding: 1rem 1rem;">
+                                    <label class="labletitle">Screening Questions</label>
+                                    <div class="row">
+                                        <div class="col-lg-1" style="text-align: end;">
+                                            <input class="input1" type="checkbox" checked disabled>
+                                        </div>
+                                        <div class="col-lg-11">
+                                            Name of the Candidate
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-1" style="text-align: end;">
+                                            <input class="input1" type="checkbox" checked disabled>
+                                        </div>
+                                        <div class="col-lg-11">
+                                            Email
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-1" style="text-align: end;">
+                                            <input class="input1" type="checkbox" checked disabled>
+                                        </div>
+                                        <div class="col-lg-11">
+                                            Phone Number
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-1" style="text-align: end;">
+                                            <input class="input1" type="checkbox" checked disabled>
+                                        </div>
+                                        <div class="col-lg-11">
+                                            Upload Resume
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-1" style="text-align: end;">
+                                            <input class="input1" type="checkbox">
+                                        </div>
+                                        <div class="col-lg-11">
+                                            What Is Your Current Salary?
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-1" style="text-align: end;">
+                                            <input class="input1" type="checkbox">
+                                        </div>
+                                        <div class="col-lg-11">
+                                            What is your expected salary?
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-1" style="text-align: end;">
+                                            <input class="input1" type="checkbox">
+                                        </div>
+                                        <div class="col-lg-11">
+                                            Experience
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-1" style="text-align: end;">
+                                            <input class="input1" type="checkbox">
+                                        </div>
+                                        <div class="col-lg-11">
+                                            Educational Qualification?
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-1" style="text-align: end;">
+                                            <input class="input1" type="checkbox">
+                                        </div>
+                                        <div class="col-lg-11">
+                                            Are You Comfortable Working Flexible Shifts?
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <p>
+                                        <b style="color: rgba(26,49,163,1);"> <u>Click Here To Add Custom Questions If
+                                                Any</u></b>
+                                    </p>
+                                    <div class="row" style="border: 1px solid lightgray;
+                                            padding: 20px 10px 5px 5px;">
+                                            <div class="row">
+                                        <div class="col-lg-1">
+                                            <p style="white-space: nowrap;">Qn. 1</p>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <input class="input2" type="text">
+                                        </div>
+                                        <div class="col-lg-1" style="margin-left: -16px;    margin-top: 2px;">
+                                            <button style="color:black;border: 1px solid black;
+      font-size: 15px !important;background-color:rgba(255,239,232,1) !important;padding: 6px;border-radius: 5px;" onclick="add()">ADD</button>
+                                        </div>
+                                        <div class="col-lg-2" style="margin-left: 16px;    margin-top: 2px;">
+                                            <button style="color:black;border: 1px solid black;
+      font-size: 15px !important;background-color:rgba(255,239,232,1) !important;padding: 6px;border-radius: 5px;" onclick="remove()">REMOVE</button>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div id="new_chq"></div>
+                                            </div>
+                                            <div class="col">
+                                                <input type="hidden" class="input2" value="1" id="total_chq">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="row">
+                                        <div class="col-lg-1">
+                                            <p style="white-space: nowrap;">Qn. 2</p>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <input class="input2" type="text">
+                                        </div>
+                                        <div class="col-lg-1" style="margin-left: -16px;    margin-top: 2px;">
+                                            <button  style="color:black;border: 1px solid black;
+      font-size: 15px !important;background-color:rgba(255,239,232,1) !important;padding: 6px;border-radius: 5px;" onclick="add1()">ADD</button>
+                                        </div>
+                                        <div class="col-lg-2" style="margin-left: 16px;    margin-top: 2px;">
+                                            <button  style="color:black;border: 1px solid black;
+      font-size: 15px !important;background-color:rgba(255,239,232,1) !important;padding: 6px;border-radius: 5px;" onclick="remove1()">REMOVE</button>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div id="new_chq1"></div>
+                                            </div>
+                                            <div class="col">
+                                                <input type="hidden" class="input2" value="1" id="total_chq1">
+                                            </div>
+                                        </div>
+                                    </div> -->
+    </div>
+                                    <br />
+                                    <div style="display: flex;justify-content: center;gap: 60px;">
+                                        <button style="color:white;width: 40%;
+                        font-size: 15px !important;background-color:#663130 !important;padding: 6px;border-radius: 5px;border: none;" type="button" 
+                                            (click)="backfunction1()">Back</button>
+                                        <button style="color:white;width: 40%;
+                        font-size: 15px !important;background-color:#663130 !important;padding: 6px;border-radius: 5px;border: none;" type="button"
+                                            >Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                </ng-template>
+            </li>
+            <li ngbNavItem="added">
+                <a ngbNavLink>Jobs Posted</a>
+                <ng-template ngbNavContent>
+                    <br />
+                    <div class="card" style="filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));margin-left: -1.5rem;">
+                        <div class="card-body">
+                            <div class="row rowpad">
+                                <div class="col-lg-8">
+                                    <h6 style="font-size: 15px !important;">Technical Account Manager</h6>
+                                    <p
+                                        style="margin-bottom: 0px;color: rgba(100,96,96,1);font-family: poppins;font-size: 10px">
+                                        <b>Artsai</b></p>
+                                        <p
+                                        style="margin-bottom: 0px;color: rgba(100,96,96,1);font-family: poppins;font-size: 10px">
+                                        Job Type: Hybrid</p>
+                                    <p
+                                        style="margin-bottom: 0px;color: rgba(102,49,48,1);font-family: poppins;font-size: 10px">
+                                        New York, NY</p>
+                                    <p
+                                        style="margin-bottom: 0px;color: rgba(100,96,96,1);font-family: poppins;font-size: 10px">
+                                        Medical, +1 Benefit</p>
+                                </div>
+                                <div class="col-lg-3" style="display: flex;
+                    align-items: center;">
+                                    <button style="color:black;width: 60%;
+                        font-size: 12px !important;background-color: rgba(252,235,210,1) !important;cursor: pointer;" type="button"
+                                        class="btn">View Details</button>
+                                    <svg style="width: 13px;
+                        margin-left: 25px;cursor: pointer;" (click)="open(content)" viewBox="217.218 828.122 12 12">
+                                        <path id="Path_103787"
+                                            d="M 224.2798156738281 830.4599609375 L 226.8814544677734 833.0615844726562 C 226.9918518066406 833.171630859375 226.9918518066406 833.349609375 226.8814544677734 833.4599609375 L 220.7263793945312 839.6151123046875 L 217.8785705566406 840.1142578125 C 217.4942016601562 840.1800537109375 217.1592407226562 839.84716796875 217.2271270751953 839.4628295898438 L 217.7239379882812 836.614990234375 L 223.8789978027344 830.4599609375 C 223.9890747070312 830.3495483398438 224.1673583984375 830.3495483398438 224.2798156738281 830.4599609375 Z M 219.2801818847656 836.9338989257812 L 218.4295349121094 836.9338989257812 L 218.1645050048828 838.445556640625 L 218.8934326171875 839.1744995117188 L 220.4054565429688 838.909423828125 L 220.4054565429688 838.058837890625 L 219.2801818847656 838.058837890625 L 219.2801818847656 836.9338989257812 Z M 220.5906066894531 836.0877075195312 L 224.1999206542969 832.47802734375 C 224.3288421630859 832.34912109375 224.3288421630859 832.1427001953125 224.1999206542969 832.0137939453125 C 224.0713500976562 831.8848876953125 223.8649444580078 831.8848876953125 223.7360229492188 832.0137939453125 L 220.1263732910156 835.6231079101562 C 219.9974670410156 835.7523193359375 219.9974670410156 835.958740234375 220.1263732910156 836.0877075195312 C 220.2552795410156 836.2166137695312 220.4616851806641 836.2166137695312 220.5906066894531 836.0877075195312 Z M 227.8075256347656 832.5318603515625 C 227.6971282958984 832.6419677734375 227.5191650390625 832.6419677734375 227.4087829589844 832.5318603515625 L 224.80712890625 829.9298706054688 C 224.6970825195312 829.8201904296875 224.6970825195312 829.641845703125 224.80712890625 829.531494140625 L 225.8878479003906 828.4511108398438 C 226.3260192871094 828.012939453125 227.0384826660156 828.012939453125 227.4790649414062 828.4511108398438 L 228.8878784179688 829.859619140625 C 229.3284606933594 830.298095703125 229.3284606933594 831.0106201171875 228.8878784179688 831.451171875 L 227.8075256347656 832.5318603515625 Z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="row rowpad">
+                                <div class="col-lg-8">
+                                    <h6 style="font-size: 15px !important;">E-Commerce Marketplace Channel Manager</h6>
+                                    <p
+                                        style="margin-bottom: 0px;color: rgba(100,96,96,1);font-family: poppins;font-size: 10px;">
+                                        <b>Paddy O'​ Furniture</b></p>
+                                        <p
+                                        style="margin-bottom: 0px;color: rgba(100,96,96,1);font-family: poppins;font-size: 10px">
+                                        Job Type: On-Site</p>
+                                    <p
+                                        style="margin-bottom: 0px;color: rgba(102,49,48,1);font-family: poppins;font-size: 10px;">
+                                        Greater Phoenix Area</p>
+                                    <p
+                                        style="margin-bottom: 0px;color: rgba(100,96,96,1);font-family: poppins;font-size: 10px;">
+                                        $90K/Yr (From Job Description) · 5 Benefits</p>
+                                </div>
+                                <div class="col-lg-3" style="display: flex;
+                    align-items: center;">
+                                    <button style="color:black;width: 60%;
+                        font-size: 12px !important;background-color: rgba(252,235,210,1) !important;cursor: pointer;" type="button"
+                                        class="btn">View Details</button>
+                                    <svg style="width: 13px; 
+                        margin-left: 25px;cursor: pointer;" (click)="open(content)" viewBox="217.218 828.122 12 12">
+                                        <path id="Path_103787"
+                                            d="M 224.2798156738281 830.4599609375 L 226.8814544677734 833.0615844726562 C 226.9918518066406 833.171630859375 226.9918518066406 833.349609375 226.8814544677734 833.4599609375 L 220.7263793945312 839.6151123046875 L 217.8785705566406 840.1142578125 C 217.4942016601562 840.1800537109375 217.1592407226562 839.84716796875 217.2271270751953 839.4628295898438 L 217.7239379882812 836.614990234375 L 223.8789978027344 830.4599609375 C 223.9890747070312 830.3495483398438 224.1673583984375 830.3495483398438 224.2798156738281 830.4599609375 Z M 219.2801818847656 836.9338989257812 L 218.4295349121094 836.9338989257812 L 218.1645050048828 838.445556640625 L 218.8934326171875 839.1744995117188 L 220.4054565429688 838.909423828125 L 220.4054565429688 838.058837890625 L 219.2801818847656 838.058837890625 L 219.2801818847656 836.9338989257812 Z M 220.5906066894531 836.0877075195312 L 224.1999206542969 832.47802734375 C 224.3288421630859 832.34912109375 224.3288421630859 832.1427001953125 224.1999206542969 832.0137939453125 C 224.0713500976562 831.8848876953125 223.8649444580078 831.8848876953125 223.7360229492188 832.0137939453125 L 220.1263732910156 835.6231079101562 C 219.9974670410156 835.7523193359375 219.9974670410156 835.958740234375 220.1263732910156 836.0877075195312 C 220.2552795410156 836.2166137695312 220.4616851806641 836.2166137695312 220.5906066894531 836.0877075195312 Z M 227.8075256347656 832.5318603515625 C 227.6971282958984 832.6419677734375 227.5191650390625 832.6419677734375 227.4087829589844 832.5318603515625 L 224.80712890625 829.9298706054688 C 224.6970825195312 829.8201904296875 224.6970825195312 829.641845703125 224.80712890625 829.531494140625 L 225.8878479003906 828.4511108398438 C 226.3260192871094 828.012939453125 227.0384826660156 828.012939453125 227.4790649414062 828.4511108398438 L 228.8878784179688 829.859619140625 C 229.3284606933594 830.298095703125 229.3284606933594 831.0106201171875 228.8878784179688 831.451171875 L 227.8075256347656 832.5318603515625 Z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="row rowpad">
+                                <div class="col-lg-8">
+                                    <h6 style="font-size: 15px !important;">Technical Team Lead</h6>
+                                    <p
+                                        style="margin-bottom: 0px;color: rgba(100,96,96,1);font-family: poppins;font-size: 10px;">
+                                        <b>Allied IT Systems</b></p>
+                                        <p
+                                        style="margin-bottom: 0px;color: rgba(100,96,96,1);font-family: poppins;font-size: 10px">
+                                        Job Type: Hybrid</p>
+                                    <p
+                                        style="margin-bottom: 0px;color: rgba(102,49,48,1);font-family: poppins;font-size: 10px;">
+                                        Port Arthur, TX</p>
+                                    <p
+                                        style="margin-bottom: 0px;color: rgba(100,96,96,1);font-family: poppins;font-size: 10px;">
+                                        3 Benefits</p>
+                                </div>
+                                <div class="col-lg-3" style="display: flex;
+                    align-items: center;">
+                                    <button style="color:black;width: 60%;
+                        font-size: 12px !important;background-color: rgba(252,235,210,1) !important;" type="button"
+                                        class="btn">View Details</button>
+                                    <svg style="width: 13px;
+                        margin-left: 25px;" viewBox="217.218 828.122 12 12">
+                                        <path id="Path_103787"
+                                            d="M 224.2798156738281 830.4599609375 L 226.8814544677734 833.0615844726562 C 226.9918518066406 833.171630859375 226.9918518066406 833.349609375 226.8814544677734 833.4599609375 L 220.7263793945312 839.6151123046875 L 217.8785705566406 840.1142578125 C 217.4942016601562 840.1800537109375 217.1592407226562 839.84716796875 217.2271270751953 839.4628295898438 L 217.7239379882812 836.614990234375 L 223.8789978027344 830.4599609375 C 223.9890747070312 830.3495483398438 224.1673583984375 830.3495483398438 224.2798156738281 830.4599609375 Z M 219.2801818847656 836.9338989257812 L 218.4295349121094 836.9338989257812 L 218.1645050048828 838.445556640625 L 218.8934326171875 839.1744995117188 L 220.4054565429688 838.909423828125 L 220.4054565429688 838.058837890625 L 219.2801818847656 838.058837890625 L 219.2801818847656 836.9338989257812 Z M 220.5906066894531 836.0877075195312 L 224.1999206542969 832.47802734375 C 224.3288421630859 832.34912109375 224.3288421630859 832.1427001953125 224.1999206542969 832.0137939453125 C 224.0713500976562 831.8848876953125 223.8649444580078 831.8848876953125 223.7360229492188 832.0137939453125 L 220.1263732910156 835.6231079101562 C 219.9974670410156 835.7523193359375 219.9974670410156 835.958740234375 220.1263732910156 836.0877075195312 C 220.2552795410156 836.2166137695312 220.4616851806641 836.2166137695312 220.5906066894531 836.0877075195312 Z M 227.8075256347656 832.5318603515625 C 227.6971282958984 832.6419677734375 227.5191650390625 832.6419677734375 227.4087829589844 832.5318603515625 L 224.80712890625 829.9298706054688 C 224.6970825195312 829.8201904296875 224.6970825195312 829.641845703125 224.80712890625 829.531494140625 L 225.8878479003906 828.4511108398438 C 226.3260192871094 828.012939453125 227.0384826660156 828.012939453125 227.4790649414062 828.4511108398438 L 228.8878784179688 829.859619140625 C 229.3284606933594 830.298095703125 229.3284606933594 831.0106201171875 228.8878784179688 831.451171875 L 227.8075256347656 832.5318603515625 Z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="row rowpad">
+                                <div class="col-lg-8">
+                                    <h6 style="font-size: 15px !important;">Senior Engineering Manager</h6>
+                                    <p
+                                        style="margin-bottom: 0px;color: rgba(100,96,96,1);font-family: poppins;font-size: 10px;">
+                                        <b>Artera</b></p>
+                                        <p
+                                        style="margin-bottom: 0px;color: rgba(100,96,96,1);font-family: poppins;font-size: 10px">
+                                        Job Type: Remote</p>
+                                    <p
+                                        style="margin-bottom: 0px;color: rgba(102,49,48,1);font-family: poppins;font-size: 10px;">
+                                        United States</p>
+                                    <p
+                                        style="margin-bottom: 0px;color: rgba(100,96,96,1);font-family: poppins;font-size: 10px;">
+                                        3 Benefits</p>
+                                </div>
+                                <div class="col-lg-3" style="display: flex;
+                    align-items: center;">
+                                    <button style="color:black;width: 60%;
+                        font-size: 12px !important;background-color: rgba(252,235,210,1) !important;" type="button"
+                                        class="btn">View Details</button>
+                                    <svg style="width: 13px;
+                        margin-left: 25px;" viewBox="217.218 828.122 12 12">
+                                        <path id="Path_103787"
+                                            d="M 224.2798156738281 830.4599609375 L 226.8814544677734 833.0615844726562 C 226.9918518066406 833.171630859375 226.9918518066406 833.349609375 226.8814544677734 833.4599609375 L 220.7263793945312 839.6151123046875 L 217.8785705566406 840.1142578125 C 217.4942016601562 840.1800537109375 217.1592407226562 839.84716796875 217.2271270751953 839.4628295898438 L 217.7239379882812 836.614990234375 L 223.8789978027344 830.4599609375 C 223.9890747070312 830.3495483398438 224.1673583984375 830.3495483398438 224.2798156738281 830.4599609375 Z M 219.2801818847656 836.9338989257812 L 218.4295349121094 836.9338989257812 L 218.1645050048828 838.445556640625 L 218.8934326171875 839.1744995117188 L 220.4054565429688 838.909423828125 L 220.4054565429688 838.058837890625 L 219.2801818847656 838.058837890625 L 219.2801818847656 836.9338989257812 Z M 220.5906066894531 836.0877075195312 L 224.1999206542969 832.47802734375 C 224.3288421630859 832.34912109375 224.3288421630859 832.1427001953125 224.1999206542969 832.0137939453125 C 224.0713500976562 831.8848876953125 223.8649444580078 831.8848876953125 223.7360229492188 832.0137939453125 L 220.1263732910156 835.6231079101562 C 219.9974670410156 835.7523193359375 219.9974670410156 835.958740234375 220.1263732910156 836.0877075195312 C 220.2552795410156 836.2166137695312 220.4616851806641 836.2166137695312 220.5906066894531 836.0877075195312 Z M 227.8075256347656 832.5318603515625 C 227.6971282958984 832.6419677734375 227.5191650390625 832.6419677734375 227.4087829589844 832.5318603515625 L 224.80712890625 829.9298706054688 C 224.6970825195312 829.8201904296875 224.6970825195312 829.641845703125 224.80712890625 829.531494140625 L 225.8878479003906 828.4511108398438 C 226.3260192871094 828.012939453125 227.0384826660156 828.012939453125 227.4790649414062 828.4511108398438 L 228.8878784179688 829.859619140625 C 229.3284606933594 830.298095703125 229.3284606933594 831.0106201171875 228.8878784179688 831.451171875 L 227.8075256347656 832.5318603515625 Z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </li>
+            <li ngbNavItem="upgrade">
+                <a ngbNavLink>Upgrade Subscription</a>
+                <ng-template ngbNavContent>
+                    <br />
+                    <div class="row row-cols-1 row-cols-md-1 g-2" style="display: flex;justify-content: center;">
+                        <div class="col-lg-4">
+                            <div class="card" style="filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));border-start-end-radius: 16px;
+                                  border-start-start-radius: 16px;    border-end-end-radius: 16px;
+                  border-end-start-radius: 16px;">
+                                <div class="card-header" style="background: rgba(247,215,201,1);
+                                    text-align: center;font-family: Poppins;border-start-end-radius: 16px;
+                  border-start-start-radius: 16px;font-size: 13px"><b>Job Basic Plan</b></div>
+                                <div class="card-body" style="height: 21vw;">
+                                    <p style="font-size: 8px;
+                                    margin-top: 0.5rem;
+                                    margin-bottom: 0.3rem;">Auto-Renew After Month</p>
+                                    <p style="font-size: 13px;"><b>$50</b></p>
+                                    <p style="font-size: 10px;font-family: Poppins;margin-bottom: 0.4rem;"><img src="assets/images/checkmark.png"
+                                            style="width: 15px;">&nbsp;&nbsp;&nbsp;<span>1 Job/30 Days
+                                            </span></p>
+                                    <p style="font-size: 10px;font-family: Poppins;margin-bottom: 0.4rem;"><img src="assets/images/checkmark.png"
+                                            style="width: 15px;">&nbsp;&nbsp;&nbsp;<span>Post or Edit Job</span></p>
+                                            <div class="row" style="font-size: 10px;font-family: Poppins;margin-bottom: 0.5rem;gap: 10px;"><div class="col-lg-1"><img src="assets/images/checkmark.png" style="width: 15px;"></div><div style="padding: 0;" class="col-lg-10"><span>Download the Contact Details of the Candidate & Resume </span></div></div>
+                                    <p style="font-size: 10px;font-family: Poppins;margin-bottom: 0.4rem;"><img src="assets/images/checkmark.png"
+                                            style="width: 15px;">&nbsp;&nbsp;&nbsp;<span>Job Basic Plan</span></p>
+                                    <p style="font-size: 10px;font-family: Poppins;margin-bottom: 0.4rem;"><img src="assets/images/checkmark.png"
+                                            style="width: 15px;">&nbsp;&nbsp;&nbsp;<span>General Listing</span></p>
+                                    <p style="font-size: 10px;font-family: Poppins;margin-bottom: 0.4rem;"><img src="assets/images/checkmark.png"
+                                            style="width: 15px;">&nbsp;&nbsp;&nbsp;<span>Default Form Fields</span></p>
+                  
+                                </div>
+                                <div class="card-footer" style="background: rgba(247,215,201,1);
+                                    text-align: center;font-family: Poppins;border-end-end-radius: 16px;
+                  border-end-start-radius: 16px;font-size: 13px;cursor: pointer;" (click)="view()"><b>View All Plans</b></div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </li>
+        </ul>
+        <div [ngbNavOutlet]="nav" class="ml-4"></div>
+    </div>
+    
+    
+    <ng-template #content let-modal>
+        <div class="modal-header" style="background: #663130;justify-content: end;padding: 10px;">
+            <button type="button" class="btn-close btn-close-white" style="font-size: 10px;" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+        </div>
+        <div class="modal-body" style="padding: 0rem !important;">
+            <div>
+                <div class="row" style="display: flex;justify-content: center;">
+                    <div class="col-lg-12" id="id1">
+                        <div class="card" style="border: none;">
+                            <div class="card-body" style="padding: 0rem 0rem;">
+                                <div
+                                    style="display: grid;justify-content: center;border-bottom: 1px solid grey;padding: 10px 0px 20px 0px">
+                                    <div style="display: flex;justify-content: center;"><img style="width: 230px;"
+                                            src="assets/images/logoblack.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body" style="padding: 1rem 1rem;">
+                                <h5 style="font-family: Poppins;text-align: center;">Edit a Job Posting</h5>
+                                <label class="labletitle">Job Title</label>
+                                <input type="text" class="input2" id="abc" style="padding: 10px;" value="Technical Account Manager" placeholder="Add the title you are hiring for">
+                                <label class="labletitle">Company</label>
+                                <input type="text" id="abc1" style="padding: 10px;" value="Artsai" class="input2" placeholder="">
+                                <label class="labletitle">Workplace Type</label>
+                                <select 
+                                    style="padding:0px 0px 0px 10px;font-size:14px;cursor:pointer;width: 100%;height: 40px;">
+                                    <option value="">Select</option>
+                                    <option value="">On-Site</option>
+                                    <option value="" selected>Hybrid</option>
+                                </select>
+                                <label class="labletitle">Job Location</label>
+                                <input type="text" class="input2" style="padding: 10px;" id="abc2" value="New York, NY, United States" placeholder="Pune, Maharashtra, India">
+                                <label class="labletitle">Job Type</label>
+                                <select
+                                    style="padding:0px 0px 0px 10px;font-size:14px;cursor:pointer;width: 100%;height: 40px;">
+                                    <option value="">Select</option>
+                                    <option value="">Full-Time</option>
+                                    <option value="">Part-Time</option>
+                                    <option value="" selected>Remote</option>
+                                </select>
+                                <br /> <br />
+                                <div style="display: flex;justify-content: center;">
+                                    <button style="color:white;width: 40%;
+                        font-size: 15px !important;background-color:#663130 !important;padding: 6px;border-radius: 5px;border: none;" type="button" 
+                                        (click)="myfunction()">Next</button>
+                                </div>
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="display: flex;justify-content: center;">
+                    <div class="col-lg-12" style="display: none;" id="id2">
+                        <div class="card" style="border: none;">
+                            <div class="card-body" style="padding: 0rem 0rem;">
+                                <div
+                                    style="display: grid;justify-content: center;border-bottom: 1px solid grey;padding: 10px 0px 20px 0px">
+                                    <div style="display: flex;justify-content: center;"><img style="width: 230px;"
+                                            src="assets/images/logoblack.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body" style="padding: 1rem 1rem;">
+                                <label class="labletitle">Job Description</label>
+                                <textarea style="padding: 20px;"  rows="15" cols="56" id="test">The ideal candidate is hardworking team player who will play critical role in creating original digital content across various social media platforms.
+    
+    Responsibilities
+    ▪ Develop social media strategy
+    ▪ Create original content
+    ▪ Provide data analysis and metric reporting for clients
+    
+    Qualification
+    ▪ Proficiency in many social media platforms
+    ▪ Fluency in Microsoft office suit(Outlook, Excel, Word,Power point etc)
+    
+                                </textarea>
+                                <br /><br/>
+                                <div style="display: flex;justify-content: center;gap: 60px;">
+                                    <button style="color:white;width: 40%;
+        font-size: 15px !important;background-color:#663130 !important;padding: 6px;border-radius: 5px;border: none;" type="button" 
+                                        (click)="backfunction()">Back</button>
+                                    <button style="color:white;width: 40%;
+        font-size: 15px !important;background-color:#663130 !important;padding: 6px;border-radius: 5px;border: none;" type="button" 
+                                        (click)="nextfunction()">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="display: flex;justify-content: center;">
+                    <div class="col-lg-12" style="display: none;" id="id3">
+                        <div class="card" style="border: none;">
+                            <div class="card-body" style="padding: 0rem 0rem;">
+                                <div
+                                    style="display: grid;justify-content: center;border-bottom: 1px solid grey;padding: 10px 0px 20px 0px">
+                                    <div style="display: flex;justify-content: center;"><img style="width: 230px;"
+                                            src="assets/images/logoblack.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body" style="padding: 1rem 1rem;">
+                                <label class="labletitle">Screening Questions</label>
+                                <div class="row">
+                                    <div class="col-lg-1" style="text-align: end;">
+                                        <input class="input1" type="checkbox" checked>
+                                    </div>
+                                    <div class="col-lg-11">
+                                        Name of the Candidate
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-1" style="text-align: end;">
+                                        <input class="input1" type="checkbox" checked>
+                                    </div>
+                                    <div class="col-lg-11">
+                                        Email
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-1" style="text-align: end;">
+                                        <input class="input1" type="checkbox" checked>
+                                    </div>
+                                    <div class="col-lg-11">
+                                        Phone Number
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-1" style="text-align: end;">
+                                        <input class="input1" type="checkbox" checked>
+                                    </div>
+                                    <div class="col-lg-11">
+                                        Upload Resume
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-1" style="text-align: end;">
+                                        <input class="input1" type="checkbox">
+                                    </div>
+                                    <div class="col-lg-11">
+                                        What Is Your Current Salary?
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-1" style="text-align: end;">
+                                        <input class="input1" type="checkbox" checked>
+                                    </div>
+                                    <div class="col-lg-11">
+                                        What is your expected salary?
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-1" style="text-align: end;">
+                                        <input class="input1" type="checkbox">
+                                    </div>
+                                    <div class="col-lg-11">
+                                        Experience
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-1" style="text-align: end;">
+                                        <input class="input1" type="checkbox">
+                                    </div>
+                                    <div class="col-lg-11">
+                                        Educational Qualification?
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-1" style="text-align: end;">
+                                        <input class="input1" type="checkbox" checked>
+                                    </div>
+                                    <div class="col-lg-11">
+                                        Are You Comfortable Working Flexible Shifts?
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-1" style="text-align: end;">
+                                        <input class="input1" type="checkbox">
+                                    </div>
+                                    <div class="col-lg-11">
+                                        Are You Eligible To Work In The Country Where We Are Located?
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-1" style="text-align: end;">
+                                        <input class="input1" type="checkbox">
+                                    </div>
+                                    <div class="col-lg-11">
+                                        What is your notice period in days?
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-1" style="text-align: end;">
+                                        <input class="input1" type="checkbox" data-my-tooltip="Upgrade your plan to enable checkbox"  disabled>
+                                    </div>
+                                    <div class="col-lg-11" style="color: rgba(144,144,144,1);">
+                                        Give An Example of a Time You Resolved Team Conflict.
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-1" style="text-align: end;">
+                                        <input class="input1" type="checkbox"  disabled>
+                                    </div>
+                                    <div class="col-lg-11" style="color: rgba(144,144,144,1);">
+                                        Why do you want to work for our company?
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-1" style="text-align: end;">
+                                        <input class="input1" type="checkbox"  disabled>
+                                    </div>
+                                    <div class="col-lg-11" style="color: rgba(144,144,144,1);">
+                                        What Are Your Greatest Achievements At Work?
+                                    </div>
+                                </div>
+                                <br />
+                                <p id="id4" (click)="customques()">
+                                    <b style="color: rgba(26,49,163,1);cursor: pointer;"> <u>Click Here To Add Custom Questions If
+                                            Any</u></b>
+                                </p>
+                                <div id="id5" class="row" style="border: 1px solid lightgray;display: none;
+                                        padding: 20px 10px 5px 5px;">
+                                        <div class="row">
+                                    <div class="col-lg-1">
+                                        <p style="white-space: nowrap;margin-left: -10px;">Qn. 1</p>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <input class="input2" type="text">
+                                    </div>
+                                    <div class="col-lg-1" style="margin-left: -16px;    margin-top: 2px;">
+                                        <button style="color:black;border: 1px solid black;
+    font-size: 15px !important;background-color:rgba(255,239,232,1) !important;padding: 6px;border-radius: 5px;" onclick="add1()">ADD</button>
+                                    </div>
+                                    <div class="col-lg-2" style="margin-left: 16px;    margin-top: 2px;">
+                                        <button style="color:black;border: 1px solid black;
+    font-size: 15px !important;background-color:rgba(255,239,232,1) !important;padding: 6px;border-radius: 5px;" onclick="remove1()">REMOVE</button>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div id="new_chq1"></div>
+                                        </div>
+                                        <div class="col">
+                                            <input type="hidden" class="input2" value="1" id="total_chq1">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="row">
+                                    <div class="col-lg-1">
+                                        <p style="white-space: nowrap;margin-left: -10px;">Qn. 2</p>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <input class="input2" type="text">
+                                    </div>
+                                    <div class="col-lg-1" style="margin-left: -16px;    margin-top: 2px;">
+                                        <button  style="color:black;border: 1px solid black;
+    font-size: 15px !important;background-color:rgba(255,239,232,1) !important;padding: 6px;border-radius: 5px;" onclick="add3()">ADD</button>
+                                    </div>
+                                    <div class="col-lg-2" style="margin-left: 16px;    margin-top: 2px;">
+                                        <button  style="color:black;border: 1px solid black;
+    font-size: 15px !important;background-color:rgba(255,239,232,1) !important;padding: 6px;border-radius: 5px;" onclick="remove3()">REMOVE</button>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div id="new_chq3"></div>
+                                        </div>
+                                        <div class="col">
+                                            <input type="hidden" class="input2" value="1" id="total_chq3">
+                                        </div>
+                                    </div>
+                                </div> -->
+    </div>
+                                <br />
+                                <div style="display: flex;justify-content: center;gap: 60px;">
+                                    <button style="color:white;width: 40%;
+                    font-size: 15px !important;background-color:#663130 !important;padding: 6px;border-radius: 5px;border: none;" type="button" 
+                                        (click)="backfunction1()">Back</button>
+                                    <button style="color:white;width: 40%;
+                    font-size: 15px !important;background-color:#663130 !important;padding: 6px;border-radius: 5px;border: none;" type="button"
+                                        >Update</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+            </div>
+        </div>
+        <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+        </div> -->
+        </ng-template>
+</div>

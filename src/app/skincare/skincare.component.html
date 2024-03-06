@@ -1,0 +1,593 @@
+<div style="overflow: hidden;">
+    <div class="container-fluid top_bar">
+      <div class="row top_bar_row">
+        <div class="col-sm" id="JoinPhytoCommunity">
+          Join The Community
+        </div>
+        <!-- <div class="col-sm" id="VisitPhytoCommunity">
+          VisitPhytoCommunity
+        </div> -->
+      </div>
+  
+    </div>
+    <!--nav bar-->
+    <div class="container-fluid naviBar">
+      <div class="row justify-content-around">
+        <div class="col-md-auto" style="padding: 0;">
+          <a class="nav-item nav-link" style="color: black;">
+            <!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
+            <img src="assets/images/hamberger.png" />
+          </a>
+        </div>
+        <div class="col-md-auto" style="padding: 0;">
+          <div class="nav-item">
+            <a class="nav-link" style="color: black;" [routerLink]="['/']" >Home</a>
+          </div>
+        </div>
+        <div class="col-md-auto" style="padding: 0;">
+          <div class="nav-item dropdown">
+            <a [routerLink]="['/events']"  class="nav-link " style="color: black;" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Events
+            </a>
+            <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" style="color: black;">Action</a>
+                <a class="dropdown-item" style="color: black;">Another action</a>
+                <a class="dropdown-item" style="color: black;">Something else here</a>
+              </div> -->
+          </div>
+        </div>
+        <div class="col-md-auto" style="padding: 0;">
+          <div class="nav-item dropdown">
+            <a [routerLink]="['/manufacturer']"  class="nav-link " style="color: black;" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Manufacturers
+              <!-- <img src="/images/Component2_1.png"> -->
+            </a>
+            <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" style="color: black;">Action</a>
+                <a class="dropdown-item" style="color: black;">Another action</a>
+                <a class="dropdown-item" style="color: black;">Something else here</a>
+              </div> -->
+          </div>
+        </div>
+        <div class="col-md-auto" style="padding: 0;">
+          <div class="nav-item dropdown">
+            <a [routerLink]="['/colorcosmetics']" class="nav-link " style="color: black;" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Products
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2" style="padding: 0;">
+          <img src="assets/images/logo2.png" class="logo" />
+        </div>
+        <div class="col-md-auto" style="padding: 0;">
+          <div class="nav-item">
+            <a [routerLink]="['/contactus']" class="nav-link" style="color: black;">Contact Us</a>
+          </div>
+        </div>
+        <div class="col-md-auto" style="padding: 0;">
+          <div class="nav-item">
+            <a [routerLink]="['/joblisting']" class="nav-link" style="color: black;">Jobs</a>
+          </div>
+        </div>
+        <!-- <div class="col-md-auto" style="padding: 0;">
+          <div class="nav-item">
+            <a class="nav-link" style="color: black;">Help</a>
+          </div>
+        </div> -->
+        <div class="col-md-auto" style="padding: 0;">
+          <div class="nav-item dropdown">
+            <a class="nav-link " style="color: black;" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+             <span style="font-weight: normal;cursor: pointer;" [routerLink]="['/login']">LogIn</span> / <span [routerLink]="['/signup']" style="font-weight: normal;cursor: pointer;">Register</span>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-auto" style="padding: 0;">
+          <div class="nav-item">
+            <a class="nav-link" style="color: black;"><img src="assets/images/searchh.png" /></a>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+    
+      <!-- BOCP -->
+      <!-- <div class="bocp">
+        <p style="font-size: xx-large !important;font-family: Playfair Display !important;"><span>B</span>usiness
+          <span>O</span>f <span>C</span>onsumer <span>P</span>roducts</p>
+      </div> -->
+      <div class="main_body">
+          <div class="main_body_content">
+          <h1>Skin Care</h1>
+      </div>
+      </div>
+      <!--Product categories-->
+      <br>
+      <div class="container-fluid product_categories">
+          <div class="row">
+            
+              <div class="col-12" style="padding-left:70px ;padding-right: 20px;">
+                 <div style="width: fit-content; margin: auto">
+    <h4
+      style="
+        font-family: 'Playfair Display';
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 1px;
+      "
+    >
+      Product Categories
+      <hr style="height: 2px" />
+    </h4>
+  </div>
+    
+                  <br>
+                  <div class="row">
+                  <div class="col" ><div class="circle"><img  src="assets/images/cream_1.png" style="width: 100%;"/><br/></div>
+                    <p style="text-align: left;margin-left: -8px;">Moisturizers</p>
+                  </div>
+                  <div class="col" ><div class="circle"><img src="assets/images/moisturizer.png" style="width: 100%;"/><br/></div>
+                    <p style="text-align: left;margin-left: -34px;">Anti-Aging Creams</p>
+                  </div>
+                  <div class="col" ><div class="circle"><img src="assets/images/skincare_3.png" style="width: 100%;"/><br/></div>
+                    <p style="text-align: left;margin-left: 12px;">Toners</p>
+                  </div>
+                  <div class="col" ><div class="circle"><img src="assets/images/serum.png" style="width: 100%;"/><br/></div>
+                    <p style="text-align: left;margin-left: 9px;">Serums</p>
+                  </div>
+                  <div class="col" ><div class="circle"><img src="assets/images/eye-cream.png" style="width: 100%;"/><br/></div>
+                    <p style="text-align: left;margin-left: -7px;">Eye Creams</p>
+                  </div>
+                  <div class="col" ><div class="circle"><img src="assets/images/exfoliant.png" style="width: 100%;"/><br/></div>
+                    <p style="text-align: left;margin-left: 4px;">Exfoliants</p>
+                  </div>
+                  <div class="col" ><div class="circle"><img src="assets/images/foam.png" style="width: 100%;"/><br/></div>
+                    <p style="text-align: left;margin-left: 3px;">Cleansers</p>
+                  </div>
+              </div>
+              </div>
+              
+          </div>
+          <br>
+      </div>
+      <!--search bar-->
+      <div class="search_bar">
+          <ul>
+              <li><img src="assets/images/location1.png" class="location_img"/>Location</li>
+              <li class="search_input"><input /><img src="assets/images/searchh.png" class="search_input_icon"/></li>
+              <li>All</li>
+              <li>United States</li>
+              <li>Los Angeles</li>
+              <li>United Kingdom</li>
+              <li>China</li>
+              <li>Europe</li>
+              <li>Japan</li>
+              <li>South Korea</li>
+              <li>India</li>
+          </ul>
+      </div>
+      <!--Listing-->
+      <div class="container-fluid listing">
+          <div class="row">
+              <div class="col-2">
+                  <div class="category_card">
+                      <p class="category_heading">Related Categories</p>
+                      <ul>
+                          <li>Moisturizers</li>
+                          <li>Anti-Aging Creams</li>
+                          <li>Toners</li>
+                          <li>Serums</li>
+                          <li>Eye Cream</li>
+                      </ul>
+                  </div>
+                  
+                  <div class="category_card">
+                      <p class="category_heading">Types Of Company</p>
+                      <ul>
+                          <li>Manufacturers</li>
+                          <li>Brands</li>
+                          <li>Packaging Suppliers</li>
+                          <li>Component Suppliers</li>
+                          <li>Ingredient Suppliers</li>
+                          <li>Distributors</li>
+                          <li>Retailers</li>
+                          <li>Exporters</li>
+                      </ul>
+                  </div>
+                  <div class="category_card">
+                      <p class="category_heading">Types Of Formula</p>
+                      <ul>
+                          <li>Natural</li>
+                          <li>Organic</li>
+                          <li>Synthetic</li>
+                          <li>Eye Shadows</li>
+                          <li>Custom</li>
+                          <li>Mineral</li>
+                      </ul>
+                  </div>
+                  <div class="category_card">
+                      <p class="category_heading">Order Quantity</p>
+                      <ul>
+                          <li>&lt;2000</li>
+                          <li>2000 - 5000</li>
+                          <li>5000 - 10,000</li>
+                          <li>10,000 - 20,000</li>
+                          <li>20,000 - 50,000</li>
+                          <li>50,000 - 100,000</li>
+                          <li>&gt;100,000</li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-10" style="padding: 0px 50px;">
+                  <div class="row">
+                  <div class="listing_card">
+                      <ul>
+                          <li>
+                              <div>
+                                  <p class="listing_heading">Accupac Manufacturer</p>
+                                  <div class="company_details">
+                                      
+                                      <ul>
+                                        <li><img src="assets/images/Mask_Group_222.png" /></li>
+                                          <li><p>Location: Canada</p>
+                                            <p>MOQ: 2000</p>
+                                          </li>
+                                          
+                                      </ul>
+                                  </div>
+                                  <p style="font-size: small;">Product Type: Synthetic</p>
+                              </div>
+                          </li>
+                          <li><div class="vl"></div></li>
+                          <li class="border_left">
+                            <p class="listing_heading">Our Products</p>
+                            <ul>
+                              <li>Bodycare</li>
+                              <li>Nutraceuticals</li>
+                              <li>Petcare</li>
+                              <li>Cannabis</li>
+                            </ul>
+                          </li>
+                          <li><div class="vl"></div></li>
+                          
+                          <li class="border_left">
+                            <p class="listing_heading">Our Services</p>
+                            <ul>
+                              <li>Beauty Products Manufacturing</li>
+                              <li>Bottling & Bulk Filling</li>
+                            </ul>
+                          </li>
+                          <li><div class="vl"></div></li>
+                          <li class="border_left"><p class="listing_heading">Certifications</p>
+                          <p style="font-size: small;">ISO, FDA, Health Canada</p>
+                          </li>
+                          <li class="border_left"><button class="view_supplier">View Supplier</button></li>
+                      </ul>
+                      <p style="font-family: Poppins;font-size: 14px;padding:0px 20px;line-height: normal;">We believe in building to positively impact communities, infrastructure, the economy, opportunity and employment. We take great pride in being proactive with our approach to projects, while ensuring that the best interests of the stakeholders are represented at every stage.</p>
+                  </div>
+                  <div class="listing_card">
+                      <ul>
+                          <li>
+                              <div>
+                                  <p class="listing_heading">Accupac Manufacturer</p>
+                                  <div class="company_details">
+                                      
+                                      <ul>
+                                        <li><img src="assets/images/Mask_Group_222.png" /></li>
+                                          <li><p>Location: Canada</p>
+                                            <p>MOQ: 2000</p>
+                                          </li>
+                                          
+                                      </ul>
+                                  </div>
+                                  <p style="font-size: small;">Product Type: Synthetic</p>
+                              </div>
+                          </li>
+                          <li><div class="vl"></div></li>
+                          <li class="border_left">
+                            <p class="listing_heading">Our Products</p>
+                            <ul>
+                              <li>Bodycare</li>
+                              <li>Nutraceuticals</li>
+                              <li>Petcare</li>
+                              <li>Cannabis</li>
+                            </ul>
+                          </li>
+                          <li><div class="vl"></div></li>
+                          
+                          <li class="border_left">
+                            <p class="listing_heading">Our Services</p>
+                            <ul>
+                              <li>Beauty Products Manufacturing</li>
+                              <li>Bottling & Bulk Filling</li>
+                            </ul>
+                          </li>
+                          <li><div class="vl"></div></li>
+                          <li class="border_left"><p class="listing_heading">Certifications</p>
+                          <p style="font-size: small;">ISO, FDA, Health Canada</p>
+                          </li>
+                          <li class="border_left"><button class="view_supplier">View Supplier</button></li>
+                      </ul>
+                      <p style="font-family: Poppins;font-size: 14px;padding:0px 20px;line-height: normal;">We believe in building to positively impact communities, infrastructure, the economy, opportunity and employment. We take great pride in being proactive with our approach to projects, while ensuring that the best interests of the stakeholders are represented at every stage.</p>
+                  </div>
+  </div>
+                  
+                  
+                  <div class="container Pure__Perfect_Cosmetics" style="position: relative;">
+                    <img src="assets/images/Mask_Group_124.png" style="width:100%;">
+                    <div class="bodycontent">
+                    <div class="row ">
+                     
+                     <div class="col-3" style="display: grid;place-content: center;">
+                      <img src="assets/images/Component106.png" style="width:100%;">
+                     </div>
+                     <div class="col-6" style="display: grid;place-content: center;">
+                        <br/>
+                      <p class="contentheading">Pure & Perfect Cosmetics</p>
+                      <p class="contentdata">
+                        Massa nisi, integer convallis sed eu. Lacus, lorem bibendum in congue justo nisl, fames at ultrices. Mattis enim mauris vitae ullamcorper maecenas enim, fermentum..
+                      </p>
+                      <div style="display: flex;justify-content: center;"> <button class="explore">Explore</button>
+                     </div>
+                     <br/> <br/>
+                    </div>
+                     <div class="col-3" style="display:grid;place-content: center;">
+                      <img src="assets/images/Component107.png" style="width:100%;">
+                     </div>
+                   </div>
+                  </div>
+                </div>
+                  <br>
+                  <div class="container limited" >
+                    <div class="row">
+                      <div class="col-6">
+                    <img src="assets/images/index-16.png" style="width:100%;">
+                    <div class="descriptionbody">
+                      <p class="bodytitle">Instant Overnight<br>
+                      Recovery Cream</p>
+                      <p class="body_content">Balance, purify & recover your skin with great quality of ingredients.</p>
+                      <br />
+                       <div style="display: flex;justify-content: center;"> <button class="shop_more">Shop Now&nbsp;<img src="assets/images/right-arrow2.png" style="width: 25%;"></button>
+                       
+                    </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <img src="assets/images/index-17.png" style="width:100%;">
+                    <div class="descriptionbody">
+                      <p class="bodytitle">Gentle Gel Facial<br>
+                      Cleanser Bergomat</p>
+                      <p class="body_content">Balance, purify & recover your skin with great quality of ingredients.</p>
+                      <br />
+                       <div style="display: flex;justify-content: center;"> <button class="shop_more">Shop Now&nbsp;<img src="assets/images/right-arrow2.png" style="width: 25%;"></button>
+                       
+                    </div>
+                    </div>
+                  </div>
+                </div>
+                  </div>
+                  
+                  
+                  <br>
+                  
+              </div>
+          </div>
+      </div>
+    
+      <div class="container-fluid red_div">
+        <!-- <div class="row">
+          <div class="col-12 red-outer-div">
+            <div class="red-image-container">
+              <img src="assets/images/index-38.png" class="red-img"/>
+              <div class="descriptionbody2">
+                <p class="bodytitle2">Charlotte Tilbury</p>
+                <p class="subtitle">Skin Beauty Products</p>
+                <p class="body_content2">Massa nisi, integer convallis sed eu. Lacus, lorem bibendum in congue justo nisl, fames at ultrices. Mattis enim mauris vitae ullamcorper maecenas enim, fermentum..</p>
+                <br />
+                 <div style="display: flex;justify-content: center;"> <button class="view_plans">Explore</button>
+                 
+              </div>
+              </div>
+            </div>
+              
+          </div>
+      </div> -->
+      <br>
+      <br>
+      <div class="container gloss-div" >
+        <img src="assets/images/Mask_Group_107.png" style="width:100%;">
+        <div class="row">
+          <div class="col-6">
+        <div class="blurredbody4">
+          <p class="blurredbody_heading4">Subscribe Our New Plans</p>
+        
+          <p class="blurredbody_content4">When looking for a new bouquet idea for Valentines or Mother's Day, ask us for a tip!</p>
+          
+           <div style="display: flex;justify-content: center;"> <button class="view_plans">View Plans</button>
+           
+        </div>
+        </div>
+      </div>
+      <div class="col-6 tellus-form-div ">
+        <div class="blurredbody5">
+        <h4>Tell Us What You Need</h4>
+        <form class="tellus-form">
+          <input class="input2" type="text" placeholder="Enter Product / Service Name"/>
+          <input class="input2" type="text" placeholder="Enter Your Mobile Number"/>
+          <!-- <div>Your Country is <a href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">USA<img src="assets/images/Component2_1.png" class="dropdown-img smaller-drop"/></a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div></div> -->
+            <!-- <label style="color: black;font-size: 14px; font-family: Lato;text-align: left;padding: 1px;margin-left: 80px;">Your Country is <b>California&nbsp;<img src="assets/images/Component2_1.png"></b></label> -->
+            <input class="input2" type="text" placeholder="Enter Your Name" /><br>
+            <button class="submit-requirement">Submit</button>
+        </form>
+      </div>
+      </div>
+    </div>
+  </div>
+      <br>
+     
+      <div class="container-fluid popular_categories">
+        <div class="row">
+          
+            <div class="col-12" style="padding-left:70px ;padding-right: 20px;">
+          <h3 style="text-align: center;">Popular Categories</h3><br>
+          <p style="text-align: center;padding-left: 30px;padding-right: 30px;">Massa nisi, integer convallis sed eu. Lacus, lorem bibendum in congue justo nisl, fames at ultrices. Mattis enim mauris vitae ullamcorper maecenas enim, fermentum.</p>
+        </div>
+      </div>
+    </div>
+      <br>
+    <div class="row">
+<div class="col" style="padding: 10px;position: relative;" >
+  <img src="assets/images/index-26.png" style="width:100%;object-fit: cover;">
+  <div class="categoriesheading">
+    <p>Face</p>
+   <button class="shop_now">Shop Now</button>                       
+  </div>
+</div>
+<div class="col" style="padding: 10px;">
+  <img src="assets/images/index-24.png" style="width:100%;object-fit: cover;">
+  <div class="categoriesheading">
+    <p>Concealer</p>
+   <button class="shop_now">Shop Now</button>                       
+   
+  </div>
+</div>
+<div class="col" style="padding: 10px;">
+  <img src="assets/images/index-32.png" style="width:100%;object-fit: cover;">
+  <div class="categoriesheading">
+    <p>Lips</p>
+   <button class="shop_now">Shop Now</button>                       
+   
+  </div>
+</div>
+<div class="col" style="padding: 10px;">
+  <img src="assets/images/index-30.png" style="width:100%;object-fit: cover;">
+  <div class="categoriesheading">
+    <p>Personal Care</p>
+   <button class="shop_now">Shop Now</button>                       
+   
+  </div>
+</div>
+    </div>
+    <br>
+     <!--Subscribe Our Newsletter-->
+     <div style="position: relative">
+        <img style="width: 100%" src="assets/images/bg-newletter.png" />
+        <div class="blurredtext1">
+          <div style="width: fit-content; margin: auto">
+            <h4
+              style="
+                font-family: 'Playfair Display';
+                font-size: 30px;
+                letter-spacing: 1px;
+                color: white;
+              "
+            >
+              Subscribe To Our Newsletter
+            </h4>
+          </div>
+          <br />
+          <p style="color: white">
+            When looking for a new bouquet idea for Valentines or Mother's Day, ask
+            us for a tip!
+          </p>
+          <br />
+          <form
+           
+          >
+            <input
+           
+              class="input3"
+              style="padding: 15px"
+              placeholder="Enter Your Email ID"
+              type="email" 
+            /><button
+              class="btn"
+              style="
+                background-color: rgba(196, 101, 89, 1);
+                border-radius: 0px;
+                position: absolute;
+                width: 40px;
+                height: 40px;
+              "
+            >
+              <img
+                style="width: 130%; margin-left: -5px; margin-top: -4px"
+                src="assets/images/paper.png"
+              />
+            </button>
+          </form>
+        </div>
+      </div>
+  </div>
+      <br />
+      <div class="footer container-fluid">
+        <div class="bocp-logo"><img style="width: 10%;" src="assets/images/bcp.png"></div>
+    
+        <div class="row rowfooter">
+          <div class="col-4 columns">
+            <div class="heading"><span style="font-size: large;">For The Consumer Goods Industry</span></div>
+            <p style="line-height: 19px !important;">Massa nisi, integer convalis sed eu. Lacus, lorem bibendum in congue justo nisi, fames at ultrices. Mattis
+              enim mauris vitae ullamcorper maecenas enim, fermentum.
+              Massa nisi, integer convalis sed eu. Lacus, lorem bibendum in congue justo nisi, fames at ultrices. Mattis
+              enim mauris vitae ullamcorper maecenas enim, fermentum.
+              Massa nisi, integer convalis sed eu. Lacus, lorem bibendum in congue justo nisi, fames at ultrices. Mattis
+              enim mauris vitae ullamcorper maecenas enim, fermentum.
+              Massa nisi, integer convalis sed eu. Lacus, lorem bibendum in congue justo nisi, fames at ultrices. Mattis
+              enim mauris vitae ullamcorper maecenas enim, fermentum.
+            </p>
+            <p>Copyright <img src="assets/images/icons8-copyright-24.png" class="copyright-img" /> 2022. bocp All Rights
+              Reserved.</p>
+          </div>
+          <div class="col-2 columns">
+            <ul>
+              <li><a [routerLink]="['/']">Home</a></li>
+              <li><a [routerLink]="['/aboutus']">About Us</a></li>
+              <li><a [routerLink]="['/contactus']">Contact Us</a></li>
+              <li><a [routerLink]="['/']">Terms & Conditions</a></li>
+              <li><a [routerLink]="['/']">Privacy Policies</a></li>
+            </ul>
+          </div>
+          <div class="col-3 columns">
+            <ul>
+              <li><a [routerLink]="['/manufacturer']" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">Manufacturer<img src="assets/images/icons8-dropdown-24.png"
+                    class="dropdown-img" /></a>
+                <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" [routerLink]="['/eventsuccess']">Action</a>
+                  <a class="dropdown-item" [routerLink]="['/eventsuccess']">Another action</a>
+                  <a class="dropdown-item" [routerLink]="['/eventsuccess']">Something else here</a>
+                </div> -->
+              </li>
+              <li><a [routerLink]="['/brandlisting']" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">Brands<img src="assets/images/icons8-dropdown-24.png" class="dropdown-img" /></a>
+                <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" [routerLink]="['/eventsuccess']">Action</a>
+                  <a class="dropdown-item" [routerLink]="['/eventsuccess']">Another action</a>
+                  <a class="dropdown-item" [routerLink]="['/eventsuccess']">Something else here</a>
+                </div> -->
+              </li>
+              <li><a [routerLink]="['/login']">Manufacturer LogIn/Register</a></li>
+              <li><a [routerLink]="['/signup']">Brand LogIn/Register</a></li>
+              <!-- <li><a [routerLink]="['/eventsuccess']">Help</a></li> -->
+            </ul>
+          </div>
+          <div class="col-3 columns">
+            <div class="heading" style="padding: 38px;">Connect With Us</div>
+            <ul class="icons">
+              <li><a><img src="assets/images/icons8-instagram-26.png" class="icon-img" /></a></li>
+              <li><a><img src="assets/images/icons8-facebook-32.png" class="icon-img" /></a></li>
+              <li><a><img src="assets/images/twitterwhite.png" class="icon-img" /></a></li>
+            </ul>
+          </div>
+        </div>
+        <br /><br />
+      </div>
+  </div>

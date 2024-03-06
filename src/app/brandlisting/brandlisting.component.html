@@ -1,0 +1,853 @@
+<div style="overflow: hidden;">
+    <div class="container-fluid top_bar">
+        <div class="row top_bar_row">
+          <div class="col-sm" id="JoinPhytoCommunity">
+            Join The Community
+          </div>
+          <!-- <div class="col-sm" id="VisitPhytoCommunity">
+            VisitPhytoCommunity
+          </div> -->
+        </div>
+    
+      </div>
+      <!--nav bar-->
+      <div class="container-fluid naviBar">
+        <div class="row justify-content-around">
+          <div class="col-md-auto" style="padding: 0;">
+            <a class="nav-item nav-link" style="color: black;">
+              <!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
+              <img src="assets/images/hamberger.png" />
+            </a>
+          </div>
+          <div class="col-md-auto" style="padding: 0;">
+            <div class="nav-item">
+              <a class="nav-link" style="color: black;" [routerLink]="['/']" >Home</a>
+            </div>
+          </div>
+          <div class="col-md-auto" style="padding: 0;">
+            <div class="nav-item dropdown">
+              <a [routerLink]="['/events']"  class="nav-link " style="color: black;" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Events
+              </a>
+              <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" style="color: black;">Action</a>
+                  <a class="dropdown-item" style="color: black;">Another action</a>
+                  <a class="dropdown-item" style="color: black;">Something else here</a>
+                </div> -->
+            </div>
+          </div>
+          <div class="col-md-auto" style="padding: 0;">
+            <div class="nav-item dropdown">
+              <a [routerLink]="['/manufacturer']"  class="nav-link " style="color: black;" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Manufacturers
+                <!-- <img src="/images/Component2_1.png"> -->
+              </a>
+              <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" style="color: black;">Action</a>
+                  <a class="dropdown-item" style="color: black;">Another action</a>
+                  <a class="dropdown-item" style="color: black;">Something else here</a>
+                </div> -->
+            </div>
+          </div>
+          <div class="col-md-auto" style="padding: 0;">
+            <div class="nav-item dropdown">
+              <a [routerLink]="['/colorcosmetics']" class="nav-link " style="color: black;" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Products
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-2" style="padding: 0;">
+            <img src="assets/images/logo2.png" class="logo" />
+          </div>
+          <div class="col-md-auto" style="padding: 0;">
+            <div class="nav-item">
+              <a [routerLink]="['/contactus']" class="nav-link" style="color: black;">Contact Us</a>
+            </div>
+          </div>
+          <div class="col-md-auto" style="padding: 0;">
+            <div class="nav-item">
+              <a [routerLink]="['/joblisting']" class="nav-link" style="color: black;">Jobs</a>
+            </div>
+          </div>
+          <!-- <div class="col-md-auto" style="padding: 0;">
+            <div class="nav-item">
+              <a class="nav-link" style="color: black;">Help</a>
+            </div>
+          </div> -->
+          <div class="col-md-auto" style="padding: 0;">
+            <div class="nav-item dropdown">
+              <a class="nav-link " style="color: black;" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+               <span style="font-weight: normal;cursor: pointer;" [routerLink]="['/login']">LogIn</span> / <span [routerLink]="['/signup']" style="font-weight: normal;cursor: pointer;">Register</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-auto" style="padding: 0;">
+            <div class="nav-item">
+              <a class="nav-link" style="color: black;"><img src="assets/images/searchh.png" /></a>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+      
+      <!-- BOCP -->
+      <!-- <div class="bocp">
+        <p style="font-size: xx-large !important;font-family: Playfair Display !important;"><span>B</span>usiness <span>O</span>f <span>C</span>onsumer <span>P</span>roducts</p>
+      </div> -->
+      <img src="assets/images/brandbg.png" style="width: 100%;">
+      <div class="row">
+        <div class="col-lg-3" style="background: rgb(249 213 213);padding: 0;">
+            <div style="padding:40px 40px 0px 40px">
+           <h5>Location</h5>
+           <p>
+            <input type="text" class="searchinput" placeholder="Search">
+        </p>
+        </div>
+        <br/>
+<div class="row row-cols-1 row-cols-md-3 g-1" style="display: flex;
+        place-items: center;padding:0px 40px;">
+<div class="col-lg-2">
+    <input id="cb1" class="input1" type="checkbox" checked>
+</div>
+<div class="col-lg-6">
+    <p style="font-size: 15px !important;">United States</p>
+</div>
+<div class="col-lg-4">
+    <p style="font-size: 15px !important;color: rgba(0,0,0,1);">87</p>
+</div>
+<div class="col-lg-2">
+    <input id="cb1" class="input1" type="checkbox" checked>
+</div>
+<div class="col-lg-6">
+    <p style="font-size: 15px !important;">Los Angeles</p>
+</div>
+<div class="col-lg-4">
+    <p style="font-size: 15px !important;color: rgba(0,0,0,1);">240</p>
+</div>
+<div class="col-lg-2">
+    <input id="cb1" class="input1" type="checkbox">
+</div>
+<div class="col-lg-6">
+    <p style="font-size: 15px !important;">Canada</p>
+</div>
+<div class="col-lg-4">
+    <p style="font-size: 15px !important;color: rgba(0,0,0,1);">870</p>
+</div>
+<div class="col-lg-2">
+    <input id="cb1" class="input1" type="checkbox">
+</div>
+<div class="col-lg-6">
+    <p style="font-size: 15px !important;">United Kingdom</p>
+</div>
+<div class="col-lg-4">
+    <p style="font-size: 15px !important;color: rgba(0,0,0,1);">4497</p>
+</div>
+<div class="col-lg-2">
+    <input id="cb1" class="input1" type="checkbox" checked>
+</div>
+<div class="col-lg-6">
+    <p style="font-size: 15px !important;">China</p>
+</div>
+<div class="col-lg-4">
+    <p style="font-size: 15px !important;color: rgba(0,0,0,1);">1204</p>
+</div>
+<div class="col-lg-2">
+    <input id="cb1" class="input1" type="checkbox">
+</div>
+<div class="col-lg-6">
+    <p style="font-size: 15px !important;">Europe</p>
+</div>
+<div class="col-lg-4">
+    <p style="font-size: 15px !important;color: rgba(0,0,0,1);">2234</p>
+</div>
+<div class="col-lg-2">
+    <input id="cb1" class="input1" type="checkbox">
+</div>
+<div class="col-lg-6">
+    <p style="font-size: 15px !important;">Japan</p>
+</div>
+<div class="col-lg-4">
+    <p style="font-size: 15px !important;color: rgba(0,0,0,1);">2100</p>
+</div>
+<div class="col-lg-2">
+    <input id="cb1" class="input1" type="checkbox" checked>
+</div>
+<div class="col-lg-6">
+    <p style="font-size: 15px !important;">India</p>
+</div>
+<div class="col-lg-4">
+    <p style="font-size: 15px !important;color: rgba(0,0,0,1);">2700</p>
+</div>
+        </div>
+        <br/>
+        <p style="border: 1px dashed;"></p>
+        <div style="padding:20px 40px 0px 40px">
+            <h5>Product Category</h5>
+            <p>
+             <input type="text" class="searchinput" placeholder="Search">
+         </p>
+         </div>
+         <br/>
+         <div class="row row-cols-1 row-cols-md-3 g-1" style="display: flex;
+        place-items: center;padding:0px 40px;">
+<div class="col-lg-2">
+    <input id="cb1" class="input1" type="checkbox">
+</div>
+<div class="col-lg-10">
+    <p style="font-size: 15px !important;">Body Care</p>
+</div>
+<div class="col-lg-2">
+    <input id="cb1" class="input1" type="checkbox">
+</div>
+<div class="col-lg-10">
+    <p style="font-size: 15px !important;">Personal Care</p>
+</div>
+<div class="col-lg-2">
+    <input id="cb1" class="input1" type="checkbox" checked>
+</div>
+<div class="col-lg-10">
+    <p style="font-size: 15px !important;">Hair Care</p>
+</div>
+<div class="col-lg-2">
+    <input id="cb1" class="input1" type="checkbox" checked>
+</div>
+<div class="col-lg-10">
+    <p style="font-size: 15px !important;">Cannabis</p>
+</div>
+<div class="col-lg-2">
+    <input id="cb1" class="input1" type="checkbox">
+</div>
+<div class="col-lg-10">
+    <p style="font-size: 15px !important;">Face Care</p>
+</div>
+<div class="col-lg-2">
+    <input id="cb1" class="input1" type="checkbox">
+</div>
+<div class="col-lg-10">
+    <p style="font-size: 15px !important;">Colour Cosmetics</p>
+</div>
+<div class="col-lg-2">
+    <input id="cb1" class="input1" type="checkbox">
+</div>
+<div class="col-lg-10">
+    <p style="font-size: 15px !important;">Nutraceuticals</p>
+</div>
+<div class="col-lg-2">
+    <input id="cb1" class="input1" type="checkbox" checked>
+</div>
+<div class="col-lg-10">
+    <p style="font-size: 15px !important;">Packaging Components</p>
+</div>
+<div class="col-lg-2">
+    <input id="cb1" class="input1" type="checkbox">
+</div>
+<div class="col-lg-10">
+    <p style="font-size: 15px !important;">Pet Care</p>
+</div>
+<div class="col-lg-2">
+    <input id="cb1" class="input1" type="checkbox">
+</div>
+<div class="col-lg-10">
+    <p style="font-size: 15px !important;">Personal Care</p>
+</div>
+</div>
+<br/>
+        <p style="border: 1px dashed;"></p>
+        <div style="padding:20px 40px 0px 40px">
+            <h5>Brands</h5>
+            <p>
+             <input type="text" class="searchinput" placeholder="Search">
+         </p>
+         </div>
+         <br/>
+         <div class="row row-cols-1 row-cols-md-3 g-1" style="display: flex;
+         place-items: center;padding:0px 40px;">
+ <div class="col-lg-2">
+     <input id="cb1" class="input1" type="checkbox">
+ </div>
+ <div class="col-lg-10">
+     <p style="font-size: 15px !important;">Lancome</p>
+ </div>
+ <div class="col-lg-2">
+     <input id="cb1" class="input1" type="checkbox" checked>
+ </div>
+ <div class="col-lg-10">
+     <p style="font-size: 15px !important;">Mac</p>
+ </div>
+ <div class="col-lg-2">
+     <input id="cb1" class="input1" type="checkbox">
+ </div>
+ <div class="col-lg-10">
+     <p style="font-size: 15px !important;">L'Oreal</p>
+ </div>
+ </div>
+         <br/>
+        </div>
+        <div class="col-lg-9" style="padding: 0px 50px;row-gap: 30px;
+        display: grid;">
+        <br/>
+          <div class="row" style="padding:8px;
+          border: 1px solid darkgrey;
+          border-radius: 10px;">
+            <div class="col" style="place-items: center;display: grid;border-right: 2px solid darkgrey;">
+                    <h4 style=" font-family: 'Poppins';font-size: 16px;font-weight: normal;letter-spacing: 1px">Lancome Cosmetics<hr style="margin: 0.2rem;background-color: rgb(210 90 90) !important;"/></h4>
+                <img style="width: 50%;margin-bottom: 10px;" src="assets/images/lancologo.png">
+                <p style="letter-spacing: 2px;font-family: Poppins;">FRANCE</p>
+            </div>
+            <div class="col" style="display: grid;
+            border-right: 2px solid darkgray;padding: 0px 20px;">
+                    <h4 style=" font-family: 'Poppins';font-size: 13px;font-weight: normal;letter-spacing: 1px;">Our Products<hr style="margin: 0.2rem;background-color: rgb(210 90 90) !important;"/></h4>
+                <div class="row row-cols-1 row-cols-md-2 g-1">
+                    <div class="col">
+                        <p>Skin Care</p>
+                    </div>
+                    <div class="col">
+                        <p style="white-space: nowrap;">Colour Cosmetics</p>
+                    </div>
+                    <div class="col">
+                        <p>Hair Care</p>
+                    </div>
+                    <div class="col">
+                        <p style="white-space: nowrap;">Eye Care</p>
+                    </div>
+                    <div class="col">
+                        <p>Body Care</p>
+                    </div>
+                    <div class="col">
+                        <p style="white-space: nowrap;">CBD Products</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="display: grid;
+            border-right: 2px solid darkgray;padding: 0px 20px;">
+                    <h4 style=" font-family: 'Poppins';font-size: 13px;font-weight: normal;letter-spacing: 1px;">Our Markets<hr style="margin: 0.2rem;background-color: rgb(210 90 90) !important;"/></h4>
+                <div class="row row-cols-1 row-cols-md-3 g-1">
+                    <div class="col">
+                        <p>Paris</p>
+                    </div>
+                    <div class="col">
+                        <p style="white-space: nowrap;">USA</p>
+                    </div>
+                    <div class="col">
+                        <p style="white-space: nowrap;">Japan</p>
+                    </div>
+                    <div class="col">
+                        <p>India</p>
+                    </div>
+                    <div class="col">
+                        <p style="white-space: nowrap;">Canada</p>
+                    </div>
+                    <div class="col">
+                        <p style="white-space: nowrap;">Germany</p>
+                    </div>
+                    <div class="col">
+                        <p style="white-space: nowrap;">UK</p>
+                    </div>
+                    <div class="col">
+                        <p style="white-space: nowrap;">Europe</p>
+                    </div>
+                    <div class="col">
+                        <p style="white-space: nowrap;">S.Korea</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="display: grid;padding: 0px 20px;">
+                    <h4 style=" font-family: 'Poppins';font-size: 13px;font-weight: normal;letter-spacing: 1px;">Our Certifications<hr style="margin: 0.2rem;background-color: rgb(210 90 90) !important;"/></h4>
+                    <div class="row row-cols-1 row-cols-md-2 g-1">
+                        <div class="col">
+                    <p>ISO, FDA, Health Canada</p>
+                    </div>
+                    <div class="col" style="text-align: -webkit-center;">  <button style="color:white;width: 85px;
+    font-size: 12px !important;background-color:rgba(216,135,135,1) !important;padding: 5px;border: none;border-radius: 5px;" type="button" 
+                    >View More</button></div>
+            </div>
+          </div>
+        </div>
+          <div class="row" style="padding:8px;
+          border: 1px solid darkgrey;
+          border-radius: 10px;">
+            <div class="col" style="place-items: center;display: grid;border-right: 2px solid darkgrey;">
+                    <h4 style=" font-family: 'Poppins';font-size: 16px;font-weight: normal;letter-spacing: 1px">L'oreal Paris<hr style="margin: 0.2rem;background-color: rgb(210 90 90) !important;"/></h4>
+                <img style="width: 40%;margin-bottom: 10px;" src="assets/images/lorel.png">
+                <p style="letter-spacing: 2px;font-family: Poppins;">FRANCE</p>
+            </div>
+            <div class="col" style="display: grid;
+            border-right: 2px solid darkgray;padding: 0px 20px;">
+                    <h4 style=" font-family: 'Poppins';font-size: 13px;font-weight: normal;letter-spacing: 1px;">Our Products<hr style="margin: 0.2rem;background-color: rgb(210 90 90) !important;"/></h4>
+                <div class="row row-cols-1 row-cols-md-2 g-1">
+                    <div class="col">
+                        <p>Skin Care</p>
+                    </div>
+                    <div class="col">
+                        <p style="white-space: nowrap;">Colour Cosmetics</p>
+                    </div>
+                    <div class="col">
+                        <p>Hair Care</p>
+                    </div>
+                    <div class="col">
+                        <p style="white-space: nowrap;">Eye Care</p>
+                    </div>
+                    <div class="col">
+                        <p>Body Care</p>
+                    </div>
+                    <div class="col">
+                        <p style="white-space: nowrap;">CBD Products</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="display: grid;
+            border-right: 2px solid darkgray;padding: 0px 20px;">
+                    <h4 style=" font-family: 'Poppins';font-size: 13px;font-weight: normal;letter-spacing: 1px;">Our Markets<hr style="margin: 0.2rem;background-color: rgb(210 90 90) !important;"/></h4>
+                <div class="row row-cols-1 row-cols-md-3 g-1">
+                    <div class="col">
+                        <p>Paris</p>
+                    </div>
+                    <div class="col">
+                        <p style="white-space: nowrap;">USA</p>
+                    </div>
+                    <div class="col">
+                        <p style="white-space: nowrap;">Japan</p>
+                    </div>
+                    <div class="col">
+                        <p>India</p>
+                    </div>
+                    <div class="col">
+                        <p style="white-space: nowrap;">Canada</p>
+                    </div>
+                    <div class="col">
+                        <p style="white-space: nowrap;">Germany</p>
+                    </div>
+                    <div class="col">
+                        <p style="white-space: nowrap;">UK</p>
+                    </div>
+                    <div class="col">
+                        <p style="white-space: nowrap;">Europe</p>
+                    </div>
+                    <div class="col">
+                        <p style="white-space: nowrap;">S.Korea</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="display: grid;padding: 0px 20px;">
+                    <h4 style=" font-family: 'Poppins';font-size: 13px;font-weight: normal;letter-spacing: 1px;">Our Certifications<hr style="margin: 0.2rem;background-color: rgb(210 90 90) !important;"/></h4>
+                    <div class="row row-cols-1 row-cols-md-2 g-1">
+                        <div class="col">
+                    <p>ISO, FDA, Health Canada</p>
+                    </div>
+                    <div class="col" style="text-align: -webkit-center;">  <button style="color:white;width: 85px;
+    font-size: 12px !important;background-color:rgba(216,135,135,1) !important;padding: 5px;border: none;border-radius: 5px;" type="button" 
+                    >View More</button></div>
+            </div>
+          </div>
+        </div>
+          <div class="row" style="padding:8px;
+          border: 1px solid darkgrey;
+          border-radius: 10px;">
+            <div class="col" style="place-items: center;display: grid;border-right: 2px solid darkgrey;">
+                    <h4 style=" font-family: 'Poppins';font-size: 16px;font-weight: normal;letter-spacing: 1px">Chanel<hr style="margin: 0.2rem;background-color: rgb(210 90 90) !important;"/></h4>
+                <img style="width: 40%;margin-bottom: 10px;" src="assets/images/chanelogo.png">
+                <p style="letter-spacing: 2px;font-family: Poppins;">FRANCE</p>
+            </div>
+            <div class="col" style="display: grid;
+            border-right: 2px solid darkgray;padding: 0px 20px;">
+                    <h4 style=" font-family: 'Poppins';font-size: 13px;font-weight: normal;letter-spacing: 1px;">Our Products<hr style="margin: 0.2rem;background-color: rgb(210 90 90) !important;"/></h4>
+                <div class="row row-cols-1 row-cols-md-2 g-1">
+                    <div class="col">
+                        <p>Skin Care</p>
+                    </div>
+                    <div class="col">
+                        <p style="white-space: nowrap;">Colour Cosmetics</p>
+                    </div>
+                    <div class="col">
+                        <p>Hair Care</p>
+                    </div>
+                    <div class="col">
+                        <p style="white-space: nowrap;">Eye Care</p>
+                    </div>
+                    <div class="col">
+                        <p>Body Care</p>
+                    </div>
+                    <div class="col">
+                        <p style="white-space: nowrap;">CBD Products</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="display: grid;
+            border-right: 2px solid darkgray;padding: 0px 20px;">
+                    <h4 style=" font-family: 'Poppins';font-size: 13px;font-weight: normal;letter-spacing: 1px;">Our Markets<hr style="margin: 0.2rem;background-color: rgb(210 90 90) !important;"/></h4>
+                <div class="row row-cols-1 row-cols-md-3 g-1">
+                    <div class="col">
+                        <p>Paris</p>
+                    </div>
+                    <div class="col">
+                        <p style="white-space: nowrap;">USA</p>
+                    </div>
+                    <div class="col">
+                        <p style="white-space: nowrap;">Japan</p>
+                    </div>
+                    <div class="col">
+                        <p>India</p>
+                    </div>
+                    <div class="col">
+                        <p style="white-space: nowrap;">Canada</p>
+                    </div>
+                    <div class="col">
+                        <p style="white-space: nowrap;">Germany</p>
+                    </div>
+                    <div class="col">
+                        <p style="white-space: nowrap;">UK</p>
+                    </div>
+                    <div class="col">
+                        <p style="white-space: nowrap;">Europe</p>
+                    </div>
+                    <div class="col">
+                        <p style="white-space: nowrap;">S.Korea</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="display: grid;padding: 0px 20px;">
+                    <h4 style=" font-family: 'Poppins';font-size: 13px;font-weight: normal;letter-spacing: 1px;">Our Certifications<hr style="margin: 0.2rem;background-color: rgb(210 90 90) !important;"/></h4>
+                    <div class="row row-cols-1 row-cols-md-2 g-1">
+                        <div class="col">
+                    <p>ISO, FDA, Health Canada</p>
+                    </div>
+                    <div class="col" style="text-align: -webkit-center;">  <button style="color:white;width: 85px;
+    font-size: 12px !important;background-color:rgba(216,135,135,1) !important;padding: 5px;border: none;border-radius: 5px;" type="button" 
+                    >View More</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="padding:8px;
+        border: 1px solid darkgrey;
+        border-radius: 10px;">
+          <div class="col" style="place-items: center;display: grid;border-right: 2px solid darkgrey;">
+                  <h4 style=" font-family: 'Poppins';font-size: 16px;font-weight: normal;letter-spacing: 1px">NARS<hr style="margin: 0.2rem;background-color: rgb(210 90 90) !important;"/></h4>
+              <img style="width: 40%;margin-bottom: 10px;" src="assets/images/nars.png">
+              <p style="letter-spacing: 2px;font-family: Poppins;">US</p>
+          </div>
+          <div class="col" style="display: grid;
+          border-right: 2px solid darkgray;padding: 0px 20px;">
+                  <h4 style=" font-family: 'Poppins';font-size: 13px;font-weight: normal;letter-spacing: 1px;">Our Products<hr style="margin: 0.2rem;background-color: rgb(210 90 90) !important;"/></h4>
+              <div class="row row-cols-1 row-cols-md-2 g-1">
+                  <div class="col">
+                      <p>Skin Care</p>
+                  </div>
+                  <div class="col">
+                      <p style="white-space: nowrap;">Colour Cosmetics</p>
+                  </div>
+                  <div class="col">
+                      <p>Hair Care</p>
+                  </div>
+                  <div class="col">
+                      <p style="white-space: nowrap;">Eye Care</p>
+                  </div>
+                  <div class="col">
+                      <p>Body Care</p>
+                  </div>
+                  <div class="col">
+                      <p style="white-space: nowrap;">CBD Products</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col" style="display: grid;
+          border-right: 2px solid darkgray;padding: 0px 20px;">
+                  <h4 style=" font-family: 'Poppins';font-size: 13px;font-weight: normal;letter-spacing: 1px;">Our Markets<hr style="margin: 0.2rem;background-color: rgb(210 90 90) !important;"/></h4>
+              <div class="row row-cols-1 row-cols-md-3 g-1">
+                  <div class="col">
+                      <p>Paris</p>
+                  </div>
+                  <div class="col">
+                      <p style="white-space: nowrap;">USA</p>
+                  </div>
+                  <div class="col">
+                      <p style="white-space: nowrap;">Japan</p>
+                  </div>
+                  <div class="col">
+                      <p>India</p>
+                  </div>
+                  <div class="col">
+                      <p style="white-space: nowrap;">Canada</p>
+                  </div>
+                  <div class="col">
+                      <p style="white-space: nowrap;">Germany</p>
+                  </div>
+                  <div class="col">
+                      <p style="white-space: nowrap;">UK</p>
+                  </div>
+                  <div class="col">
+                      <p style="white-space: nowrap;">Europe</p>
+                  </div>
+                  <div class="col">
+                      <p style="white-space: nowrap;">S.Korea</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col" style="display: grid;padding: 0px 20px;">
+                  <h4 style=" font-family: 'Poppins';font-size: 13px;font-weight: normal;letter-spacing: 1px;">Our Certifications<hr style="margin: 0.2rem;background-color: rgb(210 90 90) !important;"/></h4>
+                  <div class="row row-cols-1 row-cols-md-2 g-1">
+                      <div class="col">
+                  <p>ISO, FDA, Health Canada</p>
+                  </div>
+                  <div class="col" style="text-align: -webkit-center;">  <button style="color:white;width: 85px;
+  font-size: 12px !important;background-color:rgba(216,135,135,1) !important;padding: 5px;border: none;border-radius: 5px;" type="button" 
+                  >View More</button></div>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="padding:8px;
+      border: 1px solid darkgrey;
+      border-radius: 10px;">
+        <div class="col" style="place-items: center;display: grid;border-right: 2px solid darkgrey;">
+                <h4 style=" font-family: 'Poppins';font-size: 16px;font-weight: normal;letter-spacing: 1px">SEPHORA<hr style="margin: 0.2rem;background-color: rgb(210 90 90) !important;"/></h4>
+            <img style="width: 40%;margin-bottom: 10px;" src="assets/images/sephora.png">
+            <p style="letter-spacing: 2px;font-family: Poppins;">LONDON</p>
+        </div>
+        <div class="col" style="display: grid;
+        border-right: 2px solid darkgray;padding: 0px 20px;">
+                <h4 style=" font-family: 'Poppins';font-size: 13px;font-weight: normal;letter-spacing: 1px;">Our Products<hr style="margin: 0.2rem;background-color: rgb(210 90 90) !important;"/></h4>
+            <div class="row row-cols-1 row-cols-md-2 g-1">
+                <div class="col">
+                    <p>Skin Care</p>
+                </div>
+                <div class="col">
+                    <p style="white-space: nowrap;">Colour Cosmetics</p>
+                </div>
+                <div class="col">
+                    <p>Hair Care</p>
+                </div>
+                <div class="col">
+                    <p style="white-space: nowrap;">Eye Care</p>
+                </div>
+                <div class="col">
+                    <p>Body Care</p>
+                </div>
+                <div class="col">
+                    <p style="white-space: nowrap;">CBD Products</p>
+                </div>
+            </div>
+        </div>
+        <div class="col" style="display: grid;
+        border-right: 2px solid darkgray;padding: 0px 20px;">
+                <h4 style=" font-family: 'Poppins';font-size: 13px;font-weight: normal;letter-spacing: 1px;">Our Markets<hr style="margin: 0.2rem;background-color: rgb(210 90 90) !important;"/></h4>
+            <div class="row row-cols-1 row-cols-md-3 g-1">
+                <div class="col">
+                    <p>Paris</p>
+                </div>
+                <div class="col">
+                    <p style="white-space: nowrap;">USA</p>
+                </div>
+                <div class="col">
+                    <p style="white-space: nowrap;">Japan</p>
+                </div>
+                <div class="col">
+                    <p>India</p>
+                </div>
+                <div class="col">
+                    <p style="white-space: nowrap;">Canada</p>
+                </div>
+                <div class="col">
+                    <p style="white-space: nowrap;">Germany</p>
+                </div>
+                <div class="col">
+                    <p style="white-space: nowrap;">UK</p>
+                </div>
+                <div class="col">
+                    <p style="white-space: nowrap;">Europe</p>
+                </div>
+                <div class="col">
+                    <p style="white-space: nowrap;">S.Korea</p>
+                </div>
+            </div>
+        </div>
+        <div class="col" style="display: grid;padding: 0px 20px;">
+                <h4 style=" font-family: 'Poppins';font-size: 13px;font-weight: normal;letter-spacing: 1px;">Our Certifications<hr style="margin: 0.2rem;background-color: rgb(210 90 90) !important;"/></h4>
+                <div class="row row-cols-1 row-cols-md-2 g-1">
+                    <div class="col">
+                <p>ISO, FDA, Health Canada</p>
+                </div>
+                <div class="col" style="text-align: -webkit-center;">  <button style="color:white;width: 85px;
+font-size: 12px !important;background-color:rgba(216,135,135,1) !important;padding: 5px;border: none;border-radius: 5px;" type="button" 
+                >View More</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="padding:8px;
+      border: 1px solid darkgrey;
+      border-radius: 10px;">
+        <div class="col" style="place-items: center;display: grid;border-right: 2px solid darkgrey;">
+                <h4 style=" font-family: 'Poppins';font-size: 16px;font-weight: normal;letter-spacing: 1px">ESTEE LAUDER<hr style="margin: 0.2rem;background-color: rgb(210 90 90) !important;"/></h4>
+            <img style="width: 40%;margin-bottom: 10px;" src="assets/images/estee.png">
+            <p style="letter-spacing: 2px;font-family: Poppins;">PARIS</p>
+        </div>
+        <div class="col" style="display: grid;
+        border-right: 2px solid darkgray;padding: 0px 20px;">
+                <h4 style=" font-family: 'Poppins';font-size: 13px;font-weight: normal;letter-spacing: 1px;">Our Products<hr style="margin: 0.2rem;background-color: rgb(210 90 90) !important;"/></h4>
+            <div class="row row-cols-1 row-cols-md-2 g-1">
+                <div class="col">
+                    <p>Skin Care</p>
+                </div>
+                <div class="col">
+                    <p style="white-space: nowrap;">Colour Cosmetics</p>
+                </div>
+                <div class="col">
+                    <p>Hair Care</p>
+                </div>
+                <div class="col">
+                    <p style="white-space: nowrap;">Eye Care</p>
+                </div>
+                <div class="col">
+                    <p>Body Care</p>
+                </div>
+                <div class="col">
+                    <p style="white-space: nowrap;">CBD Products</p>
+                </div>
+            </div>
+        </div>
+        <div class="col" style="display: grid;
+        border-right: 2px solid darkgray;padding: 0px 20px;">
+                <h4 style=" font-family: 'Poppins';font-size: 13px;font-weight: normal;letter-spacing: 1px;">Our Markets<hr style="margin: 0.2rem;background-color: rgb(210 90 90) !important;"/></h4>
+            <div class="row row-cols-1 row-cols-md-3 g-1">
+                <div class="col">
+                    <p>Paris</p>
+                </div>
+                <div class="col">
+                    <p style="white-space: nowrap;">USA</p>
+                </div>
+                <div class="col">
+                    <p style="white-space: nowrap;">Japan</p>
+                </div>
+                <div class="col">
+                    <p>India</p>
+                </div>
+                <div class="col">
+                    <p style="white-space: nowrap;">Canada</p>
+                </div>
+                <div class="col">
+                    <p style="white-space: nowrap;">Germany</p>
+                </div>
+                <div class="col">
+                    <p style="white-space: nowrap;">UK</p>
+                </div>
+                <div class="col">
+                    <p style="white-space: nowrap;">Europe</p>
+                </div>
+                <div class="col">
+                    <p style="white-space: nowrap;">S.Korea</p>
+                </div>
+            </div>
+        </div>
+        <div class="col" style="display: grid;padding: 0px 20px;">
+                <h4 style=" font-family: 'Poppins';font-size: 13px;font-weight: normal;letter-spacing: 1px;">Our Certifications<hr style="margin: 0.2rem;background-color: rgb(210 90 90) !important;"/></h4>
+                <div class="row row-cols-1 row-cols-md-2 g-1">
+                    <div class="col">
+                <p>ISO, FDA, Health Canada</p>
+                </div>
+                <div class="col" style="text-align: -webkit-center;">  <button style="color:white;width: 85px;
+font-size: 12px !important;background-color:rgba(216,135,135,1) !important;padding: 5px;border: none;border-radius: 5px;" type="button" 
+                >View More</button></div>
+        </div>
+      </div>
+    </div>
+    <br/><br/>
+      </div>
+      <div class="container" style="width:100%;position: relative;margin-bottom: 50px;" >
+        <img src="assets/images/brandfoimg.png" style="width:100%;">
+        <div style=" position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(0%, -50%);
+       width: 38%;"><p style="font-family: Playfair Display;
+    font-size: 35px;font-weight: bold;color: white;
+    letter-spacing: 1px;">International Brands Fair,
+Business And Investors
+Summit</p>
+<br/>
+    <p style="color: white;font-size: 15px;font-family: Poppins;">We believe in building to positively impact communities, infrastructure, the economy, opportunity and employment. We take great pride in being proactive with our approach to projects, while ensuring that the best interests of the stakeholders are represented at every stage.</p>
+     <br/>
+     <div style="display: flex;justify-content: start;">  <button style="color:white;width: 200px;
+        font-size: 18px !important;opacity: 0.67;font-weight: bolder;
+    background-color: rgba(255,0,0,1) !important;padding: 10px;border: none;border-radius: 5px;" type="button" 
+                        >Register Now</button></div>
+</div>
+    </div>
+    <div class="row" style="background-color: rgba(251,230,230,1);margin-bottom: 50px;">
+       <div class="col" style="padding: 50px;display: grid;align-items: center  ;">
+<p style="color: rgba(155,74,26,1);font-family: 'Playfair Display' !important;font-size: 20px !important;font-weight: bold;margin-bottom: 1rem;">Get Exclusive Updates & Latest News</p>
+       <p style="color: rgba(155,74,26,1);">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus</p>
+</div>
+<div class="col" style="display: grid;align-items: center;">
+    <input type="text" class="input2" style="padding: 0px 20px;" placeholder="Enter Email ID">
+    </div>
+    <div class="col" style="display: grid;align-items: center;">
+        <button style="color:white;width: 50%;margin-left: 100px;
+        font-size: 18px !important;background-color:rgba(216,135,135,1) !important;padding: 15px;border: none;border-radius: 5px;" type="button" 
+                        >Subscribe Now</button>
+    </div>
+    </div>
+    <div class="footer container-fluid">
+        <div class="bocp-logo"><img style="width: 10%;" src="assets/images/bcp.png"></div>
+    
+        <div class="row rowfooter">
+          <div class="col-4 columns">
+            <div class="heading"><span style="font-size: large;">For The Consumer Goods Industry</span></div>
+            <p style="line-height: 19px !important;">Massa nisi, integer convalis sed eu. Lacus, lorem bibendum in congue justo nisi, fames at ultrices. Mattis
+              enim mauris vitae ullamcorper maecenas enim, fermentum.
+              Massa nisi, integer convalis sed eu. Lacus, lorem bibendum in congue justo nisi, fames at ultrices. Mattis
+              enim mauris vitae ullamcorper maecenas enim, fermentum.
+              Massa nisi, integer convalis sed eu. Lacus, lorem bibendum in congue justo nisi, fames at ultrices. Mattis
+              enim mauris vitae ullamcorper maecenas enim, fermentum.
+              Massa nisi, integer convalis sed eu. Lacus, lorem bibendum in congue justo nisi, fames at ultrices. Mattis
+              enim mauris vitae ullamcorper maecenas enim, fermentum.
+            </p>
+            <p>Copyright <img src="assets/images/icons8-copyright-24.png" class="copyright-img" /> 2022. bocp All Rights
+              Reserved.</p>
+          </div>
+          <div class="col-2 columns">
+            <ul>
+              <li><a [routerLink]="['/']">Home</a></li>
+              <li><a [routerLink]="['/aboutus']">About Us</a></li>
+              <li><a [routerLink]="['/contactus']">Contact Us</a></li>
+              <li><a [routerLink]="['/']">Terms & Conditions</a></li>
+              <li><a [routerLink]="['/']">Privacy Policies</a></li>
+            </ul>
+          </div>
+          <div class="col-3 columns">
+            <ul>
+              <li><a [routerLink]="['/manufacturer']" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">Manufacturer<img src="assets/images/icons8-dropdown-24.png"
+                    class="dropdown-img" /></a>
+                <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" [routerLink]="['/eventsuccess']">Action</a>
+                  <a class="dropdown-item" [routerLink]="['/eventsuccess']">Another action</a>
+                  <a class="dropdown-item" [routerLink]="['/eventsuccess']">Something else here</a>
+                </div> -->
+              </li>
+              <li><a [routerLink]="['/brandlisting']" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">Brands<img src="assets/images/icons8-dropdown-24.png" class="dropdown-img" /></a>
+                <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" [routerLink]="['/eventsuccess']">Action</a>
+                  <a class="dropdown-item" [routerLink]="['/eventsuccess']">Another action</a>
+                  <a class="dropdown-item" [routerLink]="['/eventsuccess']">Something else here</a>
+                </div> -->
+              </li>
+              <li><a [routerLink]="['/login']">Manufacturer LogIn/Register</a></li>
+              <li><a [routerLink]="['/signup']">Brand LogIn/Register</a></li>
+              <!-- <li><a [routerLink]="['/eventsuccess']">Help</a></li> -->
+            </ul>
+          </div>
+          <div class="col-3 columns">
+            <div class="heading" style="padding: 38px;">Connect With Us</div>
+            <ul class="icons">
+              <li><a><img src="assets/images/icons8-instagram-26.png" class="icon-img" /></a></li>
+              <li><a><img src="assets/images/icons8-facebook-32.png" class="icon-img" /></a></li>
+              <li><a><img src="assets/images/twitterwhite.png" class="icon-img" /></a></li>
+            </ul>
+          </div>
+        </div>
+        <br /><br />
+      </div>
+      </div>

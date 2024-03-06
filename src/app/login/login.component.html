@@ -1,0 +1,146 @@
+<div style="overflow: hidden;">
+  <div class="container-fluid top_bar">
+    <div class="row top_bar_row">
+      <div class="col-sm" id="JoinPhytoCommunity">
+        Join The Community
+      </div>
+      <!-- <div class="col-sm" id="VisitPhytoCommunity">
+        VisitPhytoCommunity
+      </div> -->
+    </div>
+
+  </div>
+  <!--nav bar-->
+  <div class="container-fluid naviBar">
+    <div class="row justify-content-around">
+      <div class="col-md-auto" style="padding: 0;">
+        <a class="nav-item nav-link" style="color: black;">
+          <!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
+          <img src="assets/images/hamberger.png" />
+        </a>
+      </div>
+      <div class="col-md-auto" style="padding: 0;">
+        <div class="nav-item">
+          <a class="nav-link" style="color: black;" [routerLink]="['/']" >Home</a>
+        </div>
+      </div>
+      <div class="col-md-auto" style="padding: 0;">
+        <div class="nav-item dropdown">
+          <a [routerLink]="['/events']"  class="nav-link " style="color: black;" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Events
+          </a>
+          <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" style="color: black;">Action</a>
+              <a class="dropdown-item" style="color: black;">Another action</a>
+              <a class="dropdown-item" style="color: black;">Something else here</a>
+            </div> -->
+        </div>
+      </div>
+      <div class="col-md-auto" style="padding: 0;">
+        <div class="nav-item dropdown">
+          <a [routerLink]="['/manufacturer']"  class="nav-link " style="color: black;" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Manufacturers
+            <!-- <img src="/images/Component2_1.png"> -->
+          </a>
+          <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" style="color: black;">Action</a>
+              <a class="dropdown-item" style="color: black;">Another action</a>
+              <a class="dropdown-item" style="color: black;">Something else here</a>
+            </div> -->
+        </div>
+      </div>
+      <div class="col-md-auto" style="padding: 0;">
+        <div class="nav-item dropdown">
+          <a [routerLink]="['/colorcosmetics']" class="nav-link " style="color: black;" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Products
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-2" style="padding: 0;">
+        <img src="assets/images/logo2.png" class="logo" />
+      </div>
+      <div class="col-md-auto" style="padding: 0;">
+        <div class="nav-item">
+          <a [routerLink]="['/contactus']" class="nav-link" style="color: black;">Contact Us</a>
+        </div>
+      </div>
+      <div class="col-md-auto" style="padding: 0;">
+        <div class="nav-item">
+          <a [routerLink]="['/joblisting']" class="nav-link" style="color: black;">Jobs</a>
+        </div>
+      </div>
+      <!-- <div class="col-md-auto" style="padding: 0;">
+        <div class="nav-item">
+          <a class="nav-link" style="color: black;">Help</a>
+        </div>
+      </div> -->
+      <div class="col-md-auto" style="padding: 0;">
+        <div class="nav-item dropdown">
+          <a class="nav-link " style="color: black;" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+           <span style="font-weight: normal;cursor: pointer;" [routerLink]="['/login']">LogIn</span> / <span [routerLink]="['/signup']" style="font-weight: normal;cursor: pointer;">Register</span>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-auto" style="padding: 0;">
+        <div class="nav-item">
+          <a class="nav-link" style="color: black;"><img src="assets/images/searchh.png" /></a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+    <!-- <div class="bocp">
+        <p style="font-size: x-large !important;font-family: Playfair Display !important;"><span>B</span>usiness
+          <span>O</span>f <span>C</span>onsumer <span>P</span>roducts</p>
+      </div> -->
+        <div class="row">
+            <div class="col" style="padding: 0px 0px 0px 100px;display: grid;align-content: center;">
+                <div class="create_account_div">
+                <form class="create_account_form">
+                    <h2 class="create_account">Sign In</h2>
+                    <!-- <div class="input-group">
+                        <input type="text" class="form-control rounded-0" placeholder="First Name" >
+                        <input type="text" class="form-control rounded-0 lname" placeholder="Last Name">
+                      </div> -->
+                      <br/>
+                    <input type="text" [(ngModel)]="logindetails.email"  name="email" placeholder="Email Address" class="rounded-0"/>
+                    <br/>
+                    <input type="password" [(ngModel)]="logindetails.password" name="password" placeholder="Password" class="rounded-0"/>
+                    <br/>
+                    <div class="row row-cols-1 row-cols-md-3 g-1" style="display: flex;">
+<div class="col-lg-1">
+    <input id="cb1" class="input1" type="checkbox">
+</div>
+<div class="col-lg-11">
+    <p style="font-size: 15px !important;margin-top: 2px;">I agree to the <span style="color: rgba(102,49,48,1);font-weight: 400;cursor: pointer;"><u>Terms of service</u></span> & <span style="color: rgba(102,49,48,1);font-weight: 400;cursor: pointer;"><u>Privacy Policy</u></span></p>
+</div>
+</div>
+                    <br/>
+                    <button class="submit_button" (click)="login()"><b>Sign In</b></button>
+                </form>
+                <br/>
+                <h5><span class="sign_up_with" style="cursor: pointer;" (click)="signup()">Or Sign Up With</span></h5>
+                <br/>
+                <ul class="social-icons">
+                    <li><a><img src="assets/images/fbb.png" alt="fb"></a></li>
+                    <li><img src="assets/images/google.png" alt="google"></li>
+                    <li><img src="assets/images/linke.png" alt="linkedin"></li>
+                    <li><img src="assets/images/icons8-apple-50.png" alt="apple"></li>
+                    <li><img src="assets/images/twi.png" alt="twitter"></li>
+                </ul>
+                <br/>
+                <!-- <p class="have_an_account">Already have an account? <a (click)="signup"><b style="color: rgba(102,49,48,1);"><u>Sign In</u></b></a></p> -->
+            </div>
+            </div>
+            <div class="col" style="display: grid;align-content: center;">
+                <div style="position: absolute;">
+                <img class="banner-img" src="assets/images/loginlogo.png"/>
+                </div>
+            </div>
+        </div>
+        <br/><br/>
+    </div>

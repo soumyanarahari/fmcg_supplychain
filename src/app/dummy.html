@@ -1,0 +1,421 @@
+<!-- create manufacturer profile -->
+<form
+                    [formGroup]="userForm"
+                    (ngSubmit)="
+                      createManufacturerProfile(
+                        usernameIput.value,
+                        organization_nameInput.value,
+                        designationInput.value,
+                        emailInput.value,
+                        phone_numberInput.value,
+                        street_addressInput.value,
+                        cityInput.value,
+                        postal_codeInput.value,
+                        stateInput.value,
+                        countryInput.value
+                      )
+                    "
+                  >
+                    <div class="row">
+                      <label class="labletitle">Name</label>
+                      <div class="col">
+                        <input
+                          type="text"
+                          class="input2"
+                          style="padding: 10px"
+                          placeholder="First"
+                          id="username"
+                          formControlName="username"
+                          #usernameIput
+                          required
+                        />
+                      </div>
+                      <div class="col">
+                        <input
+                          type="text"
+                          class="input2"
+                          style="padding: 10px"
+                          placeholder="Last"
+                        />
+                      </div>
+                    </div>
+                    <label class="labletitle">Organisation Name</label>
+                    <input
+                      type="text"
+                      style="padding: 10px"
+                      class="input2"
+                      placeholder=""
+                      id="organization_name"
+                      #organization_nameInput
+                      required
+                    />
+                    <label class="labletitle">Designation / Title</label>
+                    <input
+                      type="text"
+                      style="padding: 10px"
+                      class="input2"
+                      placeholder=""
+                      id="designation"
+                      #designationInput
+                      required
+                    />
+                    <label class="labletitle">Email ID</label>
+                    <input
+                      type="text"
+                      class="input2"
+                      style="padding: 10px"
+                      placeholder=""
+                      id="email"
+                      formControlName="email"
+                      #emailInput
+                      required
+                    />
+                    <!-- <label class="labletitle">Password</label>
+                  <input
+                    [type]="password"
+                    class="input2"
+                    style="padding: 10px"
+                  />
+                  <button
+                    class="btn"
+                    style="position: absolute; margin-left: -40px"
+                    (click)="onClick()"
+                  >
+                    <img
+                      src="assets/images/eyeoff.png"
+                      style="width: 18px"
+                      *ngIf="!show"
+                    />
+                    <img
+                      src="assets/images/eye.png"
+                      style="width: 18px"
+                      *ngIf="show"
+                    />
+                  </button>
+                  <label class="labletitle">Re-Enter Password</label>
+                  <input
+                    [type]="password1"
+                    class="input2"
+                    style="padding: 10px"
+                  />
+                  <button
+                    class="btn"
+                    style="position: absolute; margin-left: -40px"
+                    (click)="onClick1()"
+                  >
+                    <img
+                      src="assets/images/eyeoff.png"
+                      style="width: 18px"
+                      *ngIf="!show1"
+                    />
+                    <img
+                      src="assets/images/eye.png"
+                      style="width: 18px"
+                      *ngIf="show1"
+                    />
+                  </button> -->
+                    <label for="phone_number">phone_number:</label>
+                    <textarea
+                      id="phone_number"
+                      #phone_numberInput
+                      required
+                    ></textarea>
+                    <!-- <label class="labletitle">Phone Number</label>
+                  <form #f="ngForm" [formGroup]="phoneForm">
+                    <div class="wrapper input2">
+                      <ngx-intl-tel-input
+                        [cssClass]="'custom'"
+                        [preferredCountries]="preferredCountries"
+                        [enableAutoCountrySelect]="true"
+                        [enablePlaceholder]="true"
+                        [searchCountryFlag]="true"
+                        [searchCountryField]="[
+                          SearchCountryField.Iso2,
+                          SearchCountryField.Name
+                        ]"
+                        [selectFirstCountry]="false"
+                        [selectedCountryISO]="CountryISO.India"
+                        [maxLength]="15"
+                        [phoneValidation]="true"
+                        [separateDialCode]="separateDialCode"
+                        name="phone"
+                        formControlName="phone"
+                        id="phone_number" #phone_numberInput required
+                      >
+                      </ngx-intl-tel-input>
+                    </div>
+                  </form> -->
+                    <label class="labletitle" style="margin-top: 15px"
+                      >Address&nbsp;<img
+                        style="width: 15px"
+                        src="assets/images/location.png"
+                    /></label>
+                    <input
+                      type="text"
+                      class="input2"
+                      style="padding: 10px"
+                      placeholder="Street Address"
+                      id="street_address"
+                      #street_addressInput
+                      required
+                    />
+                    <div class="row">
+                      <div class="col">
+                        <input
+                          type="text"
+                          class="input2"
+                          style="padding: 10px"
+                          placeholder="City"
+                          id="city"
+                          #cityInput
+                          required
+                        />
+                      </div>
+                      <div class="col">
+                        <input
+                          type="text"
+                          class="input2"
+                          style="padding: 10px"
+                          placeholder="Postal Code"
+                          id="postal_code"
+                          #postal_codeInput
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <input
+                          type="text"
+                          class="input2"
+                          style="padding: 10px"
+                          placeholder="State"
+                          id="state"
+                          #stateInput
+                          required
+                        />
+                      </div>
+                      <div class="col">
+                        <input
+                          type="text"
+                          class="input2"
+                          style="padding: 10px"
+                          placeholder="Country"
+                          id="country"
+                          #countryInput
+                          required
+                        />
+                      </div>
+                    </div>
+                    <br />
+                    <br />
+                    <div style="display: flex; justify-content: center">
+                      <button
+                        style="
+                          color: white;
+                          width: 40%;
+                          font-size: 15px !important;
+                          background-color: #663130 !important;
+                          padding: 6px;
+                          border-radius: 5px;
+                          border: none;
+                        "
+                        type="submit"
+                        [routerLink]="['/manufacturersuccess']"
+                        [queryParams]="{ name: 'create' }"
+                      >
+                        Create Profile
+                      </button>
+                    </div>
+                    <br />
+                  </form>
+                  <!-- edit manufacturer profile -->
+                  <h5 style="font-family: Poppins; text-align: center">
+                    Edit Profile
+                  </h5>
+                  <div class="row">
+                    <label class="labletitle">Name</label>
+                    <div class="col">
+                      <input
+                        type="text"
+                        class="input2"
+                        value="John"
+                        style="padding: 10px"
+                        placeholder="First"
+                      />
+                    </div>
+                    <div class="col">
+                      <input
+                        type="text"
+                        class="input2"
+                        value="Smith"
+                        style="padding: 10px"
+                        placeholder="Last"
+                      />
+                    </div>
+                  </div>
+                  <label class="labletitle">Organisation Name</label>
+                  <input
+                    type="text"
+                    value="Accupac Private Limited"
+                    style="padding: 10px"
+                    class="input2"
+                    placeholder=""
+                  />
+                  <label class="labletitle">Designation / Title</label>
+                  <input
+                    type="text"
+                    style="padding: 10px"
+                    value="Software Engineer"
+                    class="input2"
+                    placeholder=""
+                  />
+                  <label class="labletitle">Email ID</label>
+                  <input
+                    type="text"
+                    class="input2"
+                    value="johnsmith@gmail.com"
+                    style="padding: 10px"
+                    placeholder=""
+                  />
+                  <label class="labletitle">Password</label>
+                  <input
+                    [type]="password"
+                    value="12345"
+                    class="input2"
+                    style="padding: 10px"
+                  />
+                  <button
+                    class="btn"
+                    style="position: absolute; margin-left: -40px"
+                    (click)="onClick()"
+                  >
+                    <img
+                      src="assets/images/eyeoff.png"
+                      style="width: 18px"
+                      *ngIf="!show"
+                    />
+                    <img
+                      src="assets/images/eye.png"
+                      style="width: 18px"
+                      *ngIf="show"
+                    />
+                  </button>
+                  <label class="labletitle">Re-Enter Password</label>
+                  <input
+                    [type]="password1"
+                    value="1234"
+                    class="input2"
+                    style="padding: 10px"
+                  />
+                  <button
+                    class="btn"
+                    style="position: absolute; margin-left: -40px"
+                    (click)="onClick1()"
+                  >
+                    <img
+                      src="assets/images/eyeoff.png"
+                      style="width: 18px"
+                      *ngIf="!show1"
+                    />
+                    <img
+                      src="assets/images/eye.png"
+                      style="width: 18px"
+                      *ngIf="show1"
+                    />
+                  </button>
+                  <label class="labletitle">Phone Number</label>
+                  <form #f="ngForm" [formGroup]="phoneForm">
+                    <div class="wrapper">
+                      <ngx-intl-tel-input
+                        [cssClass]="'custom'"
+                        [preferredCountries]="preferredCountries"
+                        [enableAutoCountrySelect]="true"
+                        [enablePlaceholder]="true"
+                        [searchCountryFlag]="true"
+                        [searchCountryField]="[
+                          SearchCountryField.Iso2,
+                          SearchCountryField.Name
+                        ]"
+                        [selectFirstCountry]="false"
+                        [selectedCountryISO]="CountryISO.India"
+                        [maxLength]="15"
+                        [phoneValidation]="true"
+                        [separateDialCode]="separateDialCode"
+                        name="phone"
+                        formControlName="phone"
+                      >
+                      </ngx-intl-tel-input>
+                    </div>
+                  </form>
+                  <label class="labletitle" style="margin-top: 15px"
+                    >Address&nbsp;<img
+                      style="width: 15px"
+                      src="assets/images/location.png"
+                  /></label>
+                  <input
+                    type="text"
+                    class="input2"
+                    value="123, Mystreet"
+                    style="padding: 10px"
+                    placeholder="Street Address"
+                  />
+                  <div class="row">
+                    <div class="col">
+                      <input
+                        type="text"
+                        class="input2"
+                        value="Kingstone"
+                        style="padding: 10px"
+                        placeholder="City"
+                      />
+                    </div>
+                    <div class="col">
+                      <input
+                        type="text"
+                        class="input2"
+                        style="padding: 10px"
+                        value="523006"
+                        placeholder="Postal Code"
+                      />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <input
+                        type="text"
+                        class="input2"
+                        value="Newyork"
+                        style="padding: 10px"
+                        placeholder="State"
+                      />
+                    </div>
+                    <div class="col">
+                      <input
+                        type="text"
+                        class="input2"
+                        value="United States"
+                        style="padding: 10px"
+                        placeholder="Country"
+                      />
+                    </div>
+                  </div>
+                  <br />
+                  <br />
+                  <div style="display: flex; justify-content: center">
+                    <button
+                      style="
+                        color: white;
+                        width: 40%;
+                        font-size: 15px !important;
+                        background-color: #663130 !important;
+                        padding: 6px;
+                        border-radius: 5px;
+                        border: none;
+                      "
+                      type="button"
+                      [routerLink]="['/manufacturersuccess']"
+                      [queryParams]="{ nameu: 'update' }"
+                    >
+                      Update Profile
+                    </button>

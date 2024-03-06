@@ -1,0 +1,231 @@
+<div style="
+  background-color: rgba(102, 49, 48, 1);
+  height: 15px;
+  margin-bottom: 20px;
+"></div>
+<!-- logo -->
+
+<div class="logo" style="text-align: center">
+    <img src="assets/images/logo.png" />
+</div>
+<!-- grey line -->
+<div style="
+  border-bottom: 2px solid rgba(112, 112, 112, 0.8);
+  margin-top: 10px;
+"></div>
+<!-- All payments -->
+<div style="
+  text-align: left;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 15px;
+  margin-left: 50px;
+">
+    <p>All Payments</p>
+</div>
+<div style="border-bottom: 2px solid rgba(112, 112, 112, 0.5)"></div>
+<!-- payment -->
+<div class="container" style="margin: 20px 80px">
+    <p style="
+    text-align: left;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+  ">
+        <b>Payment</b>
+    </p>
+    <div style="display: flex">
+        <p style="
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 22px;
+    ">
+            $800.00 <span style="color: rgba(112, 112, 112, 0.4)">USD</span>
+        </p>
+        <p *ngIf="paymentSucceed" style="
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      color: rgba(34, 147, 31, 1);
+      margin-left: 30px;
+      background: rgba(34, 147, 31, 0.3);
+      padding: 5px 25px;
+      border-radius: 8px;
+    ">
+            Succeeded<img src="assets/images/checkmarkp.png" style="margin-left: 5px; height: 16px;margin-top: -4px;" />
+        </p>
+
+      <p *ngIf="paymentFailed" style="
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        color: rgba(147, 34, 31, 1);
+        margin-left: 30px;
+        background: rgba(147, 34, 31, 0.3);
+        padding: 5px 25px;
+        border-radius: 8px;
+      ">
+              Failed<img src="assets/images/checkmarkp.png" style="margin-left: 5px; height: 16px;margin-top: -4px;" />
+        </p>
+    </div>
+</div>
+<div style="border-bottom: 2px solid rgba(112, 112, 112, 0.2)"></div>
+<!-- date -->
+<div class="container" id="navigation" style="
+  margin: 20px 80px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+">
+    <ul style="
+    display: flex;
+    list-style: none;
+    padding-left: 0px;
+    justify-content: space-between;
+  ">
+        <li>
+            <p>Date</p>
+            <p style="color: rgba(112, 112, 112, 0.5)">Oct 31, 6:09 PM</p>
+        </li>
+        <li style="
+      border-left: 2px solid rgba(112, 112, 112, 0.4);
+      margin-top: 14px;
+      margin-bottom: 20px;
+    "></li>
+        <li>
+            <p>Customer</p>
+            <p style="color: rgba(112, 112, 112, 0.5)">calvink@gmail.com</p>
+        </li>
+        <li style="
+      border-left: 2px solid rgba(112, 112, 112, 0.4);
+      margin-top: 14px;
+      margin-bottom: 20px;
+    "></li>
+
+        <li>
+            <p>Payment Method</p>
+            <p style="color: rgba(112, 112, 112, 0.5)">
+                <img src="assets/images/visa.png" style="width: 50px;" />
+                ...4256
+            </p>
+        </li>
+        <li style="
+      border-left: 2px solid rgba(112, 112, 112, 0.4);
+      margin-top: 14px;
+      margin-bottom: 20px;
+    "></li>
+
+        <li>
+            <p>Risk Evaluation</p>
+            <p style="color: rgba(112, 112, 112, 0.5)">
+                <span style="
+          margin-right: 5px;
+          color: rgba(34, 147, 31, 1);
+          background: rgba(34, 147, 31, 0.3);
+          border-radius: 20px;
+          padding: 2px 8px;
+        ">0</span>
+                Normal
+            </p>
+        </li>
+    </ul>
+</div>
+<!-- timeline -->
+<div class="container" style="margin: 20px 80px">
+    <p style="
+    text-align: left;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+  ">
+        <b>Timeline</b>
+    </p>
+</div>
+<div style="border-bottom: 2px solid rgba(112, 112, 112, 0.2)"></div>
+
+<div class="container" style="
+  margin: 20px 80px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+">
+    <ul style="list-style: none;padding: 0;">
+        <li>
+            <p style="margin-bottom: 0;">
+                <img src="assets/images/checkmarkp.png" style="
+          background: rgba(34, 147, 31, 0.3);
+          border-radius: 20px;
+          padding: 4px;
+          margin-right: 10px;
+        " />
+                Payment Succeeded
+            </p>
+            <p style="color: rgba(112, 112, 112, 0.5)">
+                <img src="assets/images/checkmarkp.png" style="
+          background: rgba(34, 147, 31, 0.3);
+          border-radius: 20px;
+          padding: 4px;
+          margin-right: 10px;
+          opacity: 0;
+        " />
+                Oct 31, 6:09PM
+            </p>
+        </li>
+        <li>
+            <p style="margin-bottom: 0;">
+                <img src="assets/images/checkmarkp.png" style="
+          background: rgba(34, 147, 31, 0.3);
+          border-radius: 20px;
+          padding: 4px;
+          margin-right: 10px;
+          opacity: 0;
+        " />Payment Started
+            </p>
+            <p style="color: rgba(112, 112, 112, 0.5)">
+                <img src="assets/images/checkmarkp.png" style="
+          background: rgba(34, 147, 31, 0.3);
+          border-radius: 20px;
+          padding: 4px;
+          margin-right: 10px;
+          opacity: 0;
+        " />Oct 31, 6:08PM
+            </p>
+        </li>
+    </ul>
+</div>
+<!-- Checkout -->
+
+<div class="container" style="margin: 20px 80px">
+    <p style="
+    text-align: left;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+  ">
+        <b>Checkout Summary</b>
+    </p>
+</div>
+<div style="border-bottom: 2px solid #70707033"></div>
+<div class="container" style="margin: 20px 80px">
+    <dl>
+        <dt>Customer</dt>
+        <dd>
+            <p style="margin-bottom: 10px; color: blue">calvink@gmail.com</p>
+            <p style="margin-bottom: 0px">98855337 US</p>
+        </dd>
+        <dt>Plan</dt>
+        <dd>Advertizer's Corporate Plan</dd>
+        <dt>Amount</dt>
+        <dd>$800.00USD</dd>
+    </dl>
+</div>

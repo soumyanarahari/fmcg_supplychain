@@ -1,0 +1,229 @@
+<div style="overflow: hidden;">
+    <div class="container-fluid top_bar">
+        <div class="row top_bar_row">
+          <div class="col-sm" id="JoinPhytoCommunity">
+            Join The Community
+          </div>
+          <!-- <div class="col-sm" id="VisitPhytoCommunity">
+            VisitPhytoCommunity
+          </div> -->
+        </div>
+    
+      </div>
+      <!--nav bar-->
+      <div class="container-fluid naviBar">
+        <div class="row justify-content-around">
+          <div class="col-md-auto" style="padding: 0;">
+            <a class="nav-item nav-link" style="color: black;">
+              <!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
+              <img src="assets/images/hamberger.png" />
+            </a>
+          </div>
+          <div class="col-md-auto" style="padding: 0;">
+            <div class="nav-item">
+              <a class="nav-link" style="color: black;" [routerLink]="['/']" >Home</a>
+            </div>
+          </div>
+          <div class="col-md-auto" style="padding: 0;">
+            <div class="nav-item dropdown">
+              <a [routerLink]="['/events']"  class="nav-link " style="color: black;" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Events
+              </a>
+              <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" style="color: black;">Action</a>
+                  <a class="dropdown-item" style="color: black;">Another action</a>
+                  <a class="dropdown-item" style="color: black;">Something else here</a>
+                </div> -->
+            </div>
+          </div>
+          <div class="col-md-auto" style="padding: 0;">
+            <div class="nav-item dropdown">
+              <a [routerLink]="['/manufacturer']"  class="nav-link " style="color: black;" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Manufacturers
+                <!-- <img src="/images/Component2_1.png"> -->
+              </a>
+              <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" style="color: black;">Action</a>
+                  <a class="dropdown-item" style="color: black;">Another action</a>
+                  <a class="dropdown-item" style="color: black;">Something else here</a>
+                </div> -->
+            </div>
+          </div>
+          <div class="col-md-auto" style="padding: 0;">
+            <div class="nav-item dropdown">
+              <a [routerLink]="['/colorcosmetics']" class="nav-link " style="color: black;" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Products
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-2" style="padding: 0;">
+            <img src="assets/images/logo2.png" class="logo" />
+          </div>
+          <div class="col-md-auto" style="padding: 0;">
+            <div class="nav-item">
+              <a [routerLink]="['/contactus']" class="nav-link" style="color: black;">Contact Us</a>
+            </div>
+          </div>
+          <div class="col-md-auto" style="padding: 0;">
+            <div class="nav-item">
+              <a [routerLink]="['/joblisting']" class="nav-link" style="color: black;">Jobs</a>
+            </div>
+          </div>
+          <!-- <div class="col-md-auto" style="padding: 0;">
+            <div class="nav-item">
+              <a class="nav-link" style="color: black;">Help</a>
+            </div>
+          </div> -->
+          <div class="col-md-auto" style="padding: 0;">
+            <div class="nav-item dropdown">
+              <a class="nav-link " style="color: black;" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+               <span style="font-weight: normal;cursor: pointer;" [routerLink]="['/login']">LogIn</span> / <span [routerLink]="['/signup']" style="font-weight: normal;cursor: pointer;">Register</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-auto" style="padding: 0;">
+            <div class="nav-item">
+              <a class="nav-link" style="color: black;"><img src="assets/images/searchh.png" /></a>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+
+    <!-- BOCP -->
+    <!-- <div class="bocp">
+        <p style="font-size: xx-large !important;font-family: Playfair Display !important;"><span>B</span>usiness
+            <span>O</span>f <span>C</span>onsumer <span>P</span>roducts
+        </p>
+    </div> -->
+<!-- main body -->
+<div class="body" >
+
+    
+        <div class="row">
+            <div class="col-lg-5" style="padding: 0px;">
+                <img src="assets/images/jobimg.png" style="width:100%;height:100%;object-fit: cover;">
+            </div>
+            <div class="col-lg-7" style="background-image: url('assets/images/jobimg1.png');">
+                <br/>
+                <br/>
+                <div style="width: fit-content;margin: auto;">
+                    <h4 style=" font-family: 'Playfair Display';font-size: 30px;font-weight: bold;letter-spacing: 1px;color: white;">Job Application
+                      <hr style="height: 2px;" />
+                    </h4>
+                  </div>
+                  <p style=" text-align: center;
+                  color: white;
+                  font-size: larger;">Software Developer
+                  </p>
+                <form class="formClass" style="padding: 0px 100px 0px 100px;">
+                    <div class="row">
+                        <div class="col">
+                            <div class="col-md-12">
+                                <label for="Name" class="labletitle" >Name</label>
+                                <div class="row">
+                                <div class="col">
+                                    <div class="form-group text-left">
+                                        <input type="text" class="input2" style="padding: 12px;" id="firstName" placeholder="First">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group textbox text-left">
+                                        <input type="text" class="input2" style="padding: 12px;" id="lastName" placeholder="Last">
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="Email" class="labletitle">Email</label>
+                                <div class="form-group text-left">
+                                    <input type="text" class="input2" style="padding: 12px;" id="Email">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="Phonenumber" class="labletitle">Phone Number</label>
+                                <div class="form-group text-left">
+                                    <input type="text" class="input2" style="padding: 12px;" id="Phonenumber">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="UploadResume" class="labletitle">Upload Resume</label>
+                                <div class="form-group text-left" style="background-color: white;height: 40px;">
+                                    <input type="file"  class="inputfile" style="padding: 7px 12px 0px 12px;"  id="UploadResume">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="CurrentSalary" class="labletitle">What Is Your Current Salary?</label>
+                                <div class="form-group text-left">
+                                    <input type="text" class="input2" style="padding: 12px;" id="CurrentSalary">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="expectedsalary" class="labletitle">What Is Your Expected Salary?</label>
+                                <div class="form-group text-left">
+                                    <select
+                                        style="padding:5px 0px 0px 10px;font-size:14px;cursor:pointer;width: 100%;height: 40px;font-family: Poppins;">
+                                        <option value="">Select</option>
+                                        <option value="">$50USD</option>
+    <option value="">$100USD</option>
+    <option value="">$110USD</option>
+    <option value="">$120USD</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="noticeperiod" class="labletitle">What Is Your Notice Period In Days?</label>
+                                <div class="form-group text-left">
+                                    <input type="text" class="input2" style="padding: 12px;" id="noticeperiod">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="experience" class="labletitle">Experience</label>
+                                <div class="form-group text-left">
+                                    <select
+                                    style="padding:5px 0px 0px 10px;font-size:14px;cursor:pointer;width: 100%;height: 40px;font-family: Poppins;">
+                                    <option value="">Select</option>
+                                    <option value="">1-2years</option>
+    <option value="">2-3years</option>
+    <option value="">3-4years</option>
+    <option value="">4-5years</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="education" class="labletitle">Education Qualification?</label>
+                                <div class="form-group text-left">
+                                    <input type="text" class="input2" style="padding: 12px;" id="education">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="shifts" class="labletitle">Are You Comfortable Working In Flexible Shifts?</label>
+                                <div class="form-group text-left">
+                                    <select
+                                    style="padding:5px 0px 0px 10px;font-size:14px;cursor:pointer;width: 100%;height: 40px;font-family: Poppins;">
+                                    <option value="">Select</option>
+                                    <option value="">YES</option>
+                                    <option value="">NO</option>
+                                </select>
+                                </div>
+                            </div>
+<br/>
+                            <div style="display: flex;justify-content: center;"> <button style="color:white;width: 40%;background-color: rgb(211 211 211 / 29%);
+                                backdrop-filter: blur(20px);
+                                border-radius: 10px;
+                                border-width: 1.5px;
+                                border-style: solid;
+                                border-color: rgba(207,207,207,1);
+                                font-size: 20px !important;background-color:rgb(102 102 110) !important;padding: 10px;"
+                                type="button">Submit</button></div>
+                          </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

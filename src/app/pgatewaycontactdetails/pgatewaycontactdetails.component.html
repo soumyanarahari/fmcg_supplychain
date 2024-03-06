@@ -1,0 +1,167 @@
+<div style="
+        background-color: rgba(102, 49, 48, 1);
+        height: 15px;
+        margin-bottom: 20px;
+      "></div>
+<!-- logo -->
+
+<div class="logo" style="text-align: center">
+    <img src="assets/images/logo.png" />
+</div>
+<!-- grey line -->
+<div style="
+        border-bottom: 2px solid rgba(112, 112, 112, 0.8);
+        margin-top: 10px;
+      "></div>
+<!-- Upgrade Your Plan-->
+<div style="
+        text-align: center;
+        font-family: Playfair Display;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+        margin-top: 10px;
+      ">
+    <p>Upgrade Your Plan</p>
+</div>
+<div style="border-bottom: 2px solid rgba(112, 112, 112, 0.5)"></div>
+<!-- Contact address -->
+<div class="container" style="margin: 20px 80px">
+    <p style="
+          text-align: left;
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 20px;
+        ">
+        Contact Address
+    </p>
+</div>
+<form [formGroup]="contactForm" (ngSubmit)="onSubmitContactDetails()">
+    <div style="border-bottom: 2px solid rgba(112, 112, 112, 0.2)"></div>
+    <div class="container" style="margin: 20px 80px;max-width: 90%;">
+        <label for="name" class="form-label">Name</label>
+        <div class="row mb-3">
+            <div class="col">
+                <input type="text" class="form-control rounded-0" placeholder="First" formControlName="firstName" />
+                <div
+                *ngIf="contactForm.get('firstName')?.errors && (contactForm.get('firstName')?.dirty || contactForm.get('firstName')?.touched)"
+                class="alert alert-danger"
+                >
+                    <div *ngIf="contactForm.get('firstName')?.errors?.['required']">First Name is required.</div>
+                    <div *ngIf="contactForm.get('firstName')?.errors?.['minlength']">
+                        First Name must be at least 2 characters long.
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control rounded-0" placeholder="Last" formControlName="lastName" />
+                <div
+                *ngIf="contactForm.get('lastName')?.errors && (contactForm.get('lastName')?.dirty || contactForm.get('lastName')?.touched)"
+                class="alert alert-danger"
+                >
+                    <div *ngIf="contactForm.get('lastName')?.errors?.['required']">Last Name is required.</div>
+                    <div *ngIf="contactForm.get('lastName')?.errors?.['minlength']">
+                        Last Name must be at least 2 characters long.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <label for="name" class="form-label">Address <img src="assets/images/location.png"
+                style="height: 20px;margin-left: 5px;" /></label>
+        <input type="text" class="form-control rounded-0 mb-3" placeholder="Street Address" formControlName="address" />
+        <div
+        *ngIf="contactForm.get('address')?.errors && (contactForm.get('address')?.dirty || contactForm.get('address')?.touched)"
+        class="alert alert-danger"
+        >
+            <div *ngIf="contactForm.get('address')?.errors?.['required']">Address is required.</div>
+            <div *ngIf="contactForm.get('address')?.errors?.['minlength']">
+                Address must be at least 5 characters long.
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col">
+                <input type="text" class="form-control rounded-0" placeholder="City" formControlName="city" />
+            </div>
+            <div class="col">
+                <input type="text" class="form-control rounded-0" placeholder="Zip Code" formControlName="zipCode" />
+            </div>
+        </div>
+        <div class="row mb-5">
+            <!-- <div class="col">
+                <input type="text" class="form-control rounded-0" placeholder="First">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control rounded-0" placeholder="Last">
+              </div> -->
+            <div class="col">
+                <select id="inputState" class="form-select form-control rounded-0">
+                    <option selected>State</option>
+                    <option>...</option>
+                </select>
+            </div>
+            <div class="col">
+                <select id="inputCountry" class="form-select form-control rounded-0">
+                    <option selected>Country</option>
+                    <option>...</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Billing Address -->
+<div class="container" style="margin: 20px 80px;max-width: 90%;">
+    <p style="
+          text-align: left;
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 28px;
+        ">
+        Billing Address
+    </p>
+</div>
+<div style="border-bottom: 2px solid rgba(112, 112, 112, 0.2)"></div>
+<div class="container" style="margin: 20px 80px;max-width: 90%;">
+    <div class="form-check mb-5">
+        <input class="form-check-input" type="checkbox" id="gridCheck" style="margin-top: 6px" formControlName="billToContactAddress" />
+        <label class="form-check-label" for="gridCheck" style="
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            color: rgba(60, 33, 33, 1);
+          ">
+            Same As Contact Address
+        </label>
+    </div>
+</div>
+<!-- Tax Settings -->
+<div class="container" style="margin: 20px 80px;max-width: 90%;">
+    <p style="
+          text-align: left;
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 28px;
+        ">
+        Tax Settings
+    </p>
+</div>
+<div style="border-bottom: 2px solid rgba(112, 112, 112, 0.2)"></div>
+<div class="container" style="margin: 20px 80px;max-width: 90%;">
+    <label for="name" class="form-label">Registered VAT/GST/TAX ID
+        <span style="color: gray">(Optional)</span></label>
+    <input type="text" class="form-control rounded-0 mb-3" formControlName="taxId" />
+    <div style="display: flex; justify-content: center">
+        <button style="width: 200px; color: white; background: rgba(102, 49, 48, 1);
+          border: none;border-radius: 25px;margin: 10px;padding:10px"
+          [disabled]="!contactForm.valid">
+            Save
+        </button>
+        <button style="width: 200px; color: black;background: white;
+        border: 2px solid black;border-radius: 25px;margin: 10px;padding:10px">Cancel</button>
+    </div>
+</div>
+</form>

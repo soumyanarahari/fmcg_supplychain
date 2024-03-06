@@ -1,0 +1,98 @@
+.maincontainer {
+    padding: 60px;
+  }
+.maincontainer1 {
+    padding: 0px 60px;
+  }
+  
+  span {
+    font-weight: 800;
+  }
+  a {
+    color: black;
+  }
+
+  .formClass {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .submit_button{
+    color:white;width: 100%;
+    background-color:#663130 !important;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+  }
+  
+  .calendar{
+    background-color: white;
+  }
+ 
+  input{
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid darkgray;
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 0px 0px 20px 0px;
+  }
+  input:focus{
+    outline: none;
+}
+
+  .create_account_div{
+    border: 1px solid darkgray;
+    padding: 50px;
+    border-radius: 15px;
+  }
+  /* .create_account_form{
+    padding: 20px;
+  } */
+  .sign_up_with{
+    text-align: center;
+    font-size: 12px;
+  }
+  .have_an_account{
+    text-align: center;
+  }
+  .social-icons{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0px;
+  }
+  .social-icons img{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 10px;
+    /* box-sizing: border-box; */
+  }
+  .banner-img{
+    width: 100%;
+  }
+  h5 {
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid darkgray; 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+    font-weight: normal;
+ } 
+ 
+ h5 span { 
+     background:#fff; 
+     padding:0 10px; 
+ }
+ input.input1[type=checkbox]{
+    height: 20px !important;
+margin-bottom: 0px !important;
+width: 25px !important;
+margin-top: 4px !important;
+border: 1px solid rgba(102,49,48,1);
+}
+#cb1 {
+    accent-color: rgba(102,49,48,1);
+  }

@@ -1,0 +1,88 @@
+input.searchinput{
+    width: 70%;
+    border-radius: 5px;
+    padding: 18px 15px 18px 35px;
+    background-image: url('/assets/images/searchh.png');
+    background-repeat: no-repeat;
+    outline: 0;
+    background-position: 12px;
+    background-size: 16px;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border: none;
+    font-size: 12px;
+    font-family: Poppins;
+
+}
+p{
+    font-family: Poppins;
+}
+h6{
+    font-family: Poppins;
+}
+.footer{
+    background-color: rgba(102, 49, 48, 1);
+    text-align: left;
+    color:white;
+    
+}
+.footer a{
+    text-decoration: none;
+    color: white;
+    font-family: 'poppins';
+    white-space: nowrap;
+}
+.footer ul{
+    list-style-type: none; 
+}
+.footer li{
+    padding:10px;
+}
+.footer p{
+    padding-top:20px;
+    font-size: x-small;
+}
+.bocp-logo{
+    padding-left: 40px;
+    padding-top: 20px;
+    font-size: xx-large;
+}
+.icons{
+    display: flex;
+}
+.icons li{
+    margin-right:25px;
+    border: solid;
+    border-color: white;
+    border-radius: 50px;
+}
+
+.rowfooter{
+    justify-content: space-around;
+    padding: 0px 40px;
+}
+
+.connect{
+padding-top:40px ;
+padding-left: 20px;
+} 
+.icon-img{
+height: 25px;
+width: 25px;
+}
+.dropdown-img{
+height: 18px;
+width: 18px;
+margin-left: 5px;
+}
+span{
+font-weight: bolder;
+}
+.heading{
+font-size: x-large;
+font-family: 'Playfair Display';
+}
+.copyright-img{
+height: 12px;
+width: 12px;
+}

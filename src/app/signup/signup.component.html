@@ -1,0 +1,139 @@
+<div style="overflow: hidden;">
+  <div class="container-fluid top_bar">
+    <div class="row top_bar_row">
+      <div class="col-sm" id="JoinPhytoCommunity">
+        Join The Community
+      </div>
+      <!-- <div class="col-sm" id="VisitPhytoCommunity">
+        VisitPhytoCommunity
+      </div> -->
+    </div>
+
+  </div>
+  <!--nav bar-->
+  <div class="container-fluid naviBar">
+    <div class="row justify-content-around">
+      <div class="col-md-auto" style="padding: 0;">
+        <a class="nav-item nav-link" style="color: black;">
+          <!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
+          <img src="assets/images/hamberger.png" />
+        </a>
+      </div>
+      <div class="col-md-auto" style="padding: 0;">
+        <div class="nav-item">
+          <a class="nav-link" style="color: black;" [routerLink]="['/']" >Home</a>
+        </div>
+      </div>
+      <div class="col-md-auto" style="padding: 0;">
+        <div class="nav-item dropdown">
+          <a [routerLink]="['/events']"  class="nav-link " style="color: black;" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Events
+          </a>
+          <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" style="color: black;">Action</a>
+              <a class="dropdown-item" style="color: black;">Another action</a>
+              <a class="dropdown-item" style="color: black;">Something else here</a>
+            </div> -->
+        </div>
+      </div>
+      <div class="col-md-auto" style="padding: 0;">
+        <div class="nav-item dropdown">
+          <a [routerLink]="['/manufacturer']"  class="nav-link " style="color: black;" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Manufacturers
+            <!-- <img src="/images/Component2_1.png"> -->
+          </a>
+          <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" style="color: black;">Action</a>
+              <a class="dropdown-item" style="color: black;">Another action</a>
+              <a class="dropdown-item" style="color: black;">Something else here</a>
+            </div> -->
+        </div>
+      </div>
+      <div class="col-md-auto" style="padding: 0;">
+        <div class="nav-item dropdown">
+          <a [routerLink]="['/colorcosmetics']" class="nav-link " style="color: black;" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Products
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-2" style="padding: 0;">
+        <img src="assets/images/logo2.png" class="logo" />
+      </div>
+      <div class="col-md-auto" style="padding: 0;">
+        <div class="nav-item">
+          <a [routerLink]="['/contactus']" class="nav-link" style="color: black;">Contact Us</a>
+        </div>
+      </div>
+      <div class="col-md-auto" style="padding: 0;">
+        <div class="nav-item">
+          <a [routerLink]="['/joblisting']" class="nav-link" style="color: black;">Jobs</a>
+        </div>
+      </div>
+      <!-- <div class="col-md-auto" style="padding: 0;">
+        <div class="nav-item">
+          <a class="nav-link" style="color: black;">Help</a>
+        </div>
+      </div> -->
+      <div class="col-md-auto" style="padding: 0;">
+        <div class="nav-item dropdown">
+          <a class="nav-link " style="color: black;" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+           <span style="font-weight: normal;cursor: pointer;" [routerLink]="['/login']">LogIn</span> / <span [routerLink]="['/signup']" style="font-weight: normal;cursor: pointer;">Register</span>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-auto" style="padding: 0;">
+        <div class="nav-item">
+          <a class="nav-link" style="color: black;"><img src="assets/images/searchh.png" /></a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+   
+        <div class="row">
+            <div class="col" style="padding: 0px 0px 0px 100px;display: grid;align-content: center;">
+                <div class="create_account_div">
+                <form class="create_account_form">
+                    <h2 class="create_account">Sign Up</h2>
+                    <br/>
+                    <div class="row">
+                        <div class="col">
+                        <input type="text" class="rounded-0" placeholder="First Name" [(ngModel)]="username" name="username">
+                        </div>
+                        <!-- <div class="col">
+                        <input type="text" class="rounded-0 lname" placeholder="Last Name" [(ngModel)]="usersignin.lname" name="lname">
+                        </div> -->
+                      </div>
+                      <!-- <input type="text" placeholder="Organization Name" class="rounded-0" [(ngModel)]="usersignin.organization_name" name="organization_name"/> -->
+                      <!-- <br/> -->
+                      <!-- [(ngModel)]="usersignin.trade_role" -->
+                      <select required [(ngModel)]="userType"  name="userType" required>
+                        <option value="" disabled>Sign up as</option>
+                        <option *ngFor="let type of userTypes" [value]="type">{{ type }}</option>
+
+                      </select>
+                      <!-- <br/> -->
+                    <input type="text" placeholder="Email Address" class="rounded-0" [(ngModel)]="email" name="email"/>
+                    <br/>
+                    <input type="password" placeholder="Password" class="rounded-0" [(ngModel)]="password" name="password"/>
+                    <br/>
+                    <input type="password" placeholder="Re-enter Password"  [(ngModel)]="confirmPassword" name="confirmPassword" class="rounded-0"/>
+                    <br/>
+                    <button class="submit_button" (click)="signin()"><b>Sign Up</b></button>
+                </form>
+               <br/><br/>
+                <p class="have_an_account" style="cursor: pointer;">Already have an account? <a (click)="login()"><b style="color: rgba(102,49,48,1);"><u>Sign In</u></b></a></p>
+            </div>
+            </div>
+            <div class="col" style="display: grid;align-content: center;">
+                <div>
+                <img class="banner-img" src="assets/images/loginlogo1.png"/>
+                </div>
+            </div>
+        </div>
+        <br/><br/>
+    </div>

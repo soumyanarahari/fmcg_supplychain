@@ -1,0 +1,116 @@
+<div class="sidebar" style="width: 300px;" [ngClass]="{ 'expanded': isExpanded }">
+    <div class="header">
+        <br />
+        <div style="display: grid;justify-content: center;border-bottom: 1px solid grey;width: 100%;">
+            <div style="display: flex;justify-content: center;margin-top: 25px;"><img style="width: 100px;cursor: pointer;"  [routerLink]="['/']" src="assets/images/bcp.png">
+            </div>
+            <p style="color: white;font-family: playfair display;font-size: 10px;">For The Consumer Goods Industry</p>
+        </div>
+      <!-- <div class="toggle" (click)="handleSidebarToggle()">
+        <span class="chevron"></span>
+      </div> -->
+    </div>
+    <div class="content">
+      <div class="link">
+        <div class="content" [routerLink]="['/subscriptions']" [routerLinkActive]="'active'">
+          <div class="icon">
+        <a><img src="assets/images/calendar1.png" style="width: 25px;"></a>
+          </div>
+          <div class="title">My Subscriptions</div>
+        </div>
+      </div>
+      <div class="link">
+        <div class="content" [routerLink]="['/events']" [routerLinkActive]="'active'">
+          <div class="icon">
+        <a><img src="assets/images/events.png" style="width: 25px;"></a>
+          </div>
+          <div class="title">My Events</div>
+        </div>
+      </div>
+      <div class="link">
+        <div class="content" [routerLink]="['/maindash']" [routerLinkActive]="'active'">
+          <div class="icon">
+        <a><img src="assets/images/jobs.png" style="width: 25px;"></a>
+          </div>
+          <div class="title">My Jobs</div>
+        </div>
+      </div>
+      <div class="link">
+        <!-- <div class="content" [routerLink]="['/manufacturer']" [routerLinkActive]="'active'">
+          <div class="icon">
+        <a><img src="assets/images/manu.png" style="width: 25px;"></a>
+          </div>
+          <div class="title">My Manufacturer Listing</div>
+        </div> -->
+        <div class="content" [routerLink]="getRouterLink()" [routerLinkActive]="'active'">
+          <div class="icon">
+            <a><img src="assets/images/manu.png" style="width: 25px;"></a>
+          </div>
+          <div class="title">{{ getTitle() }}</div>
+        </div>
+        <!-- <div *ngIf="userType === 'manufacturer'; else brandLink">
+          <ng-container *ngIf="isProfileCreated; else createManufacturerProfileLink">
+            <a routerLink="/update-manufacturer-profile">Update Manufacturer Profile</a>
+          </ng-container>
+          <ng-template #createManufacturerProfileLink>
+            <a routerLink="/create-manufacturer-profile">Create Manufacturer Profile</a>
+          </ng-template>
+        </div>
+        
+        
+        <ng-template #brandLink>
+          <div *ngIf="userType === 'brand'; else otherUserTypeLink">
+            <ng-container *ngIf="isProfileCreated; else createBrandProfileLink">
+              <a routerLink="/update-brand-profile">Update Brand Profile</a>
+            </ng-container>
+            <ng-template #createBrandProfileLink>
+              <a routerLink="/create-brand-profile">Create Brand Profile</a>
+            </ng-template>
+          </div>
+        </ng-template>
+        
+       
+        <ng-template #otherUserTypeLink>
+          <div>
+            
+            <p>No profile links available for this user type.</p>
+          </div>
+        </ng-template> -->
+      </div>
+      <div class="link">
+        <div class="content" [routerLink]="['/messages']" [routerLinkActive]="'active'">
+          <div class="icon">
+        <a><img src="assets/images/message.png" style="width: 25px;"></a>
+          </div>
+          <div class="title">My Messages</div>
+        </div>
+      </div>
+      <div class="link">
+        <div class="content" [routerLink]="['/leads']" [routerLinkActive]="'active'">
+          <div class="icon">
+        <a><img src="assets/images/leads.png" style="width: 25px;"></a>
+          </div>
+          <div class="title">My Leads</div>
+        </div>
+      </div>
+      <div class="link">
+        <div class="content" [routerLink]="['/advt']" [routerLinkActive]="'active'">
+          <div class="icon">
+        <a><img src="assets/images/advt.png" style="width: 25px;"></a>
+          </div>
+          <div class="title">My Advertising</div>
+        </div>
+      </div>
+      <!-- <div class="sidebar">
+        
+        <a><img src="assets/images/calendar1.png" style="width: 25px;">&nbsp;&nbsp;&nbsp;<span>My Subscriptions</span></a>
+        <a><img src="assets/images/events.png" style="width: 25px;">&nbsp;&nbsp;&nbsp;<span>My Events</span></a>
+        <a class="active"><img src="assets/images/jobs.png" style="width: 25px;">&nbsp;&nbsp;&nbsp;<span>My Jobs</span></a>
+        <a><img src="assets/images/manu.png" style="width: 25px;">&nbsp;&nbsp;&nbsp;<span>My Manufacturer Listing</span></a>
+        <a><img src="assets/images/message.png" style="width: 25px;">&nbsp;&nbsp;&nbsp;<span>My Messages</span></a>
+        <a><img src="assets/images/leads.png" style="width: 25px;">&nbsp;&nbsp;&nbsp;<span>My Leads</span></a>
+        <a><img src="assets/images/advt.png" style="width: 25px;">&nbsp;&nbsp;&nbsp;<span>My Advertising</span></a>
+    </div> -->
+    </div>
+    <div class="footer"></div>
+  </div>

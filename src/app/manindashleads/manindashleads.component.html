@@ -1,0 +1,190 @@
+<app-sidebar [isExpanded]="sidebarExpanded" (toggleSidebar)="sidebarExpanded = !sidebarExpanded"></app-sidebar>
+<div class="content" [ngClass]="{ 'sidebarExpanded': sidebarExpanded }">
+    
+    <div class="content">
+      <div class="sidebar" [ngClass]="{'show': showSidebar}">
+        <div
+        style="
+          background-color: rgba(253, 238, 238, 1);
+          position: relative;
+          padding-bottom: 20px;
+          padding-top: 20px;
+        "
+      >
+        <div></div>
+        <div (click)="toggleSidebar()" style="position: absolute; right: 0px; top: 0px; margin: 20px;cursor: pointer;">
+          <img src="assets/images/close.png" style="height: 30px;" />
+        </div>
+        <div style="position: absolute; left: 0px; top: 0px; margin: 20px">
+          <img
+            src="assets/images/search.png"
+            style="height: 30px; display: block; margin-bottom: 20px"
+          />
+          <img
+            src="assets/images/instagram.png"
+            style="display: block; margin-bottom: 10px"
+          />
+          <img src="assets/images/twitter.png" style="display: block; margin-bottom: 10px"/>
+          <img src="assets/images/linkedin.png" style="display: block; margin-bottom: 10px"/>
+          <img src="assets/images/whatsapp.png" style="display: block; margin-bottom: 10px"/>
+          <img src="assets/images/facebook.png" style="display: block; margin-bottom: 10px"/>
+          <img src="assets/images/logoshade.png" style="width: 90%;
+          display: grid;
+          margin-left: -77px;
+          margin-top: 130px;">
+        </div>
+        <!-- logo -->
+    
+        <div class="logo" style="text-align: center; margin-bottom: 20px">
+          <img src="assets/images/logo.png" />
+        </div>
+        <div class="row"
+          style="
+            text-align: center;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 25px;color: black;
+          "
+        >
+        <div class="col-lg-8" style="display: grid;
+        justify-content: flex-end;font-size: 17px;">
+          <p style="cursor: pointer;" [routerLink]="['/']">Home</p>
+          <p style="cursor: pointer;" [routerLink]="['/events']">Events</p>
+          <p style="cursor: pointer;" [routerLink]="['/manufacturer']">Manufacturer</p>
+          <p>Products</p>
+          <p style="cursor: pointer;" [routerLink]="['/joblisting']">Jobs</p>
+          <p style="cursor: pointer;" [routerLink]="['/contactus']">Contact Us</p>
+          <p style="font-weight: bold">Manufacturer <span style="cursor: pointer;" [routerLink]="['/login']">LogIn</span>/<span style="cursor: pointer;" [routerLink]="['/signup']">Register</span></p>
+          <p style="font-weight: bold">Brand <span style="cursor: pointer;" [routerLink]="['/login']">LogIn</span>/<span style="cursor: pointer;" [routerLink]="['/signup']">Register</span></p>
+          <p>Terms & Conditions</p>
+          <p>Privacy Policies</p>
+          </div>
+          <div class="col-lg-4">
+            <img src="assets/images/logoshade.png" style="width: 140%;">
+          </div>
+        </div>
+        <div style="text-align: center; margin: 30px">
+          <img src="assets/images/envelop.png" />
+        </div>
+        <div>
+          <p
+            style="
+              text-align: center;
+              font-family: Poppins;
+              font-style: normal;
+              font-weight: bold;
+              font-size: 17px;
+              color: rgba(0, 0, 0, 1);
+              padding-left: 50px;
+              padding-right: 50px;
+            "
+          >
+            We’re building the community of tomorrow, and making it easier for
+            entrepreneurs, indie founders, marketers, and sales professionals to
+            learn and connect with each other.
+          </p>
+        </div>
+      </div>
+        <!-- <button (click)="toggleSidebar()">Toggle Sidebar</button> -->
+    </div>
+        <div class="split">
+     <div class="left" style="padding-left: 10px;margin-top: 5px;">
+         <span style="color: rgba(100,96,96,1);font-family: poppins;font-size: 10px;text-align: end;margin-left: 2px;"> {{ getCurrentDate() }}</span> 
+         &nbsp; <img src="assets/images/downarrow.png" style="width: 18px;">
+         <p>
+             <input type="text" class="searchinput" placeholder="Search">
+         </p>
+     </div>
+     <div class="right">
+      <div class="row">
+        <div class="col">
+         <table cellspacing="10"> 
+             <tr> 
+                 <td style="padding-right: 10px;">  
+                     <img style="width: 30px;" src="assets/images/noti.png">
+                     </td>
+               <td style="padding-right: 16px;">  
+                 <div style="margin-top: 20px;">   
+             <h5 style="color: rgba(102,49,48,1);font-family: Poppins;font-size: 14px;margin-bottom: 0.2rem;">{{ (username$ | async)?.username || 'Guest' }} </h5>  
+             <p style="color: rgba(100,96,96,1);font-family: poppins;font-size: 8px;text-align: end;">Administrator</p> 
+             </div>   
+               </td> 
+               <td  style="padding-right: 16px;"> 
+                 <img style="width: 50px;
+                 border-radius: 50%;
+                 height: 40px;" src="assets/images/person.png">
+               </td> 
+               <td style="padding-right: 20px;">
+                 <img src="assets/images/downarrow.png" style="width: 18px;">
+               </td>
+             </tr> 
+           </table> 
+           </div>
+           <div class="col">
+            <a class="nav-item nav-link" style="color: black">
+                    <!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
+                    <img (click)="toggleSidebar1()"  style="cursor: pointer;position: absolute;
+                    top: 28px;
+                    left: 5px;" src="assets/images/hamberger.png" />
+                  </a>
+    </div>
+           </div>
+     </div>
+        </div>
+        <br/>
+        <div style="padding: 20px;border: 1px solid darkgrey;">
+          <div style="display: flex;justify-content: space-between;">
+            <p>
+              <input type="text" class="searchinput" style="width: 170%;border: 1px solid darkgrey;" placeholder="Search Leads">
+          </p>
+          <div style="display: inherit;align-items: center;">
+            <button style="color:black;    margin-bottom: 0.5rem;width: 120px;
+font-size: 15px !important;background-color:rgba(249,237,232,1) !important;padding: 6px;border-radius: 5px;border: none;" type="button"><img style="width: 18px;margin-top: -3px;" src="assets/images/calendar.png">&nbsp;&nbsp;Date</button>
+    &nbsp;&nbsp;&nbsp;
+    <button style="color:black;    margin-bottom: 0.5rem;width: 120px;
+      font-size: 15px !important;background-color:rgba(249,237,232,1) !important;padding: 6px;border-radius: 5px;border: none;" type="button"><img style="width: 18px;margin-top: -3px;" src="assets/images/download.png">&nbsp;&nbsp;Download</button>     
+      </div>
+      </div>
+      <br/>
+        <table class="table">
+          <thead style="background-color: rgba(252,238,232,1) !important;">
+            <tr>
+              <th scope="col" style="border: none;font-family: Poppins;font-weight: 100;padding: 12px;">Name</th>
+              <th scope="col"  style="border: none;font-family: Poppins;font-weight: 100;padding: 12px;">Date</th>
+              <th scope="col"  style="border: none;font-family: Poppins;font-weight: 100;padding: 12px;">Email ID</th>
+              <th scope="col"  style="border: none;font-family: Poppins;font-weight: 100;padding: 12px;">Phone Number</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" style="font-family: poppins;font-weight: 100;padding: 30px 0px 30px 12px;">Garry Harter</th>
+              <td style="font-family: poppins;padding: 30px 0px 30px 12px;">2/10/2023</td>
+              <td style="font-family: poppins;padding: 30px 0px 30px 12px;">garry.h@gmail.com</td>
+              <td style="font-family: poppins;padding: 30px 0px 30px 12px;">+91-9820523446</td>
+            </tr>
+            <tr>
+              <th scope="row" style="font-family: poppins;font-weight: 100;padding: 30px 0px 30px 12px;">Jenny Wilson</th>
+              <td style="font-family: poppins;padding: 30px 0px 30px 12px;">2/10/2023</td>
+              <td style="font-family: poppins;padding: 30px 0px 30px 12px;">jenny.w@gmail.com</td>
+              <td style="font-family: poppins;padding: 30px 0px 30px 12px;">+91-9819453455</td>
+            </tr>
+            <tr>
+              <th scope="row" style="font-family: poppins;font-weight: 100;padding: 30px 0px 30px 12px;">Albert Flores</th>
+              <td style="font-family: poppins;padding: 30px 0px 30px 12px;">2/10/2023</td>
+              <td style="font-family: poppins;padding: 30px 0px 30px 12px;">albertflores@gmail.com</td>
+              <td style="font-family: poppins;padding: 30px 0px 30px 12px;">+91-9819453455</td>
+            </tr>
+            <tr>
+              <th scope="row" style="font-family: poppins;font-weight: 100;padding: 30px 0px 30px 12px;">Darell Steward</th>
+              <td style="font-family: poppins;padding: 30px 0px 30px 12px;">2/10/2023</td>
+              <td style="font-family: poppins;padding: 30px 0px 30px 12px;">stewardD@gmail.com</td>
+              <td style="font-family: poppins;padding: 30px 0px 30px 12px;">+91-9819453455</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+        <br/>
+        </div>
+        </div>
+

@@ -1,0 +1,165 @@
+<app-sidebar [isExpanded]="sidebarExpanded" (toggleSidebar)="sidebarExpanded = !sidebarExpanded"></app-sidebar>
+<div class="content" [ngClass]="{ 'sidebarExpanded': sidebarExpanded }">
+    
+    <div class="content">
+        <div class="split">
+     <div class="left" style="padding-left: 10px;margin-top: 5px;">
+         <span style="color: rgba(100,96,96,1);font-family: poppins;font-size: 10px;text-align: end;margin-left: 2px;"> {{ getCurrentDate() }}</span> 
+         &nbsp; <img src="assets/images/downarrow.png" style="width: 18px;">
+         <p>
+             <input type="text" class="searchinput" placeholder="Search">
+         </p>
+     </div>
+     <div class="right">
+      <div class="row">
+        <div class="col">
+         <table cellspacing="10"> 
+             <tr> 
+                 <td style="padding-right: 10px;">  
+                     <img style="width: 30px;" src="assets/images/noti.png">
+                     </td>
+               <td style="padding-right: 16px;">  
+                 <div style="margin-top: 20px;">   
+             <h5 style="color: rgba(102,49,48,1);font-family: Poppins;font-size: 14px;margin-bottom: 0.2rem;">{{ (username$ | async)?.username || 'Guest' }} </h5>  
+             <p style="color: rgba(100,96,96,1);font-family: poppins;font-size: 8px;text-align: end;">Administrator</p> 
+             </div>   
+               </td> 
+               <td  style="padding-right: 16px;"> 
+                 <img style="width: 50px;
+                 border-radius: 50%;
+                 height: 40px;" src="assets/images/person.png">
+               </td> 
+               <td style="padding-right: 20px;">
+                 <img src="assets/images/downarrow.png" style="width: 18px;">
+               </td>
+             </tr> 
+           </table> 
+           </div>
+           <div class="col">
+            <a class="nav-item nav-link" style="color: black">
+                    <!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
+                    <img (click)="toggleSidebar1()"  style="cursor: pointer;position: absolute;
+                    top: 28px;
+                    left: 5px;" src="assets/images/hamberger.png" />
+                  </a>
+    </div>
+           </div>
+     </div>
+        </div>
+        <br/>
+        <div style="padding: 20px;border: 1px solid darkgrey;">
+          <!-- <div style="display: flex;justify-content: space-between;"> -->
+            <!-- <p>
+              <input type="text" class="searchinput" style="width: 170%;border: 1px solid darkgrey;" placeholder="Search Leads">
+          </p> -->
+          <div style="display: flex;justify-content: end;">
+    <button style="color:black;    margin-bottom: 0.5rem;width: 120px;
+      font-size: 15px !important;background-color:rgba(249,237,232,1) !important;padding: 6px;border-radius: 5px;border: none;" type="button"><img style="width: 15px;margin-top: -3px;" src="assets/images/addmedia.png">&nbsp;&nbsp;Add Media</button>     
+      </div>
+      <!-- </div> -->
+      <br/>
+        <table class="table">
+          <thead style="background-color: rgba(252,238,232,1) !important;">
+            <tr style="text-align: center;">
+              <th scope="col" style="border: none;font-family: Poppins;font-weight: bold;">Action</th>
+              <th scope="col"  style="border: none;font-family: Poppins;font-weight: bold;" colspan="2">List of Campaigns</th>
+              <th scope="col"  style="border: none;font-family: Poppins;font-weight: bold;">Status</th>
+              <th scope="col"  style="border: none;font-family: Poppins;font-weight: bold;">Date / Duration</th>
+              <th scope="col"  style="border: none;font-family: Poppins;font-weight: bold;">Clicks</th>
+              <th scope="col"  style="border: none;font-family: Poppins;font-weight: bold;">Impressions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="text-align: center;">
+              <th scope="row" style="font-family: poppins;font-weight: 100;text-align: center; vertical-align: middle;"><img style="width: 25px;" src="assets/images/green.png"></th>
+              <td style="font-family: poppins;text-align: center; vertical-align: middle;font-size: 14px;font-weight: 300;width: 25%;text-transform: uppercase;">Accupac Private Limited</td>
+              <td style="font-family: poppins;text-align: center; vertical-align: middle;font-size: 14px;font-weight: 300;text-align: initial;"><img style="width: 20px;cursor: pointer;" (click)="open(content)" src="assets/images/edit.png">&nbsp;&nbsp;<img style="width: 20px;" src="assets/images/settings.png"></td>
+              <td style="font-family: poppins;text-align: center; vertical-align: middle;font-size: 14px;font-weight: 300">Ongoing</td>
+              <td style="font-family: poppins;text-align: center; vertical-align: middle;font-size: 14px;font-weight: 300"><p style="margin-bottom: 0rem;">Apr 15, 2022</p><p style="margin-bottom: 0rem;">to</p><p style="margin-bottom: 0rem;">Apr 22, 2022</p></td>
+              <td style="font-family: poppins;text-align: center; vertical-align: middle;font-size: 14px;font-weight: 300">19</td>
+              <td style="font-family: poppins;text-align: center; vertical-align: middle;font-size: 14px;font-weight: 300">34</td>
+            </tr>
+            <tr style="text-align: center;">
+              <th scope="row" style="font-family: poppins;text-align: center; vertical-align: middle;font-weight: 100"><img style="width: 25px;" src="assets/images/red.png"></th>
+              <td style="font-family: poppins;text-align: center; vertical-align: middle;font-size: 14px;font-weight: 300;width: 25%;text-transform: uppercase;">GDMI, Inc.</td>
+              <td style="font-family: poppins;text-align: center; vertical-align: middle;font-size: 14px;font-weight: 300;text-align: initial;"><img style="width: 20px;" src="assets/images/edit.png">&nbsp;&nbsp;<img style="width: 20px;" src="assets/images/settings.png"></td>
+              <td style="font-family: poppins;text-align: center; vertical-align: middle;font-size: 14px;font-weight: 300">Completed</td>
+              <td style="font-family: poppins;text-align: center; vertical-align: middle;font-size: 14px;font-weight: 300"><p style="margin-bottom: 0rem;">Apr 20, 2022</p><p style="margin-bottom: 0rem;">to</p><p style="margin-bottom: 0rem;">Apr 29, 2022</p></td>
+              <td style="font-family: poppins;text-align: center; vertical-align: middle;font-size: 14px;font-weight: 300">12</td>
+              <td style="font-family: poppins;text-align: center; vertical-align: middle;font-size: 14px;font-weight: 300">56</td>
+            </tr>
+            <tr style="text-align: center;">
+              <th scope="row" style="font-family: poppins;text-align: center; vertical-align: middle;font-weight: 100"><img style="width: 26px;" src="assets/images/yellow.png"></th>
+              <td style="font-family: poppins;text-align: center; vertical-align: middle;font-size: 14px;font-weight: 300;width: 25%;text-transform: uppercase;">Brand Labs USA</td>
+              <td style="font-family: poppins;text-align: center; vertical-align: middle;font-size: 14px;font-weight: 300;text-align: initial;"><img style="width: 20px;" src="assets/images/edit.png">&nbsp;&nbsp;<img style="width: 20px;" src="assets/images/settings.png"></td>
+              <td style="font-family: poppins;text-align: center; vertical-align: middle;font-size: 14px;font-weight: 300">Paused</td>
+              <td style="font-family: poppins;text-align: center; vertical-align: middle;font-size: 14px;font-weight: 300"><p style="margin-bottom: 0rem;">May 20, 2022</p><p style="margin-bottom: 0rem;">to</p><p style="margin-bottom: 0rem;">May 29, 2022</p></td>
+              <td style="font-family: poppins;text-align: center; vertical-align: middle;font-size: 14px;font-weight: 300">21</td>
+              <td style="font-family: poppins;text-align: center; vertical-align: middle;font-size: 14px;font-weight: 300">78</td>
+            </tr>
+            <tr style="text-align: center;">
+              <th scope="row" style="font-family: poppins;text-align: center; vertical-align: middle;font-weight: 100"><img style="width: 26px;" src="assets/images/grey.png"></th>
+              <td style="font-family: poppins;text-align: center; vertical-align: middle;font-size: 14px;font-weight: 300;width: 25%;text-transform: uppercase;">Classic Cosmetics & Skin Care</td>
+              <td style="font-family: poppins;text-align: center; vertical-align: middle;font-size: 14px;font-weight: 300;text-align: initial;"><img style="width: 20px;" src="assets/images/edit.png">&nbsp;&nbsp;<img style="width: 20px;" src="assets/images/settings.png"></td>
+              <td style="font-family: poppins;text-align: center; vertical-align: middle;font-size: 14px;font-weight: 300">Draft</td>
+              <td style="font-family: poppins;text-align: center; vertical-align: middle;font-size: 14px;font-weight: 300"><p style="margin-bottom: 0rem;">July 20, 2022</p><p style="margin-bottom: 0rem;">to</p><p style="margin-bottom: 0rem;">July 29, 2022</p></td>
+              <td style="font-family: poppins;text-align: center; vertical-align: middle;font-size: 14px;font-weight: 300">28</td>
+              <td style="font-family: poppins;text-align: center; vertical-align: middle;font-size: 14px;font-weight: 300">97</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+        <br/>
+        </div>
+           
+    <ng-template #content let-modal>
+      <div class="modal-header" style="background: #663130;justify-content: end;padding: 10px;">
+          <button type="button" class="btn-close btn-close-white" style="font-size: 10px;" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+      </div>
+      <div class="modal-body" style="padding: 0rem !important;">
+          <div>
+              <div class="row" style="display: flex;justify-content: center;">
+                  <div class="col-lg-12">
+                      <div class="card" style="border: none;">
+                          <div class="card-body" style="padding: 0rem 0rem;">
+                              <div
+                                  style="display: grid;justify-content: center;border-bottom: 1px solid grey;padding: 10px 0px 20px 0px">
+                                  <div style="display: flex;justify-content: center;"><img style="width: 230px;"
+                                          src="assets/images/logoblack.png">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="card-body" style="padding: 1rem 1rem;">
+                              <h5 style="font-family: Poppins;text-align: center;">Edit</h5>
+                              <label class="labletitle">Campaign Name</label>
+                              <input type="text" class="input2" id="abc" style="padding: 10px;" value="Accupac Private Limited" placeholder="Enter New Campaign Name">
+                              <label class="labletitle">Edit Image</label>
+                              <div class="upload-container">
+                                <div class="preview">
+                                    <img id="image-preview" src="assets/images/editimg.png">
+                                </div>
+                                <br/>
+                                <input type="file" id="image-upload" accept="image/*" onchange="previewImage()">
+                            </div>
+                        
+                              <label class="labletitle">Campaign End Date</label>
+                              <input type="date" id="abc1" style="padding: 10px;" id="fromDate" [(ngModel)]="fromDate" class="input2" placeholder="">
+                              <br /> <br />
+                              <div style="display: flex;justify-content: center;">
+                                  <button style="color:white;width: 40%;
+                      font-size: 15px !important;background-color:#663130 !important;padding: 6px;border-radius: 5px;border: none;" type="button" >Update</button>
+                              </div>
+                              <br />
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <br/>
+          </div>
+      </div>
+      <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+      </div> -->
+      </ng-template>
+        </div>
+
