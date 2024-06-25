@@ -8,10 +8,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { BlogsComponent } from './blogs/blogs.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { MaindashboardComponent } from './maindashboard/maindashboard.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MaindashbrandComponent } from './maindashbrand/maindashbrand.component';
 import { MaindashmanufacturerComponent } from './maindashmanufacturer/maindashmanufacturer.component';
 import { MaindashsubscriptionComponent } from './maindashsubscription/maindashsubscription.component';
 import { ManindasheventsComponent } from './manindashevents/manindashevents.component';
@@ -45,6 +46,35 @@ import { ToastrModule } from 'ngx-toastr';
 import { SkincareComponent } from './skincare/skincare.component';
 import { TermsComponent } from './terms/terms.component';
 import { HaircareComponent } from './haircare/haircare.component';
+import { NeutraceuticalsComponent } from './neutraceuticals/neutraceuticals.component';
+import { PetcareComponent } from './petcare/petcare.component';
+import { CannabisComponent } from './cannabis/cannabis.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { ModalContentComponent } from './modal-content/modal-content.component';
+import { FoodComponent } from './food/food.component';
+import { BeveragesComponent } from './beverages/beverages.component';
+import { IngredientsComponent } from './ingredients/ingredients.component';
+import { LabtestingComponent } from './labtesting/labtesting.component';
+import { ServiceproviderComponent } from './serviceprovider/serviceprovider.component';
+import { ManufacturerlandingComponent } from './manufacturerlanding/manufacturerlanding.component';
+import { EventslandingComponent } from './eventslanding/eventslanding.component';
+import { EventdetailsComponent } from './eventdetails/eventdetails.component';
+import { JobdetailsComponent } from './jobdetails/jobdetails.component';
+import { CreateadsComponent } from './createads/createads.component';
+import { WelcomepageComponent } from './welcomepage/welcomepage.component';
+import { MaindashserviceproviderComponent } from './maindashserviceprovider/maindashserviceprovider.component';
+import { MaindashdistributorComponent } from './maindashdistributor/maindashdistributor.component';
+import { NewbrandlandingComponent } from './newbrandlanding/newbrandlanding.component';
+import { AdspricinglandingComponent } from './adspricinglanding/adspricinglanding.component';
+import { CreateadsplanaComponent } from './createadsplana/createadsplana.component';
+import { CreateadsplanbComponent } from './createadsplanb/createadsplanb.component';
+import { CreateadsplancComponent } from './createadsplanc/createadsplanc.component';
+import { CreateadsplandComponent } from './createadspland/createadspland.component';
+import { CreateadsplaneComponent } from './createadsplane/createadsplane.component';
+import { CreateadsplanfComponent } from './createadsplanf/createadsplanf.component';
+import { TermsforgraphicdesignComponent } from './termsforgraphicdesign/termsforgraphicdesign.component';
+import { AdrequestformComponent } from './adrequestform/adrequestform.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +84,10 @@ import { HaircareComponent } from './haircare/haircare.component';
     MaindashboardComponent,
     SidebarComponent,
     MaindashmanufacturerComponent,
+    MaindashbrandComponent,
+    MaindashdistributorComponent,
+    NewbrandlandingComponent,
+    MaindashserviceproviderComponent,
     MaindashsubscriptionComponent,
     ManindasheventsComponent,
     ManindashmessagesComponent,
@@ -81,7 +115,33 @@ import { HaircareComponent } from './haircare/haircare.component';
     JobssubscriptionComponent,
     SkincareComponent,
     TermsComponent,
-    HaircareComponent
+    HaircareComponent,
+    NeutraceuticalsComponent,
+    PetcareComponent,
+    CannabisComponent,
+    ForgotPasswordComponent,
+    ResetPasswordComponent,
+    ModalContentComponent,
+    FoodComponent,
+    BeveragesComponent,
+    IngredientsComponent,
+    LabtestingComponent,
+    ServiceproviderComponent,
+    ManufacturerlandingComponent,
+    EventslandingComponent,
+    EventdetailsComponent,
+    JobdetailsComponent,
+    CreateadsComponent,
+    WelcomepageComponent,
+    AdspricinglandingComponent,
+    CreateadsplanaComponent,
+    CreateadsplanbComponent,
+    CreateadsplancComponent,
+    CreateadsplandComponent,
+    CreateadsplaneComponent,
+    CreateadsplanfComponent,
+    TermsforgraphicdesignComponent,
+    AdrequestformComponent
   ],
   imports: [
     BrowserModule,
@@ -93,7 +153,8 @@ import { HaircareComponent } from './haircare/haircare.component';
     HttpClientModule,
     NgxIntlTelInputModule,
     CommonModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    NgbTooltipModule
     // CaroyuselModule
   ],
   providers: [DatePipe],

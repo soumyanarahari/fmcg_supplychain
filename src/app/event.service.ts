@@ -41,7 +41,12 @@ export class EventService {
     
     return this.http.get<any[]>('/api/all-events', { headers });
   }
-
+  getAllEventslist(): Observable<any[]> {
+    const token = localStorage.getItem('token');
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    
+    return this.http.get<any[]>('/api/all-eventslist');
+  }
   getEventSubscriptionPlans(): Observable<EventSubscriptionsOffers[]>{
     return this.http.get<EventSubscriptionsOffers[]>('api/eventSubscriptions');
   }
@@ -116,6 +121,25 @@ export class EventService {
     // Make a GET request to fetch user details based on userId
     return this.http.get(`/api/get-eventDetails/${event_id}`, { headers });
   }
+
+  saveEvent(eventId:string): Observable<any> {
+    const token = localStorage.getItem('token');
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    // Make a GET request to fetch user details based on userId
+    return this.http.post(`/api/save-event`,{eventId}, { headers });
+  }
+  unsaveEvent(eventId:string): Observable<any> {
+    const token = localStorage.getItem('token');
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    // Make a GET request to fetch user details based on userId
+    return this.http.post(`/api/unsave-event/`,{eventId}, { headers });
+  }
+  isEventSaved(eventId: string): Observable<any> {
+    const token = localStorage.getItem('token');
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    return this.http.get(`/api/is-event-saved/${eventId}`, { headers });
+  }
+
   updateEvent(event_data:any): Observable<any>  {
     const token = localStorage.getItem('token');
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);

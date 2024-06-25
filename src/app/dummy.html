@@ -419,3 +419,195 @@
                     >
                       Update Profile
                     </button>
+                    <!--  -->
+                    <form
+                    [formGroup]="updateProfileForm"
+                    (ngSubmit)="
+                      updateManufacturerProfile(
+                        usernameIput.value,
+                        organization_nameInput.value,
+                        designationInput.value,
+                        emailInput.value,
+                        phone_numberInput.value,
+                        street_addressInput.value,
+                        cityInput.value,
+                        postal_codeInput.value,
+                        stateInput.value,
+                        countryInput.value
+                      )
+                    "
+                  >
+                    <label class="labletitle" for="username">Username</label>
+                    <input
+                      type="text"
+                      class="input2"
+                      style="padding: 10px"
+                      placeholder="First"
+                      id="username"
+                      formControlName="username"
+                      #usernameIput
+                      required
+                    />
+
+                    <label class="labletitle" for="organization_name"
+                      >Organization name</label
+                    >
+                    <input
+                      id="organization_name"
+                      style="padding: 10px"
+                      class="input2"
+                      placeholder=""
+                      formControlName="organization_name"
+                      #organization_nameInput
+                      required
+                    />
+                    <label class="labletitle" for="designation"
+                      >Designation/Title</label
+                    >
+                    <input
+                      id="designation"
+                      style="padding: 10px"
+                      class="input2"
+                      placeholder=""
+                      formControlName="designation"
+                      #designationInput
+                      required
+                    />
+                    <label class="labletitle" for="email">Email</label>
+                    <input
+                      id="email"
+                      class="input2"
+                      style="padding: 10px"
+                      placeholder=""
+                      formControlName="email"
+                      #emailInput
+                      required
+                    />
+                    <label class="labletitle" for="phone_number"
+                      >Phone Number</label
+                    >
+                    <input
+                      id="phone_number"
+                      #phone_numberInput
+                      class="input2"
+                      style="padding: 10px"
+                      formControlName="phone_number"
+                      required
+                    />
+                    <!-- <form #f="ngForm" [formGroup]="phoneForm">
+                        <div class="wrapper input2">
+                          <ngx-intl-tel-input
+                            [cssClass]="'custom'"
+                            [preferredCountries]="preferredCountries"
+                            [enableAutoCountrySelect]="true"
+                            [enablePlaceholder]="true"
+                            [searchCountryFlag]="true"
+                            [searchCountryField]="[
+                              SearchCountryField.Iso2,
+                              SearchCountryField.Name
+                            ]"
+                            [selectFirstCountry]="false"
+                            [selectedCountryISO]="CountryISO.India"
+                            [maxLength]="15"
+                            [phoneValidation]="true"
+                            [separateDialCode]="separateDialCode"
+                            name="phone"
+                            formControlName="phone"
+                            id="phone_number" #phone_numberInput required
+                          >
+                          </ngx-intl-tel-input>
+                        </div>
+                      </form> -->
+                    <label class="labletitle" style="margin-top: 15px"
+                      >Address&nbsp;<img
+                        style="width: 15px"
+                        src="assets/images/location.png"
+                    /></label>
+
+                    
+                    <input
+                      id="street_address"
+                      #street_addressInput
+                      class="input2"
+                      style="padding: 10px"
+                      placeholder="Street Address"
+                      formControlName="street_address"
+                      required
+                    />
+                   
+                    <div class="row">
+                      <div class="col">
+                        <input
+                          id="city"
+                          class="input2"
+                          style="padding: 10px"
+                          placeholder="City"
+                          formControlName="city"
+                          #cityInput
+                          required
+                        />
+                      </div>
+                     
+                      <div class="col">
+                        <input
+                          id="postal_code"
+                          #postal_codeInput
+                          class="input2"
+                          style="padding: 10px"
+                          placeholder="Postal Code"
+                          formControlName="postal_code"
+                          required
+                        />
+                      </div>
+                    </div>
+                   
+                    <div class="row">
+                      <div class="col">
+                        <input
+                          id="state"
+                          class="input2"
+                          style="padding: 10px"
+                          placeholder="State"
+                          #stateInput
+                          formControlName="state"
+                          required
+                        />
+                      </div>
+                     
+                      <div class="col">
+                        <input
+                          id="country"
+                          class="input2"
+                          style="padding: 10px"
+                          placeholder="Country"
+                          #countryInput
+                          formControlName="country"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <br />
+                    <br />
+                    <div style="display: flex; justify-content: center">
+                      <!-- [routerLink]="['/manufacturersuccess']"
+                        [queryParams]="{ name: 'create' }" -->
+                      <button
+                        style="
+                          color: white;
+                          width: 40%;
+                          font-size: 15px !important;
+                          background-color: #663130 !important;
+                          padding: 6px;
+                          border-radius: 5px;
+                          border: none;
+                        "
+                        type="submit"
+                      >
+                        Update Profile
+                      </button>
+                    </div>
+                    <br />
+                  </form>
+
+
+                  
